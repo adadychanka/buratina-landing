@@ -1,0 +1,78 @@
+{
+  "Hero": {
+    "title": "Buratina Bar",
+    "subtitle": "Najmističniji bar u Beogradu",
+    "description": "Atmosferski opis bara...",
+    "cta": {
+      "book": "Rezerviši sto",
+      "event": "Organizuj događaj"
+    }
+  },
+  "About": {
+    "title": "O nama",
+    "content": "Sadržaj o baru..."
+  },
+  "Menu": {
+    "title": "Meni",
+    "categories": {
+      "cocktails": "Koktel karta",
+      "alcohol": "Alkoholna pića",
+      "nonAlcohol": "Bezalkoholna pića",
+      "food": "Hrana"
+    },
+    "viewMenu": "Pogledaj meni"
+  },
+  "Events": {
+    "title": "Događaji i uslovi",
+    "formats": "Opis formata događaja...",
+    "conditions": "Uslovi za organizaciju događaja...",
+    "cta": "Pošalji zahtev za događaj"
+  },
+  "EventExamples": {
+    "title": "Primeri događaja"
+  },
+  "ContactForm": {
+    "title": "Kontaktirajte nas",
+    "name": "Ime",
+    "namePlaceholder": "Unesite vaše ime",
+    "phone": "Telefon",
+    "phonePlaceholder": "+381...",
+    "contact": "Dodatni kontakt",
+    "contactPlaceholder": "Email, telefon ili Instagram",
+    "eventDate": "Datum događaja",
+    "eventType": "Tip događaja",
+    "selectEventType": "Izaberite tip događaja",
+    "eventTypes": {
+      "birthday": "Rođendan",
+      "corporate": "Korporativni događaj",
+      "privateParty": "Privatna žurka",
+      "concert": "Koncert / DJ set",
+      "lecture": "Predavanje",
+      "photoshoot": "Fotografisanje",
+      "other": "Drugo"
+    },
+    "guestCount": "Broj gostiju",
+    "guestCountPlaceholder": "Unesite broj gostiju",
+    "consent": "Slažem se sa obrađom ličnih podataka",
+    "submit": "Pošalji",
+    "submitting": "Slanje...",
+    "success": "Zahtev je uspešno poslat!",
+    "error": "Došlo je do greške. Molimo pokušajte ponovo."
+  },
+  "Location": {
+    "title": "Kako nas naći",
+    "address": "Adresa",
+    "hours": "Radno vreme",
+    "directions": "Kako doći"
+  },
+  "SocialMedia": {
+    "title": "Pratite nas"
+  },
+  "Navigation": {
+    "about": "O nama",
+    "menu": "Meni",
+    "events": "Događaji",
+    "contact": "Kontakt",
+    "location": "Lokacija"
+  }
+}

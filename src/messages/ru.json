@@ -1,0 +1,78 @@
+{
+  "Hero": {
+    "title": "Buratina Bar",
+    "subtitle": "Самый мистический бар в Белграде",
+    "description": "Атмосферное описание бара...",
+    "cta": {
+      "book": "Забронировать стол",
+      "event": "Провести мероприятие"
+    }
+  },
+  "About": {
+    "title": "О нас",
+    "content": "Содержимое о баре..."
+  },
+  "Menu": {
+    "title": "Меню",
+    "categories": {
+      "cocktails": "Коктейльная карта",
+      "alcohol": "Алкогольное меню",
+      "nonAlcohol": "Безалкогольное меню",
+      "food": "Еда"
+    },
+    "viewMenu": "Посмотреть меню"
+  },
+  "Events": {
+    "title": "Мероприятия и условия",
+    "formats": "Описание форматов мероприятий...",
+    "conditions": "Условия проведения мероприятий...",
+    "cta": "Оставить заявку на мероприятие"
+  },
+  "EventExamples": {
+    "title": "Примеры мероприятий"
+  },
+  "ContactForm": {
+    "title": "Свяжитесь с нами",
+    "name": "Имя",
+    "namePlaceholder": "Введите ваше имя",
+    "phone": "Телефон",
+    "phonePlaceholder": "+7...",
+    "contact": "Дополнительный контакт",
+    "contactPlaceholder": "Email, телефон или Instagram",
+    "eventDate": "Дата мероприятия",
+    "eventType": "Тип мероприятия",
+    "selectEventType": "Выберите тип мероприятия",
+    "eventTypes": {
+      "birthday": "День рождения",
+      "corporate": "Корпоратив",
+      "privateParty": "Закрытая вечеринка",
+      "concert": "Концерт / DJ-сет",
+      "lecture": "Лекция",
+      "photoshoot": "Фотосъёмка",
+      "other": "Другое"
+    },
+    "guestCount": "Количество гостей",
+    "guestCountPlaceholder": "Введите количество гостей",
+    "consent": "Я согласен на обработку персональных данных",
+    "submit": "Отправить",
+    "submitting": "Отправка...",
+    "success": "Заявка успешно отправлена!",
+    "error": "Произошла ошибка. Попробуйте еще раз."
+  },
+  "Location": {
+    "title": "Как нас найти",
+    "address": "Адрес",
+    "hours": "Часы работы",
+    "directions": "Как пройти"
+  },
+  "SocialMedia": {
+    "title": "Мы в соцсетях"
+  },
+  "Navigation": {
+    "about": "О нас",
+    "menu": "Меню",
+    "events": "Мероприятия",
+    "contact": "Контакты",
+    "location": "Как найти"
+  }
+}

@@ -1,0 +1,45 @@
+# Cursor Rules for Buratina Bar Landing Page
+
+## Project Context
+This is a landing page for Buratina Bar - a bar in Belgrade. The project uses Next.js 14+ with App Router, TypeScript, Tailwind CSS, and shadcn/ui.
+
+## Code Style
+- All code and comments must be in English
+- Use TypeScript for all files
+- Follow Biome linting rules
+- Use functional components with TypeScript
+- Prefer named exports over default exports when possible
+
+## Architecture
+- Use Next.js App Router structure
+- Components in `src/components/`
+- Sections in `src/components/sections/`
+- UI components from shadcn/ui in `src/components/ui/`
+- Utilities in `src/lib/utils/`
+- Types in `src/types/`
+- Hooks in `src/hooks/`
+
+## Internationalization
+- Use next-intl for all text content
+- Translation files in `src/messages/`
+- Support locales: en, ru, sr
+- Always use `useTranslations` hook for text
+
+## Styling
+- Use Tailwind CSS for styling
+- Use shadcn/ui components as base
+- Customize components through Tailwind classes
+- Follow mobile-first approach
+
+## Form Handling
+- Use React Hook Form for form management
+- Use Zod for validation schemas
+- Share validation schemas between client and server
+
+## Best Practices
+- Add comments explaining complex logic
+- Use semantic HTML
+- Ensure accessibility (a11y)
+- Optimize images with next/image
+- Use lazy loading where appropriate
+- Follow SEO best practices
