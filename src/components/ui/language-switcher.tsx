@@ -1,7 +1,6 @@
 'use client';
 
 import { useRouter, usePathname } from 'next/navigation';
-import { useLocale } from 'next-intl';
 import { routing } from '@/i18n/routing';
 import {
   Select,
@@ -18,11 +17,25 @@ import {
 export function LanguageSwitcher() {
   const router = useRouter();
   const pathname = usePathname();
-  const locale = useLocale();
+
+  // Extract locale from pathname to ensure it updates when URL changes
+  // Since localePrefix is 'always', locale is always the first segment after root
+  const getLocaleFromPathname = (): string => {
+    const segments = pathname.split('/').filter(Boolean);
+    const firstSegment = segments[0];
+    
+    if (firstSegment && routing.locales.includes(firstSegment as 'en' | 'ru' | 'sr')) {
+      return firstSegment;
+    }
+    
+    return routing.defaultLocale;
+  };
+
+  const locale = getLocaleFromPathname();
 
   const switchLocale = (newLocale: string) => {
     // Replace locale in pathname
-    const segments = pathname.split('/');
+    const segments = pathname.split('/').filter(Boolean);
     const currentLocaleIndex = segments.findIndex((seg) =>
       routing.locales.includes(seg as 'en' | 'ru' | 'sr')
     );
@@ -31,10 +44,10 @@ export function LanguageSwitcher() {
       segments[currentLocaleIndex] = newLocale;
     } else {
       // If no locale in path (default locale), prepend it
-      segments.splice(1, 0, newLocale);
+      segments.unshift(newLocale);
     }
 
-    const newPath = segments.join('/');
+    const newPath = '/' + segments.join('/');
     router.push(newPath);
   };
 
