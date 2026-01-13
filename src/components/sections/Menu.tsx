@@ -47,7 +47,7 @@ export function Menu() {
               >
                 <div className="text-center text-muted-foreground">
                   {/* TODO: Add menu items for each category */}
-                  <p>Menu items for {category.label} will be displayed here</p>
+                  <p>{t('menuItemsPlaceholder', { category: category.label })}</p>
                 </div>
               </TabsContent>
             ))}
@@ -71,13 +71,14 @@ export function Menu() {
                   variant="ghost"
                   size="icon"
                   onClick={() => setIsMenuModalOpen(false)}
+                  aria-label={t('close')}
                 >
                   ×
                 </Button>
               </div>
               <div className="text-center text-muted-foreground py-12">
                 {/* TODO: Add PDF viewer component */}
-                <p>PDF viewer will be implemented here</p>
+                <p>{t('pdfViewerPlaceholder')}</p>
                 <p className="text-sm mt-4">
                   Menu PDF: /public/menu/menu.pdf
                 </p>

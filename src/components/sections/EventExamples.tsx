@@ -1,16 +1,19 @@
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 /**
  * EventExamples section - Gallery of past events
  * Features photos/videos from previous events with optional descriptions
  */
 export function EventExamples() {
+  const t = useTranslations('EventExamples');
+  
   // TODO: Replace with actual images
   const eventImages = [
-    { src: '/images/events/1.jpg', alt: 'Event 1', description: 'Birthday party' },
-    { src: '/images/events/2.jpg', alt: 'Event 2', description: 'Corporate event' },
-    { src: '/images/events/3.jpg', alt: 'Event 3', description: 'Concert' },
-    { src: '/images/events/4.jpg', alt: 'Event 4', description: 'Private party' },
+    { src: '/images/events/1.jpg', alt: 'Event 1', descriptionKey: 'birthday' },
+    { src: '/images/events/2.jpg', alt: 'Event 2', descriptionKey: 'corporate' },
+    { src: '/images/events/3.jpg', alt: 'Event 3', descriptionKey: 'concert' },
+    { src: '/images/events/4.jpg', alt: 'Event 4', descriptionKey: 'privateParty' },
   ];
 
   return (
@@ -18,7 +21,7 @@ export function EventExamples() {
       <div className="container mx-auto px-4">
         {/* Title */}
         <h2 className="text-4xl md:text-5xl font-bold font-serif text-center mb-12 text-foreground">
-          Event Examples
+          {t('title')}
         </h2>
 
         {/* Gallery Grid */}
@@ -43,7 +46,7 @@ export function EventExamples() {
               
               {/* Description overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                <p className="text-white text-sm font-medium">{image.description}</p>
+                <p className="text-white text-sm font-medium">{t(`descriptions.${image.descriptionKey}`)}</p>
               </div>
             </div>
           ))}

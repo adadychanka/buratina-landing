@@ -10,7 +10,8 @@
   },
   "About": {
     "title": "O nama",
-    "content": "Sadržaj o baru..."
+    "content": "Sadržaj o baru...",
+    "callUs": "Pozovite nas"
   },
   "Menu": {
     "title": "Meni",
@@ -20,16 +21,43 @@
       "nonAlcohol": "Bezalkoholna pića",
       "food": "Hrana"
     },
-    "viewMenu": "Pogledaj meni"
+    "viewMenu": "Pogledaj meni",
+    "menuItemsPlaceholder": "Stavke menija za {category} će biti prikazane ovde",
+    "close": "Zatvori",
+    "pdfViewerPlaceholder": "PDF pregledač će biti implementiran ovde"
   },
   "Events": {
     "title": "Događaji i uslovi",
     "formats": "Opis formata događaja...",
+    "formatsTitle": "Formati događaja",
+    "formatsList": {
+      "birthday": "Rođendani",
+      "corporate": "Korporativni događaji",
+      "privateParty": "Privatne žurke",
+      "concert": "Koncerti / DJ setovi",
+      "lecture": "Predavanja",
+      "photoshoot": "Fotografisanja"
+    },
     "conditions": "Uslovi za organizaciju događaja...",
+    "conditionsTitle": "Uslovi",
+    "conditionsList": {
+      "capacity": "Kapacitet: Do 200 gostiju",
+      "deposit": "Potreban je minimalni depozit",
+      "duration": "Trajanje događaja: Fleksibilno",
+      "equipment": "Dostupna oprema: Zvučni sistem, osvetljenje",
+      "catering": "Opcije kateringa: Partner katering ili sopstvena hrana",
+      "specialMenu": "Dostupan poseban meni"
+    },
     "cta": "Pošalji zahtev za događaj"
   },
   "EventExamples": {
-    "title": "Primeri događaja"
+    "title": "Primeri događaja",
+    "descriptions": {
+      "birthday": "Rođendan",
+      "corporate": "Korporativni događaj",
+      "concert": "Koncert",
+      "privateParty": "Privatna žurka"
+    }
   },
   "ContactForm": {
     "title": "Kontaktirajte nas",
@@ -63,7 +91,15 @@
     "title": "Kako nas naći",
     "address": "Adresa",
     "hours": "Radno vreme",
-    "directions": "Kako doći"
+    "hoursList": {
+      "weekday": "Ponedeljak - Četvrtak: 18:00 - 02:00",
+      "weekend": "Petak - Subota: 18:00 - 03:00",
+      "sunday": "Nedelja: 18:00 - 01:00"
+    },
+    "directions": "Kako doći",
+    "directionsText": "Detaljne uputstva kako doći do bara biće data ovde.",
+    "mapPlaceholder": "Mapa će biti ugrađena ovde",
+    "mapIntegration": "Google Maps ili Leaflet integracija"
   },
   "SocialMedia": {
     "title": "Pratite nas"
@@ -73,6 +109,14 @@
     "menu": "Meni",
     "events": "Događaji",
     "contact": "Kontakt",
-    "location": "Lokacija"
+    "location": "Lokacija",
+    "toggleMenu": "Prebaci meni",
+    "menuTitle": "Meni",
+    "menuDescription": "Navigacija kroz stranicu"
+  },
+  "Footer": {
+    "subtitle": "Najmističniji bar u Beogradu",
+    "contact": "Kontakt",
+    "copyright": "© {year} Buratina Bar. Sva prava zadržana."
   }
 }

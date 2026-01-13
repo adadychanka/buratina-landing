@@ -93,13 +93,13 @@ export function Header() {
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
                 <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle menu</span>
+                <span className="sr-only">{t('toggleMenu')}</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
               <SheetHeader>
-                <SheetTitle>Menu</SheetTitle>
-                <SheetDescription>Navigate through the page</SheetDescription>
+                <SheetTitle>{t('menuTitle')}</SheetTitle>
+                <SheetDescription>{t('menuDescription')}</SheetDescription>
               </SheetHeader>
               <nav className="flex flex-col space-y-4 mt-6">
                 {navItems.map((item) => (

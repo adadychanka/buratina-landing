@@ -7,6 +7,7 @@ import { Instagram, Send, Music } from 'lucide-react';
  */
 export function Footer() {
   const t = useTranslations('SocialMedia');
+  const tFooter = useTranslations('Footer');
 
   const currentYear = new Date().getFullYear();
 
@@ -36,7 +37,7 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-bold font-serif text-foreground">Buratina Bar</h3>
             <p className="text-sm text-muted-foreground">
-              The most mystical bar in Belgrade
+              {tFooter('subtitle')}
             </p>
           </div>
 
@@ -64,7 +65,7 @@ export function Footer() {
 
           {/* Contact */}
           <div className="space-y-4">
-            <h4 className="text-sm font-semibold">Contact</h4>
+            <h4 className="text-sm font-semibold">{tFooter('contact')}</h4>
             <div className="text-sm text-muted-foreground space-y-1">
               <p>Belgrade, Serbia</p>
               <Link
@@ -79,7 +80,7 @@ export function Footer() {
 
         {/* Copyright */}
         <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p>© {currentYear} Buratina Bar. All rights reserved.</p>
+          <p>{tFooter('copyright', { year: currentYear })}</p>
         </div>
       </div>
     </footer>

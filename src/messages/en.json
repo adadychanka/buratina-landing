@@ -10,7 +10,8 @@
     },
     "About": {
         "title": "About us",
-        "content": "About the bar content..."
+        "content": "About the bar content...",
+        "callUs": "Call us"
     },
     "Menu": {
         "title": "Menu",
@@ -20,16 +21,43 @@
             "nonAlcohol": "Non-alcoholic drinks",
             "food": "Food"
         },
-        "viewMenu": "View menu"
+        "viewMenu": "View menu",
+        "menuItemsPlaceholder": "Menu items for {category} will be displayed here",
+        "close": "Close",
+        "pdfViewerPlaceholder": "PDF viewer will be implemented here"
     },
     "Events": {
         "title": "Events and conditions",
         "formats": "Event formats description...",
+        "formatsTitle": "Event Formats",
+        "formatsList": {
+            "birthday": "Birthdays",
+            "corporate": "Corporate events",
+            "privateParty": "Private parties",
+            "concert": "Concerts / DJ sets",
+            "lecture": "Lectures",
+            "photoshoot": "Photoshoots"
+        },
         "conditions": "Event conditions...",
+        "conditionsTitle": "Conditions",
+        "conditionsList": {
+            "capacity": "Capacity: Up to 200 guests",
+            "deposit": "Minimum deposit required",
+            "duration": "Event duration: Flexible",
+            "equipment": "Available equipment: Sound system, lighting",
+            "catering": "Catering options: Partner catering or own food",
+            "specialMenu": "Special menu available"
+        },
         "cta": "Submit event request"
     },
     "EventExamples": {
-        "title": "Event examples"
+        "title": "Event examples",
+        "descriptions": {
+            "birthday": "Birthday party",
+            "corporate": "Corporate event",
+            "concert": "Concert",
+            "privateParty": "Private party"
+        }
     },
     "ContactForm": {
         "title": "Contact us",
@@ -63,7 +91,15 @@
         "title": "Find us",
         "address": "Address",
         "hours": "Opening hours",
-        "directions": "How to get here"
+        "hoursList": {
+            "weekday": "Monday - Thursday: 18:00 - 02:00",
+            "weekend": "Friday - Saturday: 18:00 - 03:00",
+            "sunday": "Sunday: 18:00 - 01:00"
+        },
+        "directions": "How to get here",
+        "directionsText": "Detailed directions on how to reach the bar will be provided here.",
+        "mapPlaceholder": "Map will be embedded here",
+        "mapIntegration": "Google Maps or Leaflet integration"
     },
     "SocialMedia": {
         "title": "Follow us"
@@ -73,6 +109,14 @@
         "menu": "Menu",
         "events": "Events",
         "contact": "Contact",
-        "location": "Location"
+        "location": "Location",
+        "toggleMenu": "Toggle menu",
+        "menuTitle": "Menu",
+        "menuDescription": "Navigate through the page"
+    },
+    "Footer": {
+        "subtitle": "The most mystical bar in Belgrade",
+        "contact": "Contact",
+        "copyright": "© {year} Buratina Bar. All rights reserved."
     }
 }
