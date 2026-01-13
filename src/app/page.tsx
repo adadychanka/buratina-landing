@@ -11,15 +11,13 @@ import { routing } from '@/i18n/routing';
  *   - `/en`, `/ru` or `/sr` (because `localePrefix: 'always'`).
  * - If detection fails or language is not supported, falls back to English (`/en`).
  */
-export default function RootPage() {
-  const headersList = headers();
+export default async function RootPage() {
+  const headersList = await headers();
   const acceptLanguage = headersList.get('accept-language');
 
   const detectedLocale = detectLocaleFromHeader(acceptLanguage);
 
-  const supportedLocales = routing.locales as (typeof routing.locales)[number][];
-
-  const finalLocale = supportedLocales.includes(detectedLocale as (typeof supportedLocales)[number])
+  const finalLocale = routing.locales.includes(detectedLocale as 'en' | 'ru' | 'sr')
     ? detectedLocale
     : routing.defaultLocale;
 

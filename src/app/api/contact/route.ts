@@ -7,9 +7,8 @@ import { z } from 'zod';
  * API route for handling contact form submissions
  * Validates data, sends email via Resend, and sends notification to Telegram
  */
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request: Request) {
+  const resend = new Resend(process.env.RESEND_API_KEY);
   try {
     const body = await request.json();
 
@@ -42,7 +41,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({
       success: true,
-      messageId: emailResult.id,
+      messageId: emailResult.data?.id || null,
     });
   } catch (error) {
     if (error instanceof z.ZodError) {
