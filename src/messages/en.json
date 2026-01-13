@@ -1,78 +1,78 @@
 {
-  "Hero": {
-    "title": "Buratina Bar",
-    "subtitle": "The most mystical bar in Belgrade",
-    "description": "An atmospheric description of the bar...",
-    "cta": {
-      "book": "Book a table",
-      "event": "Host an event"
+    "Hero": {
+        "title": "Buratina Bar",
+        "subtitle": "The most mystical bar in Belgrade",
+        "description": "An atmospheric description of the bar...",
+        "cta": {
+            "book": "Book a table",
+            "event": "Host an event"
+        }
+    },
+    "About": {
+        "title": "About us",
+        "content": "About the bar content..."
+    },
+    "Menu": {
+        "title": "Menu",
+        "categories": {
+            "cocktails": "Cocktail menu",
+            "alcohol": "Alcoholic drinks",
+            "nonAlcohol": "Non-alcoholic drinks",
+            "food": "Food"
+        },
+        "viewMenu": "View menu"
+    },
+    "Events": {
+        "title": "Events and conditions",
+        "formats": "Event formats description...",
+        "conditions": "Event conditions...",
+        "cta": "Submit event request"
+    },
+    "EventExamples": {
+        "title": "Event examples"
+    },
+    "ContactForm": {
+        "title": "Contact us",
+        "name": "Name",
+        "namePlaceholder": "Enter your name",
+        "phone": "Phone",
+        "phonePlaceholder": "+381...",
+        "contact": "Additional contact",
+        "contactPlaceholder": "Email, phone or Instagram",
+        "eventDate": "Event date",
+        "eventType": "Event type",
+        "selectEventType": "Select event type",
+        "eventTypes": {
+            "birthday": "Birthday",
+            "corporate": "Corporate event",
+            "privateParty": "Private party",
+            "concert": "Concert / DJ set",
+            "lecture": "Lecture",
+            "photoshoot": "Photoshoot",
+            "other": "Other"
+        },
+        "guestCount": "Number of guests",
+        "guestCountPlaceholder": "Enter number of guests",
+        "consent": "I agree to the processing of personal data",
+        "submit": "Submit",
+        "submitting": "Submitting...",
+        "success": "Request submitted successfully!",
+        "error": "An error occurred. Please try again."
+    },
+    "Location": {
+        "title": "Find us",
+        "address": "Address",
+        "hours": "Opening hours",
+        "directions": "How to get here"
+    },
+    "SocialMedia": {
+        "title": "Follow us"
+    },
+    "Navigation": {
+        "about": "About",
+        "menu": "Menu",
+        "events": "Events",
+        "contact": "Contact",
+        "location": "Location"
     }
-  },
-  "About": {
-    "title": "About us",
-    "content": "About the bar content..."
-  },
-  "Menu": {
-    "title": "Menu",
-    "categories": {
-      "cocktails": "Cocktail menu",
-      "alcohol": "Alcoholic drinks",
-      "nonAlcohol": "Non-alcoholic drinks",
-      "food": "Food"
-    },
-    "viewMenu": "View menu"
-  },
-  "Events": {
-    "title": "Events and conditions",
-    "formats": "Event formats description...",
-    "conditions": "Event conditions...",
-    "cta": "Submit event request"
-  },
-  "EventExamples": {
-    "title": "Event examples"
-  },
-  "ContactForm": {
-    "title": "Contact us",
-    "name": "Name",
-    "namePlaceholder": "Enter your name",
-    "phone": "Phone",
-    "phonePlaceholder": "+381...",
-    "contact": "Additional contact",
-    "contactPlaceholder": "Email, phone or Instagram",
-    "eventDate": "Event date",
-    "eventType": "Event type",
-    "selectEventType": "Select event type",
-    "eventTypes": {
-      "birthday": "Birthday",
-      "corporate": "Corporate event",
-      "privateParty": "Private party",
-      "concert": "Concert / DJ set",
-      "lecture": "Lecture",
-      "photoshoot": "Photoshoot",
-      "other": "Other"
-    },
-    "guestCount": "Number of guests",
-    "guestCountPlaceholder": "Enter number of guests",
-    "consent": "I agree to the processing of personal data",
-    "submit": "Submit",
-    "submitting": "Submitting...",
-    "success": "Request submitted successfully!",
-    "error": "An error occurred. Please try again."
-  },
-  "Location": {
-    "title": "Find us",
-    "address": "Address",
-    "hours": "Opening hours",
-    "directions": "How to get here"
-  },
-  "SocialMedia": {
-    "title": "Follow us"
-  },
-  "Navigation": {
-    "about": "About",
-    "menu": "Menu",
-    "events": "Events",
-    "contact": "Contact",
-    "location": "Location"
-  }
 }
