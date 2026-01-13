@@ -24,7 +24,19 @@
     "viewMenu": "Pogledaj meni",
     "menuItemsPlaceholder": "Stavke menija za {category} će biti prikazane ovde",
     "close": "Zatvori",
-    "pdfViewerPlaceholder": "PDF pregledač će biti implementiran ovde"
+    "loading": "Učitavanje menija...",
+    "loadError": "Neuspešno učitavanje menija",
+    "loadErrorDescription": "Molimo pokušajte kasnije ili nas kontaktirajte ako se problem nastavi.",
+    "menuNotFound": "Meni nije dostupan na vašem jeziku",
+    "menuNotFoundDescription": "Meni je trenutno dostupan samo na engleskom jeziku.",
+    "previous": "Prethodna",
+    "next": "Sledeća",
+    "page": "Strana {current} od {total}",
+    "zoomIn": "+",
+    "zoomOut": "−",
+    "resetZoom": "Resetuj",
+    "reset": "Resetuj",
+    "zoomLevel": "Nivo zumiranja"
   },
   "Events": {
     "title": "Događaji i uslovi",

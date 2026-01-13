@@ -24,7 +24,19 @@
     "viewMenu": "View menu",
     "menuItemsPlaceholder": "Menu items for {category} will be displayed here",
     "close": "Close",
-    "pdfViewerPlaceholder": "PDF viewer will be implemented here"
+    "loading": "Loading menu...",
+    "loadError": "Failed to load menu",
+    "loadErrorDescription": "Please try again later or contact us if the problem persists.",
+    "menuNotFound": "Menu not available in your language",
+    "menuNotFoundDescription": "The menu is currently only available in English.",
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page {current} of {total}",
+    "zoomIn": "+",
+    "zoomOut": "−",
+    "resetZoom": "Reset",
+    "reset": "Reset",
+    "zoomLevel": "Zoom level"
   },
   "Events": {
     "title": "Events and conditions",

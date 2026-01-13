@@ -24,7 +24,19 @@
     "viewMenu": "Посмотреть меню",
     "menuItemsPlaceholder": "Пункты меню для {category} будут отображаться здесь",
     "close": "Закрыть",
-    "pdfViewerPlaceholder": "Просмотрщик PDF будет реализован здесь"
+    "loading": "Загрузка меню...",
+    "loadError": "Не удалось загрузить меню",
+    "loadErrorDescription": "Пожалуйста, попробуйте позже или свяжитесь с нами, если проблема сохраняется.",
+    "menuNotFound": "Меню недоступно на вашем языке",
+    "menuNotFoundDescription": "Меню в настоящее время доступно только на английском языке.",
+    "previous": "Назад",
+    "next": "Вперёд",
+    "page": "Страница {current} из {total}",
+    "zoomIn": "+",
+    "zoomOut": "−",
+    "resetZoom": "Сброс",
+    "reset": "Сброс",
+    "zoomLevel": "Уровень масштаба"
   },
   "Events": {
     "title": "Мероприятия и условия",
