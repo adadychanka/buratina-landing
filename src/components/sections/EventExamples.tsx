@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl';
  */
 export function EventExamples() {
   const t = useTranslations('EventExamples');
-  
+
   // TODO: Replace with actual images
   const eventImages = [
     { src: '/images/events/1.jpg', alt: 'Event 1', descriptionKey: 'birthday' },
@@ -27,10 +27,7 @@ export function EventExamples() {
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {eventImages.map((image, index) => (
-            <div
-              key={index}
-              className="group relative aspect-[4/3] rounded-lg overflow-hidden"
-            >
+            <div key={index} className="group relative aspect-[4/3] rounded-lg overflow-hidden">
               {/* Placeholder for images */}
               <div className="absolute inset-0 bg-neutral-200 dark:bg-neutral-800 flex items-center justify-center">
                 <span className="text-neutral-400 text-sm">{image.alt}</span>
@@ -43,10 +40,12 @@ export function EventExamples() {
                 className="object-cover transition-transform group-hover:scale-105"
                 loading="lazy"
               /> */}
-              
+
               {/* Description overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                <p className="text-white text-sm font-medium">{t(`descriptions.${image.descriptionKey}`)}</p>
+                <p className="text-white text-sm font-medium">
+                  {t(`descriptions.${image.descriptionKey}`)}
+                </p>
               </div>
             </div>
           ))}

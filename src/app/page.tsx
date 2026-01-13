@@ -1,6 +1,6 @@
-import {headers} from 'next/headers';
-import {redirect} from 'next/navigation';
-import {routing} from '@/i18n/routing';
+import { headers } from 'next/headers';
+import { redirect } from 'next/navigation';
+import { routing } from '@/i18n/routing';
 
 /**
  * Root page - handles requests to `/` without an explicit locale.
@@ -19,9 +19,7 @@ export default function RootPage() {
 
   const supportedLocales = routing.locales as (typeof routing.locales)[number][];
 
-  const finalLocale = supportedLocales.includes(
-    detectedLocale as (typeof supportedLocales)[number],
-  )
+  const finalLocale = supportedLocales.includes(detectedLocale as (typeof supportedLocales)[number])
     ? detectedLocale
     : routing.defaultLocale;
 
@@ -49,4 +47,3 @@ function detectLocaleFromHeader(header: string | null): string {
 
   return routing.defaultLocale;
 }
-

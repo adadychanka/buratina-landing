@@ -1,6 +1,5 @@
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
-import Image from 'next/image';
 import Link from 'next/link';
 
 /**
@@ -29,9 +28,7 @@ export function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
           {/* Text Content */}
           <div className="space-y-6">
-            <p className="text-lg text-muted-foreground">
-              {t('content')}
-            </p>
+            <p className="text-lg text-muted-foreground">{t('content')}</p>
             {/* TODO: Add more paragraphs from translations */}
           </div>
 
@@ -46,9 +43,7 @@ export function About() {
               >
                 {/* Placeholder for images */}
                 <div className="absolute inset-0 bg-neutral-200 dark:bg-neutral-800 flex items-center justify-center">
-                  <span className="text-neutral-400 text-sm">
-                    {image.alt}
-                  </span>
+                  <span className="text-neutral-400 text-sm">{image.alt}</span>
                 </div>
                 {/* TODO: Replace with actual Image component when images are available */}
                 {/* <Image

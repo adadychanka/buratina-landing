@@ -24,13 +24,17 @@ export function Location() {
           <div className="space-y-8">
             {/* Address */}
             <div>
-              <h3 className="text-2xl font-semibold font-serif mb-4 text-foreground">{t('address')}</h3>
+              <h3 className="text-2xl font-semibold font-serif mb-4 text-foreground">
+                {t('address')}
+              </h3>
               <p className="text-lg text-muted-foreground">{address}</p>
             </div>
 
             {/* Opening Hours */}
             <div>
-              <h3 className="text-2xl font-semibold font-serif mb-4 text-foreground">{t('hours')}</h3>
+              <h3 className="text-2xl font-semibold font-serif mb-4 text-foreground">
+                {t('hours')}
+              </h3>
               <div className="space-y-2 text-muted-foreground">
                 <p>{t('hoursList.weekday')}</p>
                 <p>{t('hoursList.weekend')}</p>
@@ -40,7 +44,9 @@ export function Location() {
 
             {/* Directions */}
             <div>
-              <h3 className="text-2xl font-semibold font-serif mb-4 text-foreground">{t('directions')}</h3>
+              <h3 className="text-2xl font-semibold font-serif mb-4 text-foreground">
+                {t('directions')}
+              </h3>
               <p className="text-muted-foreground leading-relaxed">
                 {t('directionsText')}
                 {/* TODO: Add actual directions text */}
@@ -54,9 +60,7 @@ export function Location() {
             <div className="absolute inset-0 bg-neutral-200 dark:bg-neutral-800 flex items-center justify-center">
               <div className="text-center">
                 <p className="text-neutral-400 mb-2">{t('mapPlaceholder')}</p>
-                <p className="text-sm text-neutral-500">
-                  {t('mapIntegration')}
-                </p>
+                <p className="text-sm text-neutral-500">{t('mapIntegration')}</p>
                 <p className="text-xs text-neutral-500 mt-2">
                   Coordinates: {coordinates.lat}, {coordinates.lng}
                 </p>

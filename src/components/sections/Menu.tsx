@@ -40,11 +40,7 @@ export function Menu() {
             </TabsList>
 
             {menuCategories.map((category) => (
-              <TabsContent
-                key={category.key}
-                value={category.key}
-                className="mt-8"
-              >
+              <TabsContent key={category.key} value={category.key} className="mt-8">
                 <div className="text-center text-muted-foreground">
                   {/* TODO: Add menu items for each category */}
                   <p>{t('menuItemsPlaceholder', { category: category.label })}</p>
@@ -79,9 +75,7 @@ export function Menu() {
               <div className="text-center text-muted-foreground py-12">
                 {/* TODO: Add PDF viewer component */}
                 <p>{t('pdfViewerPlaceholder')}</p>
-                <p className="text-sm mt-4">
-                  Menu PDF: /public/menu/menu.pdf
-                </p>
+                <p className="text-sm mt-4">Menu PDF: /public/menu/menu.pdf</p>
               </div>
             </div>
           </div>

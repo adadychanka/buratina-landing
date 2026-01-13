@@ -21,8 +21,7 @@ export async function POST(request: Request) {
 
     // Send email via Resend
     const emailResult = await resend.emails.send({
-      from:
-        process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev',
+      from: process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev',
       to: process.env.CONTACT_EMAIL!,
       subject: 'New Event Request - Buratina Bar',
       html: emailContent,
@@ -31,18 +30,15 @@ export async function POST(request: Request) {
 
     // Send notification to Telegram
     const telegramMessage = formatTelegramMessage(validatedData);
-    await fetch(
-      `https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          chat_id: process.env.TELEGRAM_CHAT_ID,
-          text: telegramMessage,
-          parse_mode: 'HTML',
-        }),
-      }
-    );
+    await fetch(`https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        chat_id: process.env.TELEGRAM_CHAT_ID,
+        text: telegramMessage,
+        parse_mode: 'HTML',
+      }),
+    });
 
     return NextResponse.json({
       success: true,
@@ -73,9 +69,7 @@ export async function POST(request: Request) {
 /**
  * Format form data as HTML email content
  */
-function formatEmailContent(
-  data: z.infer<typeof contactFormSchema>
-): string {
+function formatEmailContent(data: z.infer<typeof contactFormSchema>): string {
   return `
     <!DOCTYPE html>
     <html>
@@ -152,9 +146,7 @@ function formatEmailContent(
 /**
  * Format form data as Telegram message
  */
-function formatTelegramMessage(
-  data: z.infer<typeof contactFormSchema>
-): string {
+function formatTelegramMessage(data: z.infer<typeof contactFormSchema>): string {
   return `
 <b>🎉 New Event Request</b>
 

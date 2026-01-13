@@ -36,9 +36,7 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <h3 className="text-lg font-bold font-serif text-foreground">Buratina Bar</h3>
-            <p className="text-sm text-muted-foreground">
-              {tFooter('subtitle')}
-            </p>
+            <p className="text-sm text-muted-foreground">{tFooter('subtitle')}</p>
           </div>
 
           {/* Social Links */}
@@ -68,10 +66,7 @@ export function Footer() {
             <h4 className="text-sm font-semibold">{tFooter('contact')}</h4>
             <div className="text-sm text-muted-foreground space-y-1">
               <p>Belgrade, Serbia</p>
-              <Link
-                href="tel:+381123456789"
-                className="hover:text-foreground transition-colors"
-              >
+              <Link href="tel:+381123456789" className="hover:text-foreground transition-colors">
                 +381 12 345 6789
               </Link>
             </div>

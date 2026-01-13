@@ -8,16 +8,7 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "ignore": [
-      "node_modules",
-      ".next",
-      "dist",
-      "build",
-      ".turbo",
-      "coverage",
-      ".vercel",
-      "public"
-    ]
+    "ignore": ["node_modules", ".next", "dist", "build", ".turbo", "coverage", ".vercel", "public"]
   },
   "formatter": {
     "enabled": true,
@@ -82,13 +73,11 @@
         "noDuplicateParameters": "error",
         "noEmptyBlockStatements": "warn",
         "noFallthroughSwitchClause": "error",
-        "noGlobalObjectCalls": "error",
         "noImplicitAnyLet": "warn",
         "noMisleadingCharacterClass": "error",
         "noPrototypeBuiltins": "error",
         "noRedeclare": "error",
         "noShadowRestrictedNames": "error",
-        "noUnsafeFinally": "error",
         "noUnsafeNegation": "error",
         "useGetterReturn": "error",
         "useValidTypeof": "error"
@@ -110,11 +99,7 @@
       "quoteProperties": "asNeeded",
       "attributePosition": "auto"
     },
-    "globals": [
-      "React",
-      "NextRequest",
-      "NextResponse"
-    ]
+    "globals": ["React", "NextRequest", "NextResponse"]
   },
   "overrides": [
     {

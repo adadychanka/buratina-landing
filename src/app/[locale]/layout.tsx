@@ -32,15 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: 'Buratina Bar - The Most Mystical Bar in Belgrade',
     description:
       'Experience the mystical atmosphere of Buratina Bar in Belgrade. Book a table, host events, and enjoy our unique cocktails and menu.',
-    keywords: [
-      'bar',
-      'Belgrade',
-      'cocktails',
-      'events',
-      'restaurant',
-      'nightlife',
-      'Serbia',
-    ],
+    keywords: ['bar', 'Belgrade', 'cocktails', 'events', 'restaurant', 'nightlife', 'Serbia'],
     authors: [{ name: 'Buratina Bar' }],
     openGraph: {
       type: 'website',
@@ -48,8 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: url,
       siteName: 'Buratina Bar',
       title: 'Buratina Bar - The Most Mystical Bar in Belgrade',
-      description:
-        'Experience the mystical atmosphere of Buratina Bar in Belgrade.',
+      description: 'Experience the mystical atmosphere of Buratina Bar in Belgrade.',
       images: [
         {
           url: `${baseUrl}/og-image.jpg`,
@@ -62,8 +53,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     twitter: {
       card: 'summary_large_image',
       title: 'Buratina Bar - The Most Mystical Bar in Belgrade',
-      description:
-        'Experience the mystical atmosphere of Buratina Bar in Belgrade.',
+      description: 'Experience the mystical atmosphere of Buratina Bar in Belgrade.',
       images: [`${baseUrl}/og-image.jpg`],
     },
     alternates: {

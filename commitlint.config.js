@@ -6,7 +6,11 @@ module.exports = {
   extends: ['@commitlint/config-conventional'],
   rules: {
     // Enforce English-only commit messages
-    'subject-case': [2, 'always', ['lower-case', 'sentence-case', 'start-case', 'pascal-case', 'upper-case']],
+    'subject-case': [
+      2,
+      'always',
+      ['lower-case', 'sentence-case', 'start-case', 'pascal-case', 'upper-case'],
+    ],
     'subject-empty': [2, 'never'],
     'subject-full-stop': [2, 'never', '.'],
     'type-case': [2, 'always', 'lower-case'],

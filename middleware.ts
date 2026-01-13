@@ -4,7 +4,7 @@ import { routing } from './src/i18n/routing';
 /**
  * Next.js middleware for internationalization routing
  * Handles locale detection and URL rewriting
- * 
+ *
  * Features:
  * - Detects locale from Accept-Language header
  * - Falls back to default locale (en) if no match

@@ -58,11 +58,7 @@ export function Hero() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button
-            asChild
-            size="lg"
-            className="w-full sm:w-auto min-w-[200px]"
-          >
+          <Button asChild size="lg" className="w-full sm:w-auto min-w-[200px]">
             <Link href="tel:+381123456789">{t('cta.book')}</Link>
           </Button>
           <Button

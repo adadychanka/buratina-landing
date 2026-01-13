@@ -24,41 +24,22 @@ export const contactFormSchema = z.object({
     .string()
     .optional()
     .refine(
-      (val) =>
-        !val ||
-        val.includes('@') ||
-        val.startsWith('@') ||
-        /^[\+]?[(]?[0-9]/.test(val),
+      (val) => !val || val.includes('@') || val.startsWith('@') || /^[\+]?[(]?[0-9]/.test(val),
       'Please provide email, phone, or Instagram'
     ),
 
   eventDate: z
     .string()
     .optional()
-    .refine(
-      (val) => !val || !isNaN(Date.parse(val)),
-      'Invalid date format'
-    ),
+    .refine((val) => !val || !isNaN(Date.parse(val)), 'Invalid date format'),
 
   eventType: z
-    .enum(
-      [
-        'birthday',
-        'corporate',
-        'private-party',
-        'concert',
-        'lecture',
-        'photoshoot',
-        'other',
-      ],
-      {
-        errorMap: () => ({ message: 'Please select an event type' }),
-      }
-    )
+    .enum(['birthday', 'corporate', 'private-party', 'concert', 'lecture', 'photoshoot', 'other'], {
+      errorMap: () => ({ message: 'Please select an event type' }),
+    })
     .optional(),
 
-  guestCount: z
-    .coerce
+  guestCount: z.coerce
     .number()
     .int('Guest count must be a whole number')
     .min(1, 'Minimum 1 guest')
@@ -66,11 +47,9 @@ export const contactFormSchema = z.object({
     .optional()
     .or(z.literal('')),
 
-  consent: z
-    .boolean()
-    .refine((val) => val === true, {
-      message: 'Consent to data processing is required',
-    }),
+  consent: z.boolean().refine((val) => val === true, {
+    message: 'Consent to data processing is required',
+  }),
 });
 
 // Export TypeScript type inferred from schema

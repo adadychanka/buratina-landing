@@ -35,10 +35,10 @@ export function Events() {
         <div className="max-w-4xl mx-auto space-y-12">
           {/* Event Formats */}
           <div>
-            <h3 className="text-2xl font-semibold font-serif mb-4 text-foreground">{t('formatsTitle')}</h3>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              {t('formats')}
-            </p>
+            <h3 className="text-2xl font-semibold font-serif mb-4 text-foreground">
+              {t('formatsTitle')}
+            </h3>
+            <p className="text-lg text-muted-foreground leading-relaxed">{t('formats')}</p>
             <ul className="mt-4 space-y-2 text-muted-foreground">
               <li>• {t('formatsList.birthday')}</li>
               <li>• {t('formatsList.corporate')}</li>
@@ -51,10 +51,10 @@ export function Events() {
 
           {/* Conditions */}
           <div>
-            <h3 className="text-2xl font-semibold font-serif mb-4 text-foreground">{t('conditionsTitle')}</h3>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              {t('conditions')}
-            </p>
+            <h3 className="text-2xl font-semibold font-serif mb-4 text-foreground">
+              {t('conditionsTitle')}
+            </h3>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-4">{t('conditions')}</p>
             <ul className="space-y-3 text-muted-foreground">
               <li className="flex items-start">
                 <span className="mr-2">•</span>

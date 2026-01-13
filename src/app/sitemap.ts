@@ -15,10 +15,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Generate entries for each locale
   routing.locales.forEach((locale) => {
     routes.forEach((route) => {
-      const url = locale === 'en' 
-        ? `${baseUrl}${route}` 
-        : `${baseUrl}/${locale}${route}`;
-      
+      const url = locale === 'en' ? `${baseUrl}${route}` : `${baseUrl}/${locale}${route}`;
+
       sitemapEntries.push({
         url,
         lastModified: new Date(),

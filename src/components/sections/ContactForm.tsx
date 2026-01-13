@@ -103,18 +103,14 @@ export function ContactForm() {
           {/* Success Message */}
           {submitStatus === 'success' && (
             <div className="mb-6 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
-              <p className="text-green-800 dark:text-green-200 text-center">
-                {t('success')}
-              </p>
+              <p className="text-green-800 dark:text-green-200 text-center">{t('success')}</p>
             </div>
           )}
 
           {/* Error Message */}
           {submitStatus === 'error' && (
             <div className="mb-6 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
-              <p className="text-red-800 dark:text-red-200 text-center">
-                {t('error')}
-              </p>
+              <p className="text-red-800 dark:text-red-200 text-center">{t('error')}</p>
             </div>
           )}
 
@@ -131,9 +127,7 @@ export function ContactForm() {
                 className={cn(errors.name && 'border-destructive')}
               />
               {errors.name && (
-                <p className="mt-1 text-sm text-destructive">
-                  {errors.name.message}
-                </p>
+                <p className="mt-1 text-sm text-destructive">{errors.name.message}</p>
               )}
             </div>
 
@@ -150,9 +144,7 @@ export function ContactForm() {
                 className={cn(errors.phone && 'border-destructive')}
               />
               {errors.phone && (
-                <p className="mt-1 text-sm text-destructive">
-                  {errors.phone.message}
-                </p>
+                <p className="mt-1 text-sm text-destructive">{errors.phone.message}</p>
               )}
             </div>
 
@@ -166,9 +158,7 @@ export function ContactForm() {
                 className={cn(errors.contact && 'border-destructive')}
               />
               {errors.contact && (
-                <p className="mt-1 text-sm text-destructive">
-                  {errors.contact.message}
-                </p>
+                <p className="mt-1 text-sm text-destructive">{errors.contact.message}</p>
               )}
             </div>
 
@@ -182,9 +172,7 @@ export function ContactForm() {
                 className={cn(errors.eventDate && 'border-destructive')}
               />
               {errors.eventDate && (
-                <p className="mt-1 text-sm text-destructive">
-                  {errors.eventDate.message}
-                </p>
+                <p className="mt-1 text-sm text-destructive">{errors.eventDate.message}</p>
               )}
             </div>
 
@@ -193,7 +181,9 @@ export function ContactForm() {
               <Label htmlFor="eventType">{t('eventType')}</Label>
               <Select
                 value={eventType}
-                onValueChange={(value) => setValue('eventType', value as ContactFormData['eventType'])}
+                onValueChange={(value) =>
+                  setValue('eventType', value as ContactFormData['eventType'])
+                }
               >
                 <SelectTrigger
                   id="eventType"
@@ -210,9 +200,7 @@ export function ContactForm() {
                 </SelectContent>
               </Select>
               {errors.eventType && (
-                <p className="mt-1 text-sm text-destructive">
-                  {errors.eventType.message}
-                </p>
+                <p className="mt-1 text-sm text-destructive">{errors.eventType.message}</p>
               )}
             </div>
 
@@ -229,9 +217,7 @@ export function ContactForm() {
                 className={cn(errors.guestCount && 'border-destructive')}
               />
               {errors.guestCount && (
-                <p className="mt-1 text-sm text-destructive">
-                  {errors.guestCount.message}
-                </p>
+                <p className="mt-1 text-sm text-destructive">{errors.guestCount.message}</p>
               )}
             </div>
 
@@ -241,10 +227,7 @@ export function ContactForm() {
                 id="consent"
                 checked={consent}
                 onCheckedChange={(checked) => setValue('consent', checked === true)}
-                className={cn(
-                  'mt-1',
-                  errors.consent && 'border-destructive'
-                )}
+                className={cn('mt-1', errors.consent && 'border-destructive')}
               />
               <Label
                 htmlFor="consent"
@@ -254,18 +237,11 @@ export function ContactForm() {
               </Label>
             </div>
             {errors.consent && (
-              <p className="text-sm text-destructive -mt-4">
-                {errors.consent.message}
-              </p>
+              <p className="text-sm text-destructive -mt-4">{errors.consent.message}</p>
             )}
 
             {/* Submit Button */}
-            <Button
-              type="submit"
-              size="lg"
-              className="w-full"
-              disabled={isSubmitting}
-            >
+            <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
               {isSubmitting ? t('submitting') : t('submit')}
             </Button>
           </form>
