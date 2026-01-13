@@ -1,7 +1,7 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
-import { getMessages } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import type { Metadata } from 'next';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
@@ -23,7 +23,6 @@ type Props = {
  */
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const messages = await getMessages();
 
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://buratina-bar.com';
   const localePath = locale === 'en' ? '' : `/${locale}`;
@@ -97,11 +96,14 @@ export default async function LocaleLayout({ children, params }: Props) {
     notFound();
   }
 
-  // Load messages for the locale
-  const messages = await getMessages();
+  // Set request locale so getMessages() knows which locale to use
+  setRequestLocale(locale);
+
+  // Load messages for the locale - use direct import to ensure correct locale
+  const messages = (await import(`@/messages/${locale}.json`)).default;
 
   return (
-    <NextIntlClientProvider messages={messages}>
+    <NextIntlClientProvider messages={messages} locale={locale}>
       <HtmlLang />
       <div className="flex min-h-screen flex-col">
         <Header />

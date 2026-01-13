@@ -1,6 +1,6 @@
 'use client';
 
-import { useRouter, usePathname } from 'next/navigation';
+import { useLocale } from 'next-intl';
 import { routing } from '@/i18n/routing';
 import {
   Select,
@@ -15,40 +15,30 @@ import {
  * Allows users to switch between supported locales (EN, RU, SR)
  */
 export function LanguageSwitcher() {
-  const router = useRouter();
-  const pathname = usePathname();
-
-  // Extract locale from pathname to ensure it updates when URL changes
-  // Since localePrefix is 'always', locale is always the first segment after root
-  const getLocaleFromPathname = (): string => {
-    const segments = pathname.split('/').filter(Boolean);
-    const firstSegment = segments[0];
-    
-    if (firstSegment && routing.locales.includes(firstSegment as 'en' | 'ru' | 'sr')) {
-      return firstSegment;
-    }
-    
-    return routing.defaultLocale;
-  };
-
-  const locale = getLocaleFromPathname();
+  const locale = useLocale();
 
   const switchLocale = (newLocale: string) => {
-    // Replace locale in pathname
-    const segments = pathname.split('/').filter(Boolean);
-    const currentLocaleIndex = segments.findIndex((seg) =>
+    // Get current full pathname with locale
+    const currentPath = window.location.pathname;
+    const segments = currentPath.split('/').filter(Boolean);
+    
+    // Find and replace locale segment
+    const localeIndex = segments.findIndex((seg) =>
       routing.locales.includes(seg as 'en' | 'ru' | 'sr')
     );
-
-    if (currentLocaleIndex !== -1) {
-      segments[currentLocaleIndex] = newLocale;
+    
+    if (localeIndex !== -1) {
+      segments[localeIndex] = newLocale;
     } else {
-      // If no locale in path (default locale), prepend it
+      // If no locale in path, prepend it
       segments.unshift(newLocale);
     }
-
-    const newPath = '/' + segments.join('/');
-    router.push(newPath);
+    
+    // Use full page reload to ensure translations are loaded correctly
+    // This is necessary because Next.js App Router doesn't always reload
+    // server components when locale changes via client-side navigation
+    const newPath = '/' + segments.join('/') + window.location.search;
+    window.location.href = newPath;
   };
 
   const localeLabels: Record<string, string> = {
