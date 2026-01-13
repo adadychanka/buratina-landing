@@ -2,6 +2,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { getMessages } from 'next-intl/server';
+import type { Metadata } from 'next';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { HtmlLang } from '@/components/layout/HtmlLang';
@@ -15,6 +16,78 @@ type Props = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 };
+
+/**
+ * Generate metadata for SEO
+ * Supports multilingual metadata
+ */
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const messages = await getMessages();
+
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://buratina-bar.com';
+  const localePath = locale === 'en' ? '' : `/${locale}`;
+  const url = `${baseUrl}${localePath}`;
+
+  return {
+    title: 'Buratina Bar - The Most Mystical Bar in Belgrade',
+    description:
+      'Experience the mystical atmosphere of Buratina Bar in Belgrade. Book a table, host events, and enjoy our unique cocktails and menu.',
+    keywords: [
+      'bar',
+      'Belgrade',
+      'cocktails',
+      'events',
+      'restaurant',
+      'nightlife',
+      'Serbia',
+    ],
+    authors: [{ name: 'Buratina Bar' }],
+    openGraph: {
+      type: 'website',
+      locale: locale,
+      url: url,
+      siteName: 'Buratina Bar',
+      title: 'Buratina Bar - The Most Mystical Bar in Belgrade',
+      description:
+        'Experience the mystical atmosphere of Buratina Bar in Belgrade.',
+      images: [
+        {
+          url: `${baseUrl}/og-image.jpg`,
+          width: 1200,
+          height: 630,
+          alt: 'Buratina Bar',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Buratina Bar - The Most Mystical Bar in Belgrade',
+      description:
+        'Experience the mystical atmosphere of Buratina Bar in Belgrade.',
+      images: [`${baseUrl}/og-image.jpg`],
+    },
+    alternates: {
+      canonical: url,
+      languages: {
+        en: `${baseUrl}`,
+        ru: `${baseUrl}/ru`,
+        sr: `${baseUrl}/sr`,
+      },
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+  };
+}
 
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
