@@ -3,7 +3,8 @@ import './globals.css';
 
 /**
  * Root layout for Next.js App Router
- * This layout is minimal - locale-specific layout is in [locale]/layout.tsx
+ * Must contain <html> and <body> tags
+ * Default locale is 'en' - actual locale is set by middleware and locale layout
  */
 export const metadata: Metadata = {
   title: 'Buratina Bar',
@@ -15,5 +16,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return children;
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body>{children}</body>
+    </html>
+  );
 }
