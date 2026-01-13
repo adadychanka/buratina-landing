@@ -1,3 +1,9 @@
+---
+description: Testing and development practices
+globs: ["**/*"]
+alwaysApply: true
+---
+
 # Testing and Development
 
 ## Manual Testing

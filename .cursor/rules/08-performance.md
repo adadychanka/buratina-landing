@@ -1,3 +1,9 @@
+---
+description: Performance optimization guidelines
+globs: ["src/**/*.tsx", "src/**/*.ts"]
+alwaysApply: true
+---
+
 # Performance
 
 ## Image Optimization

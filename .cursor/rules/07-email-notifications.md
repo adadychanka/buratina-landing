@@ -1,3 +1,9 @@
+---
+description: Email and Telegram notification integration guidelines
+globs: ["src/app/api/**/*.ts"]
+alwaysApply: false
+---
+
 # Email and Notifications
 
 ## Resend Integration

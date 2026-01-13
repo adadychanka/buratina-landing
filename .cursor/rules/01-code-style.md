@@ -1,3 +1,9 @@
+---
+description: Code style guidelines and TypeScript rules
+globs: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"]
+alwaysApply: true
+---
+
 # Code Style
 
 ## General Rules

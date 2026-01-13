@@ -1,3 +1,9 @@
+---
+description: Form handling with React Hook Form and Zod validation
+globs: ["src/components/**/*Form*.tsx", "src/lib/validations/**/*.ts"]
+alwaysApply: false
+---
+
 # Form Handling
 
 ## React Hook Form + Zod

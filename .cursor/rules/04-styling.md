@@ -1,3 +1,9 @@
+---
+description: Tailwind CSS styling guidelines and responsive design rules
+globs: ["src/**/*.tsx", "src/**/*.css", "tailwind.config.ts"]
+alwaysApply: true
+---
+
 # Styling
 
 ## Tailwind CSS

@@ -1,3 +1,9 @@
+---
+description: Error handling strategies and best practices
+globs: ["src/**/*.tsx", "src/**/*.ts"]
+alwaysApply: true
+---
+
 # Error Handling
 
 ## General Rules

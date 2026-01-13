@@ -1,3 +1,9 @@
+---
+description: Environment variable management and configuration
+globs: ["**/*.ts", "**/*.tsx", ".env.example"]
+alwaysApply: true
+---
+
 # Environment Variables
 
 ## Rules

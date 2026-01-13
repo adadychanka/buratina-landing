@@ -1,3 +1,9 @@
+---
+description: Planned features and future improvements
+globs: ["**/*"]
+alwaysApply: false
+---
+
 # Future Considerations
 
 ## Planned Features

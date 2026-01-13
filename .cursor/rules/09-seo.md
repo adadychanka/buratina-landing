@@ -1,3 +1,9 @@
+---
+description: SEO optimization best practices and metadata guidelines
+globs: ["src/app/**/layout.tsx", "src/app/**/page.tsx", "src/app/sitemap.ts", "src/app/robots.ts"]
+alwaysApply: false
+---
+
 # SEO Optimization
 
 ## Metadata

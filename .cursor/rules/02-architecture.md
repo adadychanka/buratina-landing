@@ -1,3 +1,9 @@
+---
+description: Project architecture, structure, and component guidelines
+globs: ["src/**/*.tsx", "src/**/*.ts"]
+alwaysApply: true
+---
+
 # Architecture
 
 ## Project Structure

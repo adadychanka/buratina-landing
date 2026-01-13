@@ -1,3 +1,9 @@
+---
+description: Git workflow and commit guidelines
+globs: ["**/*"]
+alwaysApply: true
+---
+
 # Git Workflow
 
 ## Commits

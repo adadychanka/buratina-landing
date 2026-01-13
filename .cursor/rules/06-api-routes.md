@@ -1,3 +1,9 @@
+---
+description: API route development guidelines and best practices
+globs: ["src/app/api/**/*.ts"]
+alwaysApply: false
+---
+
 # API Routes
 
 ## Structure

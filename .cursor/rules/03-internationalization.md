@@ -1,3 +1,9 @@
+---
+description: Internationalization rules and translation guidelines using next-intl
+globs: ["src/**/*.tsx", "src/messages/**/*.json"]
+alwaysApply: true
+---
+
 # Internationalization
 
 ## Rules
