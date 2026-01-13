@@ -1,29 +1,15 @@
-'use client';
-
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { ScrollToButton } from '@/components/ui/scroll-to-button';
 
 /**
  * Hero section - First screen of the landing page
  * Features logo, title, subtitle, background image/video, and CTA buttons
+ * Server component with client-side interactive buttons
  */
-export function Hero() {
-  const t = useTranslations('Hero');
-
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      const headerOffset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
-      });
-    }
-  };
+export async function Hero() {
+  const t = await getTranslations('Hero');
 
   return (
     <section
@@ -61,14 +47,14 @@ export function Hero() {
           <Button asChild size="lg" className="w-full sm:w-auto min-w-[200px]">
             <Link href="tel:+381123456789">{t('cta.book')}</Link>
           </Button>
-          <Button
+          <ScrollToButton
+            targetId="contact"
             variant="outline"
             size="lg"
             className="w-full sm:w-auto min-w-[200px] bg-accent/10 text-accent border-accent/30 hover:bg-accent/20 hover:border-accent/50"
-            onClick={scrollToContact}
           >
             {t('cta.event')}
-          </Button>
+          </ScrollToButton>
         </div>
       </div>
 

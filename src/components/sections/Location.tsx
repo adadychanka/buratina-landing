@@ -1,11 +1,12 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
 /**
  * Location section - How to find us
  * Features address, opening hours, directions, and embedded map
+ * Server component - no client-side interactivity needed
  */
-export function Location() {
-  const t = useTranslations('Location');
+export async function Location() {
+  const t = await getTranslations('Location');
 
   // TODO: Replace with actual address and coordinates
   const address = 'Belgrade, Serbia';

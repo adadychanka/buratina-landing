@@ -1,28 +1,13 @@
-'use client';
-
-import { useTranslations } from 'next-intl';
-import { Button } from '@/components/ui/button';
+import { getTranslations } from 'next-intl/server';
+import { ScrollToButton } from '@/components/ui/scroll-to-button';
 
 /**
  * Events section - Information about events and conditions
  * Features description of event formats, conditions, and CTA button
+ * Server component with client-side interactive button
  */
-export function Events() {
-  const t = useTranslations('Events');
-
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      const headerOffset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
-      });
-    }
-  };
+export async function Events() {
+  const t = await getTranslations('Events');
 
   return (
     <section id="events" className="py-20 bg-background">
@@ -86,9 +71,9 @@ export function Events() {
 
         {/* CTA Button */}
         <div className="text-center mt-12">
-          <Button size="lg" onClick={scrollToContact}>
+          <ScrollToButton targetId="contact" size="lg">
             {t('cta')}
-          </Button>
+          </ScrollToButton>
         </div>
       </div>
     </section>

@@ -1,13 +1,14 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 import { Instagram, Send, Music } from 'lucide-react';
 
 /**
  * Footer component with copyright, social links, and contact information
+ * Server component - no client-side interactivity needed
  */
-export function Footer() {
-  const t = useTranslations('SocialMedia');
-  const tFooter = useTranslations('Footer');
+export async function Footer() {
+  const t = await getTranslations('SocialMedia');
+  const tFooter = await getTranslations('Footer');
 
   const currentYear = new Date().getFullYear();
 

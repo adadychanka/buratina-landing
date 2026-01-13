@@ -1,12 +1,13 @@
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
 /**
  * EventExamples section - Gallery of past events
  * Features photos/videos from previous events with optional descriptions
+ * Server component - hover effects work via CSS
  */
-export function EventExamples() {
-  const t = useTranslations('EventExamples');
+export async function EventExamples() {
+  const t = await getTranslations('EventExamples');
 
   // TODO: Replace with actual images
   const eventImages = [

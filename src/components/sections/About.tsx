@@ -1,13 +1,14 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 /**
  * About section - Information about the bar
  * Features title, text content, image gallery, and CTA button
+ * Server component - no client-side interactivity needed
  */
-export function About() {
-  const t = useTranslations('About');
+export async function About() {
+  const t = await getTranslations('About');
 
   // TODO: Replace with actual images
   const galleryImages = [

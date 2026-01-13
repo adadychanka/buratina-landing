@@ -1,13 +1,14 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 import { Instagram, Send, Music } from 'lucide-react';
 
 /**
  * SocialMedia section - Social media links
  * Features icons with links to Instagram, Telegram, TikTok
+ * Server component - no client-side interactivity needed
  */
-export function SocialMedia() {
-  const t = useTranslations('SocialMedia');
+export async function SocialMedia() {
+  const t = await getTranslations('SocialMedia');
 
   const socialLinks = [
     {

@@ -15,6 +15,7 @@ import {
 import { Menu } from 'lucide-react';
 import { useState } from 'react';
 import { cn } from '@/lib/utils/cn';
+import { scrollToSection } from '@/lib/utils/scroll';
 
 /**
  * Header component with navigation and language switcher
@@ -37,17 +38,7 @@ export function Header() {
     const href = e.currentTarget.getAttribute('href');
     if (href?.startsWith('#')) {
       const targetId = href.slice(1);
-      const element = document.getElementById(targetId);
-      if (element) {
-        const headerOffset = 80; // Header height
-        const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth',
-        });
-      }
+      scrollToSection(targetId, 80);
     }
     setMobileMenuOpen(false);
   };
