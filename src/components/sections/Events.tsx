@@ -28,14 +28,14 @@ export function Events() {
     <section id="events" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Title */}
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+        <h2 className="text-4xl md:text-5xl font-bold font-serif text-center mb-12 text-foreground">
           {t('title')}
         </h2>
 
         <div className="max-w-4xl mx-auto space-y-12">
           {/* Event Formats */}
           <div>
-            <h3 className="text-2xl font-semibold mb-4">Event Formats</h3>
+            <h3 className="text-2xl font-semibold font-serif mb-4 text-foreground">Event Formats</h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
               {t('formats')}
             </p>
@@ -51,7 +51,7 @@ export function Events() {
 
           {/* Conditions */}
           <div>
-            <h3 className="text-2xl font-semibold mb-4">Conditions</h3>
+            <h3 className="text-2xl font-semibold font-serif mb-4 text-foreground">Conditions</h3>
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
               {t('conditions')}
             </p>

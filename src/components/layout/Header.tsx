@@ -58,7 +58,7 @@ export function Header() {
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center space-x-2 font-bold text-xl"
+          className="flex items-center space-x-2 font-bold text-xl font-serif text-foreground hover:text-accent transition-colors"
           onClick={(e) => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -74,7 +74,7 @@ export function Header() {
               key={item.key}
               href={item.href}
               onClick={handleNavClick}
-              className="text-sm font-medium transition-colors hover:text-primary"
+              className="text-sm font-medium transition-colors hover:text-accent"
             >
               {item.label}
             </Link>
@@ -108,7 +108,7 @@ export function Header() {
                     href={item.href}
                     onClick={handleNavClick}
                     className={cn(
-                      'text-sm font-medium transition-colors hover:text-primary',
+                      'text-sm font-medium transition-colors hover:text-accent',
                       'py-2'
                     )}
                   >

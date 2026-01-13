@@ -15,7 +15,7 @@ export function Location() {
     <section id="location" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Title */}
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+        <h2 className="text-4xl md:text-5xl font-bold font-serif text-center mb-12 text-foreground">
           {t('title')}
         </h2>
 
@@ -24,13 +24,13 @@ export function Location() {
           <div className="space-y-8">
             {/* Address */}
             <div>
-              <h3 className="text-2xl font-semibold mb-4">{t('address')}</h3>
+              <h3 className="text-2xl font-semibold font-serif mb-4 text-foreground">{t('address')}</h3>
               <p className="text-lg text-muted-foreground">{address}</p>
             </div>
 
             {/* Opening Hours */}
             <div>
-              <h3 className="text-2xl font-semibold mb-4">{t('hours')}</h3>
+              <h3 className="text-2xl font-semibold font-serif mb-4 text-foreground">{t('hours')}</h3>
               <div className="space-y-2 text-muted-foreground">
                 <p>Monday - Thursday: 18:00 - 02:00</p>
                 <p>Friday - Saturday: 18:00 - 03:00</p>
@@ -40,7 +40,7 @@ export function Location() {
 
             {/* Directions */}
             <div>
-              <h3 className="text-2xl font-semibold mb-4">{t('directions')}</h3>
+              <h3 className="text-2xl font-semibold font-serif mb-4 text-foreground">{t('directions')}</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Detailed directions on how to reach the bar will be provided here.
                 {/* TODO: Add actual directions text */}

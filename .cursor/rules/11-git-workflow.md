@@ -10,6 +10,7 @@ alwaysApply: true
 
 - Make logical commits after each feature/step
 - Write descriptive commit messages
+- **ALWAYS write commit messages in English only** - never use other languages
 - Follow conventional commit format when possible
 - Examples: `feat:`, `fix:`, `docs:`, `refactor:`, `style:`
 

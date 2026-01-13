@@ -3,6 +3,7 @@ import type { Config } from 'tailwindcss';
 /**
  * Tailwind CSS configuration
  * Configured for shadcn/ui with CSS variables support
+ * Mystical and theatrical theme with custom colors and fonts
  */
 const config: Config = {
   darkMode: ['class'],
@@ -54,6 +55,19 @@ const config: Config = {
           '4': 'hsl(var(--chart-4))',
           '5': 'hsl(var(--chart-5))',
         },
+        // Custom mystical colors
+        burgundy: 'hsl(var(--burgundy))',
+        maroon: 'hsl(var(--maroon))',
+        gold: 'hsl(var(--gold))',
+        'warm-brown': 'hsl(var(--warm-brown))',
+        'deep-red': 'hsl(var(--deep-red))',
+        cream: 'hsl(var(--cream))',
+      },
+      fontFamily: {
+        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        serif: ['var(--font-playfair)', 'Georgia', 'serif'],
+        playfair: ['var(--font-playfair)', 'Georgia', 'serif'],
+        inter: ['var(--font-inter)', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
         lg: 'var(--radius)',

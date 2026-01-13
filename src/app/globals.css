@@ -4,62 +4,48 @@
 
 /**
  * Global CSS with shadcn/ui theme variables
- * CSS variables are used for theming and can be customized
+ * Mystical and theatrical color palette inspired by Buratina Bar's aesthetic
+ * Dark theme with deep reds, rich browns, and golden accents
  */
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+    /* Main theme colors - dark mystical palette */
+    --background: 5 15% 6%;
+    --foreground: 48 25% 92%;
+    --card: 5 18% 8%;
+    --card-foreground: 48 25% 92%;
+    --popover: 5 18% 8%;
+    --popover-foreground: 48 25% 92%;
+    --primary: 3 65% 35%;
+    --primary-foreground: 48 25% 95%;
+    --secondary: 22 35% 18%;
+    --secondary-foreground: 48 25% 92%;
+    --muted: 22 35% 18%;
+    --muted-foreground: 48 20% 65%;
+    --accent: 48 90% 58%;
+    --accent-foreground: 5 15% 6%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 48 25% 95%;
+    --border: 3 40% 25%;
+    --input: 3 35% 20%;
+    --ring: 48 85% 55%;
+    
+    /* Custom mystical colors */
+    --burgundy: 3 65% 35%;
+    --maroon: 5 60% 28%;
+    --gold: 48 90% 58%;
+    --warm-brown: 22 35% 18%;
+    --deep-red: 0 70% 30%;
+    --cream: 48 25% 92%;
+    
+    /* Chart colors - adjusted for dark theme */
+    --chart-1: 3 65% 45%;
+    --chart-2: 48 85% 55%;
+    --chart-3: 22 50% 35%;
+    --chart-4: 5 60% 40%;
+    --chart-5: 48 70% 65%;
+    
     --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
   }
 }
 
@@ -69,5 +55,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* Ensure dark theme is always applied */
+    color-scheme: dark;
   }
 }

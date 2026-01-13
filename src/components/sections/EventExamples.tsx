@@ -17,7 +17,7 @@ export function EventExamples() {
     <section id="event-examples" className="py-20 bg-muted/50">
       <div className="container mx-auto px-4">
         {/* Title */}
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+        <h2 className="text-4xl md:text-5xl font-bold font-serif text-center mb-12 text-foreground">
           Event Examples
         </h2>
 
