@@ -30,7 +30,7 @@ export function Footer() {
 
   return (
     <footer className="border-t bg-background">
-      <div className="container px-4 py-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div className="space-y-4">
