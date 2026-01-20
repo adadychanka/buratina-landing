@@ -1,6 +1,7 @@
 import { Footer } from '@/components/layout/Footer';
 import { Header } from '@/components/layout/Header';
 import { HtmlLang } from '@/components/layout/HtmlLang';
+import { ScrollRestorer } from '@/components/layout/ScrollRestorer';
 import { routing } from '@/i18n/routing';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
@@ -96,6 +97,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     <NextIntlClientProvider messages={messages} locale={locale}>
       <HtmlLang />
       <div className="flex min-h-screen flex-col">
+        <ScrollRestorer />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

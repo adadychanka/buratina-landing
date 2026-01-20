@@ -18,9 +18,11 @@ export function LanguageSwitcher() {
   const locale = useLocale();
 
   const switchLocale = (newLocale: string) => {
-    // Get current full pathname with locale
-    const currentPath = window.location.pathname;
-    const segments = currentPath.split('/').filter(Boolean);
+    // Preserve current scroll position via URL param so we can restore it after reload
+    const scrollY = window.scrollY;
+
+    const url = new URL(window.location.href);
+    const segments = url.pathname.split('/').filter(Boolean);
 
     // Find and replace locale segment
     const localeIndex = segments.findIndex((seg) =>
@@ -34,11 +36,12 @@ export function LanguageSwitcher() {
       segments.unshift(newLocale);
     }
 
+    url.pathname = `/${segments.join('/')}`;
+    url.searchParams.set('_scroll', String(scrollY));
+
     // Use full page reload to ensure translations are loaded correctly
-    // This is necessary because Next.js App Router doesn't always reload
-    // server components when locale changes via client-side navigation
-    const newPath = `/${segments.join('/')}${window.location.search}`;
-    window.location.href = newPath;
+    // Scroll position will be restored by ScrollRestorer on the next page
+    window.location.href = url.toString();
   };
 
   const localeLabels: Record<string, string> = {
