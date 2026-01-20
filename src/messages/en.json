@@ -10,7 +10,22 @@
   },
   "About": {
     "title": "About us",
-    "content": "About the bar content...",
+    "paragraphs": [
+      "We believe a bar is more than a place to drink. It’s a space where you slow down, listen, observe, and become part of what’s happening.",
+      "Our bar is hidden from the city’s noise — in a quiet courtyard, underground, behind an unremarkable door. Not for the sake of secrecy, but because atmosphere needs silence, intimacy, and attention to detail.",
+      "Here, speakeasy culture meets theatricality and live music. Each evening feels like a performance without a poster — light, sound, movement behind the bar, and guests who become part of the scene themselves.",
+      "We work with signature cocktails, mood, and the moment. No rush. No templates. No need to pretend.",
+      "This is a place for conversations, pauses, and nights that stay with you. If you’re here, you already know why."
+    ],
+    "gallery": {
+      "alts": [
+        "Buratina Bar interior with warm lighting",
+        "Buratina Bar bar counter and bottles",
+        "Cozy seating area at Buratina Bar",
+        "Underground corridor leading to Buratina Bar",
+        "Guests enjoying the evening at Buratina Bar"
+      ]
+    },
     "callUs": "Call us"
   },
   "Menu": {

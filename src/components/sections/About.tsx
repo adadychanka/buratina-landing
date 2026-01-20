@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { getTranslations } from 'next-intl/server';
+import Image from 'next/image';
 import Link from 'next/link';
 
 /**
@@ -10,11 +11,15 @@ import Link from 'next/link';
 export async function About() {
   const t = await getTranslations('About');
 
-  // TODO: Replace with actual images
+  const paragraphs = t.raw('paragraphs') as string[];
+  const galleryAltTexts = t.raw('gallery.alts') as string[];
+
   const galleryImages = [
-    { src: '/images/about/1.jpg', alt: 'Bar interior 1' },
-    { src: '/images/about/2.jpg', alt: 'Bar interior 2' },
-    { src: '/images/about/3.jpg', alt: 'Bar interior 3' },
+    '/about/IMG_5165.JPG',
+    '/about/IMG_5214.JPG',
+    '/about/IMG_5232.JPG',
+    '/about/IMG_5266.JPG',
+    '/about/IMG_5380.JPG',
   ];
 
   return (
@@ -29,31 +34,30 @@ export async function About() {
         <div className="mb-12 grid items-center gap-12 md:grid-cols-2">
           {/* Text Content */}
           <div className="space-y-6">
-            <p className="text-lg text-muted-foreground">{t('content')}</p>
-            {/* TODO: Add more paragraphs from translations */}
+            {paragraphs.map((paragraph) => (
+              <p key={paragraph} className="text-lg text-muted-foreground">
+                {paragraph}
+              </p>
+            ))}
           </div>
 
           {/* Image Gallery */}
           <div className="grid grid-cols-2 gap-4">
             {galleryImages.map((image, index) => (
               <div
-                key={image.src}
+                key={image}
                 className={`relative aspect-square overflow-hidden rounded-lg ${
                   index === 0 ? 'col-span-2' : ''
                 }`}
               >
-                {/* Placeholder for images */}
-                <div className="absolute inset-0 flex items-center justify-center bg-neutral-200 dark:bg-neutral-800">
-                  <span className="text-neutral-400 text-sm">{image.alt}</span>
-                </div>
-                {/* TODO: Replace with actual Image component when images are available */}
-                {/* <Image
-                  src={image.src}
-                  alt={image.alt}
+                <Image
+                  src={image}
+                  alt={galleryAltTexts[index] ?? ''}
                   fill
                   className="object-cover"
                   loading="lazy"
-                /> */}
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                />
               </div>
             ))}
           </div>
