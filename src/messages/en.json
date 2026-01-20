@@ -2,7 +2,7 @@
   "Hero": {
     "title": "Buratina Bar",
     "subtitle": "The most mystical bar in Belgrade",
-    "description": "An atmospheric description of the bar...",
+    "description": "This bar isn’t found — it’s entered.\nHidden in a quiet courtyard, behind an ordinary doorway, it begins where the city fades away.\nHere, theatre blends with the bar, music with whispers, and cocktails with stories never told out loud.\nEvery night is a stage without a script.\nIf you’re here, you’ve already been let in.",
     "cta": {
       "book": "Book a table",
       "event": "Host an event"
@@ -76,7 +76,7 @@
     "name": "Name",
     "namePlaceholder": "Enter your name",
     "phone": "Phone",
-    "phonePlaceholder": "+381...",
+    "phonePlaceholder": "+381 61 1096732",
     "contact": "Additional contact",
     "contactPlaceholder": "Email, phone or Instagram",
     "eventDate": "Event date",

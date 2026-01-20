@@ -62,7 +62,7 @@ export async function About() {
         {/* CTA Button */}
         <div className="text-center">
           <Button asChild size="lg">
-            <Link href="tel:+381123456789">{t('callUs')}</Link>
+            <Link href="tel:+381611096732">{t('callUs')}</Link>
           </Button>
         </div>
       </div>

@@ -2,7 +2,7 @@
   "Hero": {
     "title": "Buratina Bar",
     "subtitle": "Najmističniji bar u Beogradu",
-    "description": "Atmosferski opis bara...",
+    "description": "Ovaj bar se ne traži — u njega se ulazi.\nSkriven u dvorištu, iza običnih vrata zgrade, počinje tamo gde grad utihne.\nOvde se teatar meša sa barom, muzika sa šapatima, a kokteli sa pričama koje se ne izgovaraju naglas.\nSvaka večer je scena bez scenarija.\nAko si ovde — već si pozvan.",
     "cta": {
       "book": "Rezerviši sto",
       "event": "Organizuj događaj"
@@ -76,7 +76,7 @@
     "name": "Ime",
     "namePlaceholder": "Unesite vaše ime",
     "phone": "Telefon",
-    "phonePlaceholder": "+381...",
+    "phonePlaceholder": "+381 61 1096732",
     "contact": "Dodatni kontakt",
     "contactPlaceholder": "Email, telefon ili Instagram",
     "eventDate": "Datum događaja",

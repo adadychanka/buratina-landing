@@ -67,8 +67,8 @@ export async function Footer() {
             <h4 className="text-sm font-semibold">{tFooter('contact')}</h4>
             <div className="text-sm text-muted-foreground space-y-1">
               <p>Belgrade, Serbia</p>
-              <Link href="tel:+381123456789" className="hover:text-foreground transition-colors">
-                +381 12 345 6789
+              <Link href="tel:+381611096732" className="hover:text-foreground transition-colors">
+                +381 61 109 6732
               </Link>
             </div>
           </div>
