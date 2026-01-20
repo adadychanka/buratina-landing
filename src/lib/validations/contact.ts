@@ -1,5 +1,5 @@
-import * as z from 'zod';
 import type { EventType } from '@/types';
+import * as z from 'zod';
 
 /**
  * Contact form validation schema using Zod
@@ -31,7 +31,7 @@ export const contactFormSchema = z.object({
   eventDate: z
     .string()
     .optional()
-    .refine((val) => !val || !isNaN(Date.parse(val)), 'Invalid date format'),
+    .refine((val) => !val || !Number.isNaN(Date.parse(val)), 'Invalid date format'),
 
   eventType: z
     .enum(['birthday', 'corporate', 'private-party', 'concert', 'lecture', 'photoshoot', 'other'], {

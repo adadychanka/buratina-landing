@@ -1,6 +1,6 @@
+import { Instagram, Music, Send } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
-import { Instagram, Send, Music } from 'lucide-react';
 
 /**
  * SocialMedia section - Social media links
@@ -32,15 +32,15 @@ export async function SocialMedia() {
   ];
 
   return (
-    <section id="social" className="py-20 bg-muted/50">
+    <section id="social" className="bg-muted/50 py-20">
       <div className="container mx-auto px-4">
         {/* Title */}
-        <h2 className="text-4xl md:text-5xl font-bold font-serif text-center mb-12 text-foreground">
+        <h2 className="mb-12 text-center font-bold font-serif text-4xl text-foreground md:text-5xl">
           {t('title')}
         </h2>
 
         {/* Social Icons */}
-        <div className="flex justify-center items-center gap-8">
+        <div className="flex items-center justify-center gap-8">
           {socialLinks.map((social) => {
             const Icon = social.icon;
             return (
@@ -49,11 +49,11 @@ export async function SocialMedia() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center gap-3 p-6 rounded-lg transition-all hover:scale-110 text-muted-foreground hover:text-accent"
+                className="flex flex-col items-center gap-3 rounded-lg p-6 text-muted-foreground transition-all hover:scale-110 hover:text-accent"
                 aria-label={social.name}
               >
                 <Icon className="h-12 w-12" />
-                <span className="text-sm font-medium">{social.name}</span>
+                <span className="font-medium text-sm">{social.name}</span>
               </Link>
             );
           })}

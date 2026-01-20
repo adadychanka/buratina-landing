@@ -1,6 +1,6 @@
+import { routing } from '@/i18n/routing';
 import { headers } from 'next/headers';
 import { redirect } from 'next/navigation';
-import { routing } from '@/i18n/routing';
 
 /**
  * Root page - handles requests to `/` without an explicit locale.

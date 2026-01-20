@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
+import Image from 'next/image';
 
 /**
  * EventExamples section - Gallery of past events
@@ -18,19 +18,19 @@ export async function EventExamples() {
   ];
 
   return (
-    <section id="event-examples" className="py-20 bg-muted/50">
+    <section id="event-examples" className="bg-muted/50 py-20">
       <div className="container mx-auto px-4">
         {/* Title */}
-        <h2 className="text-4xl md:text-5xl font-bold font-serif text-center mb-12 text-foreground">
+        <h2 className="mb-12 text-center font-bold font-serif text-4xl text-foreground md:text-5xl">
           {t('title')}
         </h2>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {eventImages.map((image, index) => (
-            <div key={index} className="group relative aspect-[4/3] rounded-lg overflow-hidden">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {eventImages.map((image) => (
+            <div key={image.src} className="group relative aspect-[4/3] overflow-hidden rounded-lg">
               {/* Placeholder for images */}
-              <div className="absolute inset-0 bg-neutral-200 dark:bg-neutral-800 flex items-center justify-center">
+              <div className="absolute inset-0 flex items-center justify-center bg-neutral-200 dark:bg-neutral-800">
                 <span className="text-neutral-400 text-sm">{image.alt}</span>
               </div>
               {/* TODO: Replace with actual Image component when images are available */}
@@ -43,8 +43,8 @@ export async function EventExamples() {
               /> */}
 
               {/* Description overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                <p className="text-white text-sm font-medium">
+              <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent p-4 opacity-0 transition-opacity group-hover:opacity-100">
+                <p className="font-medium text-sm text-white">
                   {t(`descriptions.${image.descriptionKey}`)}
                 </p>
               </div>

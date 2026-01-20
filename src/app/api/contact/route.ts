@@ -1,6 +1,6 @@
+import { contactFormSchema } from '@/lib/validations/contact';
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
-import { contactFormSchema } from '@/lib/validations/contact';
 import { z } from 'zod';
 
 /**
@@ -19,9 +19,14 @@ export async function POST(request: Request) {
     const emailContent = formatEmailContent(validatedData);
 
     // Send email via Resend
+    const contactEmail = process.env.CONTACT_EMAIL;
+    if (!contactEmail) {
+      throw new Error('CONTACT_EMAIL environment variable is not set');
+    }
+
     const emailResult = await resend.emails.send({
       from: process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev',
-      to: process.env.CONTACT_EMAIL!,
+      to: contactEmail,
       subject: 'New Event Request - Buratina Bar',
       html: emailContent,
       replyTo: validatedData.contact || validatedData.phone,

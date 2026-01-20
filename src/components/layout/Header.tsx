@@ -1,9 +1,7 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
-import Link from 'next/link';
-import { LanguageSwitcher } from '@/components/ui/language-switcher';
 import { Button } from '@/components/ui/button';
+import { LanguageSwitcher } from '@/components/ui/language-switcher';
 import {
   Sheet,
   SheetContent,
@@ -12,10 +10,12 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
-import { Menu } from 'lucide-react';
-import { useState } from 'react';
 import { cn } from '@/lib/utils/cn';
 import { scrollToSection } from '@/lib/utils/scroll';
+import { Menu } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import Link from 'next/link';
+import { useState } from 'react';
 
 /**
  * Header component with navigation and language switcher
@@ -45,11 +45,11 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="mx-auto max-w-7xl flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link
           href="/"
-          className="flex items-center space-x-2 font-bold text-xl font-serif text-foreground hover:text-accent transition-colors"
+          className="flex items-center space-x-2 font-bold font-serif text-foreground text-xl transition-colors hover:text-accent"
           onClick={(e) => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -59,13 +59,13 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-6">
+        <nav className="hidden items-center space-x-6 md:flex">
           {navItems.map((item) => (
             <Link
               key={item.key}
               href={item.href}
               onClick={handleNavClick}
-              className="text-sm font-medium transition-colors hover:text-accent"
+              className="font-medium text-sm transition-colors hover:text-accent"
             >
               {item.label}
             </Link>
@@ -73,12 +73,12 @@ export function Header() {
         </nav>
 
         {/* Desktop Language Switcher */}
-        <div className="hidden md:flex items-center space-x-4">
+        <div className="hidden items-center space-x-4 md:flex">
           <LanguageSwitcher />
         </div>
 
         {/* Mobile Menu */}
-        <div className="flex md:hidden items-center space-x-2">
+        <div className="flex items-center space-x-2 md:hidden">
           <LanguageSwitcher />
           <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
             <SheetTrigger asChild>
@@ -92,14 +92,14 @@ export function Header() {
                 <SheetTitle>{t('menuTitle')}</SheetTitle>
                 <SheetDescription>{t('menuDescription')}</SheetDescription>
               </SheetHeader>
-              <nav className="flex flex-col space-y-4 mt-6">
+              <nav className="mt-6 flex flex-col space-y-4">
                 {navItems.map((item) => (
                   <Link
                     key={item.key}
                     href={item.href}
                     onClick={handleNavClick}
                     className={cn(
-                      'text-sm font-medium transition-colors hover:text-accent',
+                      'font-medium text-sm transition-colors hover:text-accent',
                       'py-2'
                     )}
                   >

@@ -1,5 +1,5 @@
-import { getTranslations } from 'next-intl/server';
 import { Button } from '@/components/ui/button';
+import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 
 /**
@@ -18,15 +18,15 @@ export async function About() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-background">
+    <section id="about" className="bg-background py-20">
       <div className="container mx-auto px-4">
         {/* Title */}
-        <h2 className="text-4xl md:text-5xl font-bold font-serif text-center mb-12 text-foreground">
+        <h2 className="mb-12 text-center font-bold font-serif text-4xl text-foreground md:text-5xl">
           {t('title')}
         </h2>
 
         {/* Content Grid */}
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
+        <div className="mb-12 grid items-center gap-12 md:grid-cols-2">
           {/* Text Content */}
           <div className="space-y-6">
             <p className="text-lg text-muted-foreground">{t('content')}</p>
@@ -37,13 +37,13 @@ export async function About() {
           <div className="grid grid-cols-2 gap-4">
             {galleryImages.map((image, index) => (
               <div
-                key={index}
-                className={`relative aspect-square rounded-lg overflow-hidden ${
+                key={image.src}
+                className={`relative aspect-square overflow-hidden rounded-lg ${
                   index === 0 ? 'col-span-2' : ''
                 }`}
               >
                 {/* Placeholder for images */}
-                <div className="absolute inset-0 bg-neutral-200 dark:bg-neutral-800 flex items-center justify-center">
+                <div className="absolute inset-0 flex items-center justify-center bg-neutral-200 dark:bg-neutral-800">
                   <span className="text-neutral-400 text-sm">{image.alt}</span>
                 </div>
                 {/* TODO: Replace with actual Image component when images are available */}

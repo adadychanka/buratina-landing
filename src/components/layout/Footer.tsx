@@ -1,6 +1,6 @@
+import { Instagram, Music, Send } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
-import { Instagram, Send, Music } from 'lucide-react';
 
 /**
  * Footer component with copyright, social links, and contact information
@@ -32,17 +32,17 @@ export async function Footer() {
 
   return (
     <footer className="border-t bg-background">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-lg font-bold font-serif text-foreground">Buratina Bar</h3>
-            <p className="text-sm text-muted-foreground">{tFooter('subtitle')}</p>
+            <h3 className="font-bold font-serif text-foreground text-lg">Buratina Bar</h3>
+            <p className="text-muted-foreground text-sm">{tFooter('subtitle')}</p>
           </div>
 
           {/* Social Links */}
           <div className="space-y-4">
-            <h4 className="text-sm font-semibold">{t('title')}</h4>
+            <h4 className="font-semibold text-sm">{t('title')}</h4>
             <div className="flex space-x-4">
               {socialLinks.map((social) => {
                 const Icon = social.icon;
@@ -52,7 +52,7 @@ export async function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-muted-foreground transition-colors hover:text-foreground"
                     aria-label={social.name}
                   >
                     <Icon className="h-5 w-5" />
@@ -64,10 +64,10 @@ export async function Footer() {
 
           {/* Contact */}
           <div className="space-y-4">
-            <h4 className="text-sm font-semibold">{tFooter('contact')}</h4>
-            <div className="text-sm text-muted-foreground space-y-1">
+            <h4 className="font-semibold text-sm">{tFooter('contact')}</h4>
+            <div className="space-y-1 text-muted-foreground text-sm">
               <p>Belgrade, Serbia</p>
-              <Link href="tel:+381611096732" className="hover:text-foreground transition-colors">
+              <Link href="tel:+381611096732" className="transition-colors hover:text-foreground">
                 +381 61 109 6732
               </Link>
             </div>
@@ -75,7 +75,7 @@ export async function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
+        <div className="mt-8 border-t pt-8 text-center text-muted-foreground text-sm">
           <p>{tFooter('copyright', { year: currentYear })}</p>
         </div>
       </div>

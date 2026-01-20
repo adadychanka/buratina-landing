@@ -1,8 +1,8 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import { MenuModal } from './MenuModal';
 
@@ -22,15 +22,15 @@ export function Menu() {
   ];
 
   return (
-    <section id="menu" className="py-20 bg-muted/50">
+    <section id="menu" className="bg-muted/50 py-20">
       <div className="container mx-auto px-4">
         {/* Title */}
-        <h2 className="text-4xl md:text-5xl font-bold font-serif text-center mb-12 text-foreground">
+        <h2 className="mb-12 text-center font-bold font-serif text-4xl text-foreground md:text-5xl">
           {t('title')}
         </h2>
 
         {/* Menu Tabs */}
-        <div className="max-w-4xl mx-auto mb-8">
+        <div className="mx-auto mb-8 max-w-4xl">
           <Tabs defaultValue={menuCategories[0].key} className="w-full">
             <TabsList className="grid w-full grid-cols-2 md:grid-cols-4">
               {menuCategories.map((category) => (

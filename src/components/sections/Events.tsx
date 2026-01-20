@@ -1,5 +1,5 @@
-import { getTranslations } from 'next-intl/server';
 import { ScrollToButton } from '@/components/ui/scroll-to-button';
+import { getTranslations } from 'next-intl/server';
 
 /**
  * Events section - Information about events and conditions
@@ -10,17 +10,17 @@ export async function Events() {
   const t = await getTranslations('Events');
 
   return (
-    <section id="events" className="py-20 bg-background">
+    <section id="events" className="bg-background py-20">
       <div className="container mx-auto px-4">
         {/* Title */}
-        <h2 className="text-4xl md:text-5xl font-bold font-serif text-center mb-12 text-foreground">
+        <h2 className="mb-12 text-center font-bold font-serif text-4xl text-foreground md:text-5xl">
           {t('title')}
         </h2>
 
-        <div className="max-w-4xl mx-auto space-y-12">
+        <div className="mx-auto max-w-4xl space-y-12">
           {/* Event Formats */}
           <div>
-            <h3 className="text-2xl font-semibold font-serif mb-4 text-foreground">
+            <h3 className="mb-4 font-semibold font-serif text-2xl text-foreground">
               {t('formatsTitle')}
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed">{t('formats')}</p>
@@ -36,10 +36,10 @@ export async function Events() {
 
           {/* Conditions */}
           <div>
-            <h3 className="text-2xl font-semibold font-serif mb-4 text-foreground">
+            <h3 className="mb-4 font-semibold font-serif text-2xl text-foreground">
               {t('conditionsTitle')}
             </h3>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-4">{t('conditions')}</p>
+            <p className="mb-4 text-lg text-muted-foreground leading-relaxed">{t('conditions')}</p>
             <ul className="space-y-3 text-muted-foreground">
               <li className="flex items-start">
                 <span className="mr-2">•</span>
@@ -70,7 +70,7 @@ export async function Events() {
         </div>
 
         {/* CTA Button */}
-        <div className="text-center mt-12">
+        <div className="mt-12 text-center">
           <ScrollToButton targetId="contact" size="lg">
             {t('cta')}
           </ScrollToButton>

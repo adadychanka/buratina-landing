@@ -1,5 +1,5 @@
-import { MetadataRoute } from 'next';
 import { routing } from '@/i18n/routing';
+import type { MetadataRoute } from 'next';
 
 /**
  * Generate sitemap.xml for SEO

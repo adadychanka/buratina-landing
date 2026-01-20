@@ -1,11 +1,11 @@
-import { NextIntlClientProvider } from 'next-intl';
-import { notFound } from 'next/navigation';
-import { routing } from '@/i18n/routing';
-import { setRequestLocale } from 'next-intl/server';
-import type { Metadata } from 'next';
-import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { Header } from '@/components/layout/Header';
 import { HtmlLang } from '@/components/layout/HtmlLang';
+import { routing } from '@/i18n/routing';
+import type { Metadata } from 'next';
+import { NextIntlClientProvider } from 'next-intl';
+import { setRequestLocale } from 'next-intl/server';
+import { notFound } from 'next/navigation';
 
 /**
  * Locale-specific layout

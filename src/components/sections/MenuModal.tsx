@@ -1,9 +1,9 @@
 'use client';
 
-import { useTranslations, useLocale } from 'next-intl';
 import { Button } from '@/components/ui/button';
+import { useLocale, useTranslations } from 'next-intl';
+import { useEffect, useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
-import { useState, useEffect } from 'react';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 
@@ -75,7 +75,7 @@ export function MenuModal({ isOpen, onClose }: MenuModalProps) {
 
   const onDocumentLoadError = (error: Error) => {
     console.error('Error loading PDF:', error);
-    
+
     // If locale-specific PDF fails and we haven't tried English fallback yet, try it
     if (locale !== 'en' && !triedFallback) {
       setTriedFallback(true);
@@ -83,7 +83,7 @@ export function MenuModal({ isOpen, onClose }: MenuModalProps) {
       setLoading(true);
       return;
     }
-    
+
     // If English also fails or we're already on English, show error
     setLoading(false);
     if (locale !== 'en' && triedFallback) {
@@ -148,15 +148,20 @@ export function MenuModal({ isOpen, onClose }: MenuModalProps) {
           onClose();
         }
       }}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' && e.target === e.currentTarget) {
+          onClose();
+        }
+      }}
     >
-      <div className="bg-background rounded-none md:rounded-lg p-4 md:p-6 max-w-5xl w-full h-full md:h-auto md:mx-4 md:max-h-[90vh] flex flex-col">
+      <div className="flex h-full w-full max-w-5xl flex-col rounded-none bg-background p-4 md:mx-4 md:h-auto md:max-h-[90vh] md:rounded-lg md:p-6">
         {/* Header */}
-        <div className="flex justify-between items-center mb-4 flex-shrink-0">
-          <h3 className="text-xl md:text-2xl font-bold">{t('title')}</h3>
+        <div className="mb-4 flex flex-shrink-0 items-center justify-between">
+          <h3 className="font-bold text-xl md:text-2xl">{t('title')}</h3>
           <div className="flex items-center gap-2">
             {/* Zoom Controls */}
             {!error && (
-              <div className="hidden md:flex items-center gap-2 mr-4">
+              <div className="mr-4 hidden items-center gap-2 md:flex">
                 <Button
                   variant="outline"
                   size="sm"
@@ -166,7 +171,7 @@ export function MenuModal({ isOpen, onClose }: MenuModalProps) {
                 >
                   {t('zoomOut')}
                 </Button>
-                <div className="flex items-center gap-2 min-w-[120px]">
+                <div className="flex min-w-[120px] items-center gap-2">
                   <input
                     type="range"
                     min="0.5"
@@ -177,7 +182,7 @@ export function MenuModal({ isOpen, onClose }: MenuModalProps) {
                     className="flex-1"
                     aria-label={t('zoomLevel')}
                   />
-                  <span className="text-sm text-muted-foreground min-w-[50px] text-right">
+                  <span className="min-w-[50px] text-right text-muted-foreground text-sm">
                     {Math.round(scale * 100)}%
                   </span>
                 </div>
@@ -203,7 +208,7 @@ export function MenuModal({ isOpen, onClose }: MenuModalProps) {
             )}
             {/* Mobile Zoom Controls */}
             {!error && (
-              <div className="flex md:hidden items-center gap-1 mr-2">
+              <div className="mr-2 flex items-center gap-1 md:hidden">
                 <Button
                   variant="outline"
                   size="sm"
@@ -214,7 +219,7 @@ export function MenuModal({ isOpen, onClose }: MenuModalProps) {
                 >
                   {t('zoomOut')}
                 </Button>
-                <span className="text-xs text-muted-foreground min-w-[45px] text-center">
+                <span className="min-w-[45px] text-center text-muted-foreground text-xs">
                   {Math.round(scale * 100)}%
                 </span>
                 <Button
@@ -234,7 +239,7 @@ export function MenuModal({ isOpen, onClose }: MenuModalProps) {
               size="icon"
               onClick={onClose}
               aria-label={t('close')}
-              className="text-2xl h-8 w-8 md:h-9 md:w-9"
+              className="h-8 w-8 text-2xl md:h-9 md:w-9"
             >
               ×
             </Button>
@@ -242,7 +247,7 @@ export function MenuModal({ isOpen, onClose }: MenuModalProps) {
         </div>
 
         {/* PDF Viewer */}
-        <div className="flex-1 overflow-auto flex flex-col items-center min-h-0">
+        <div className="flex min-h-0 flex-1 flex-col items-center overflow-auto">
           {loading && (
             <div className="flex items-center justify-center py-12">
               <p className="text-muted-foreground">{t('loading')}</p>
@@ -250,29 +255,29 @@ export function MenuModal({ isOpen, onClose }: MenuModalProps) {
           )}
 
           {error === 'loadError' && (
-            <div className="text-center py-12">
-              <p className="text-destructive mb-4">{t('loadError')}</p>
-              <p className="text-sm text-muted-foreground">{t('loadErrorDescription')}</p>
+            <div className="py-12 text-center">
+              <p className="mb-4 text-destructive">{t('loadError')}</p>
+              <p className="text-muted-foreground text-sm">{t('loadErrorDescription')}</p>
             </div>
           )}
 
           {error === 'menuNotFound' && (
-            <div className="text-center py-12">
-              <p className="text-muted-foreground mb-4">{t('menuNotFound')}</p>
-              <p className="text-sm text-muted-foreground">{t('menuNotFoundDescription')}</p>
+            <div className="py-12 text-center">
+              <p className="mb-4 text-muted-foreground">{t('menuNotFound')}</p>
+              <p className="text-muted-foreground text-sm">{t('menuNotFoundDescription')}</p>
             </div>
           )}
 
           {!error && (
             <>
-              <div className="border-0 md:border rounded-none md:rounded-lg overflow-auto bg-muted/50 h-full md:max-h-[calc(90vh-200px)]">
-                <div className="flex justify-center p-2 md:p-4 min-h-full">
+              <div className="h-full overflow-auto rounded-none border-0 bg-muted/50 md:max-h-[calc(90vh-200px)] md:rounded-lg md:border">
+                <div className="flex min-h-full justify-center p-2 md:p-4">
                   <Document
                     file={pdfPath}
                     onLoadSuccess={onDocumentLoadSuccess}
                     onLoadError={onDocumentLoadError}
                     loading={
-                      <div className="flex items-center justify-center w-full h-[400px] md:h-[600px]">
+                      <div className="flex h-[400px] w-full items-center justify-center md:h-[600px]">
                         <p className="text-muted-foreground">{t('loading')}</p>
                       </div>
                     }
@@ -290,7 +295,7 @@ export function MenuModal({ isOpen, onClose }: MenuModalProps) {
 
               {/* Pagination Controls */}
               {numPages && numPages > 1 && (
-                <div className="flex items-center justify-center gap-2 md:gap-4 mt-2 md:mt-4 flex-shrink-0 pb-2 md:pb-0">
+                <div className="mt-2 flex flex-shrink-0 items-center justify-center gap-2 pb-2 md:mt-4 md:gap-4 md:pb-0">
                   <Button
                     variant="outline"
                     size="sm"
@@ -300,7 +305,7 @@ export function MenuModal({ isOpen, onClose }: MenuModalProps) {
                   >
                     {t('previous')}
                   </Button>
-                  <span className="text-xs md:text-sm text-muted-foreground">
+                  <span className="text-muted-foreground text-xs md:text-sm">
                     {t('page', { current: pageNumber, total: numPages })}
                   </span>
                   <Button

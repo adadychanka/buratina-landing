@@ -1,14 +1,8 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { contactFormSchema, type ContactFormData } from '@/lib/validations/contact';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
+import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import {
   Select,
@@ -17,7 +11,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import { Textarea } from '@/components/ui/textarea';
 import { cn } from '@/lib/utils/cn';
+import { type ContactFormData, contactFormSchema } from '@/lib/validations/contact';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useTranslations } from 'next-intl';
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
 
 /**
  * ContactForm section - Event request form
@@ -91,26 +91,26 @@ export function ContactForm() {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-background">
+    <section id="contact" className="bg-background py-20">
       <div className="container mx-auto px-4">
         {/* Title */}
-        <h2 className="text-4xl md:text-5xl font-bold font-serif text-center mb-12 text-foreground">
+        <h2 className="mb-12 text-center font-bold font-serif text-4xl text-foreground md:text-5xl">
           {t('title')}
         </h2>
 
         {/* Form */}
-        <div className="max-w-2xl mx-auto">
+        <div className="mx-auto max-w-2xl">
           {/* Success Message */}
           {submitStatus === 'success' && (
-            <div className="mb-6 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
-              <p className="text-green-800 dark:text-green-200 text-center">{t('success')}</p>
+            <div className="mb-6 rounded-lg border border-green-200 bg-green-50 p-4 dark:border-green-800 dark:bg-green-900/20">
+              <p className="text-center text-green-800 dark:text-green-200">{t('success')}</p>
             </div>
           )}
 
           {/* Error Message */}
           {submitStatus === 'error' && (
-            <div className="mb-6 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
-              <p className="text-red-800 dark:text-red-200 text-center">{t('error')}</p>
+            <div className="mb-6 rounded-lg border border-red-200 bg-red-50 p-4 dark:border-red-800 dark:bg-red-900/20">
+              <p className="text-center text-red-800 dark:text-red-200">{t('error')}</p>
             </div>
           )}
 
@@ -127,7 +127,7 @@ export function ContactForm() {
                 className={cn(errors.name && 'border-destructive')}
               />
               {errors.name && (
-                <p className="mt-1 text-sm text-destructive">{errors.name.message}</p>
+                <p className="mt-1 text-destructive text-sm">{errors.name.message}</p>
               )}
             </div>
 
@@ -144,7 +144,7 @@ export function ContactForm() {
                 className={cn(errors.phone && 'border-destructive')}
               />
               {errors.phone && (
-                <p className="mt-1 text-sm text-destructive">{errors.phone.message}</p>
+                <p className="mt-1 text-destructive text-sm">{errors.phone.message}</p>
               )}
             </div>
 
@@ -158,7 +158,7 @@ export function ContactForm() {
                 className={cn(errors.contact && 'border-destructive')}
               />
               {errors.contact && (
-                <p className="mt-1 text-sm text-destructive">{errors.contact.message}</p>
+                <p className="mt-1 text-destructive text-sm">{errors.contact.message}</p>
               )}
             </div>
 
@@ -172,7 +172,7 @@ export function ContactForm() {
                 className={cn(errors.eventDate && 'border-destructive')}
               />
               {errors.eventDate && (
-                <p className="mt-1 text-sm text-destructive">{errors.eventDate.message}</p>
+                <p className="mt-1 text-destructive text-sm">{errors.eventDate.message}</p>
               )}
             </div>
 
@@ -200,7 +200,7 @@ export function ContactForm() {
                 </SelectContent>
               </Select>
               {errors.eventType && (
-                <p className="mt-1 text-sm text-destructive">{errors.eventType.message}</p>
+                <p className="mt-1 text-destructive text-sm">{errors.eventType.message}</p>
               )}
             </div>
 
@@ -217,7 +217,7 @@ export function ContactForm() {
                 className={cn(errors.guestCount && 'border-destructive')}
               />
               {errors.guestCount && (
-                <p className="mt-1 text-sm text-destructive">{errors.guestCount.message}</p>
+                <p className="mt-1 text-destructive text-sm">{errors.guestCount.message}</p>
               )}
             </div>
 
@@ -231,13 +231,13 @@ export function ContactForm() {
               />
               <Label
                 htmlFor="consent"
-                className="text-sm font-normal leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                className="font-normal text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
               >
                 {t('consent')} <span className="text-destructive">*</span>
               </Label>
             </div>
             {errors.consent && (
-              <p className="text-sm text-destructive -mt-4">{errors.consent.message}</p>
+              <p className="-mt-4 text-destructive text-sm">{errors.consent.message}</p>
             )}
 
             {/* Submit Button */}

@@ -1,9 +1,9 @@
+import heroBanner from '@/../public/hero/hero-banner-2560.jpg';
+import { Button } from '@/components/ui/button';
+import { ScrollToButton } from '@/components/ui/scroll-to-button';
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ScrollToButton } from '@/components/ui/scroll-to-button';
-import heroBanner from '@/../public/hero/hero-banner-2560.jpg';
 
 /**
  * Hero section - First screen of the landing page
@@ -33,23 +33,23 @@ export async function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-20 text-center">
+      <div className="container relative z-10 mx-auto px-4 py-20 text-center">
         {/* Text block on subtle panel for better readability */}
-        <div className="mx-auto max-w-4xl rounded-3xl bg-background/25 px-6 py-10 shadow-md shadow-black/20 backdrop-blur">
+        <div className="mx-auto max-w-4xl rounded-3xl bg-background/25 px-6 py-10 shadow-black/20 shadow-md backdrop-blur">
           {/* Logo placeholder */}
           <div className="mb-6">
-            <h1 className="mb-3 font-serif text-4xl font-bold text-foreground md:text-6xl">
+            <h1 className="mb-3 font-bold font-serif text-4xl text-foreground md:text-6xl">
               {t('title')}
             </h1>
           </div>
 
           {/* Subtitle */}
-          <h2 className="mb-6 font-serif text-2xl font-semibold text-foreground md:text-3xl">
+          <h2 className="mb-6 font-semibold font-serif text-2xl text-foreground md:text-3xl">
             {t('subtitle')}
           </h2>
 
           {/* Description */}
-          <p className="mx-auto mb-10 max-w-3xl text-base text-foreground/90 md:text-lg whitespace-pre-line">
+          <p className="mx-auto mb-10 max-w-3xl whitespace-pre-line text-base text-foreground/90 md:text-lg">
             {t('description')}
           </p>
 
@@ -71,9 +71,9 @@ export async function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
-        <div className="w-6 h-10 border-2 border-accent/30 rounded-full flex items-start justify-center p-2">
-          <div className="w-1 h-3 bg-accent/50 rounded-full" />
+      <div className="-translate-x-1/2 absolute bottom-8 left-1/2 z-10 transform animate-bounce">
+        <div className="flex h-10 w-6 items-start justify-center rounded-full border-2 border-accent/30 p-2">
+          <div className="h-3 w-1 rounded-full bg-accent/50" />
         </div>
       </div>
     </section>

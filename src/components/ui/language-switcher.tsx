@@ -1,7 +1,5 @@
 'use client';
 
-import { useLocale } from 'next-intl';
-import { routing } from '@/i18n/routing';
 import {
   Select,
   SelectContent,
@@ -9,6 +7,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import { routing } from '@/i18n/routing';
+import { useLocale } from 'next-intl';
 
 /**
  * Language switcher component
@@ -37,7 +37,7 @@ export function LanguageSwitcher() {
     // Use full page reload to ensure translations are loaded correctly
     // This is necessary because Next.js App Router doesn't always reload
     // server components when locale changes via client-side navigation
-    const newPath = '/' + segments.join('/') + window.location.search;
+    const newPath = `/${segments.join('/')}${window.location.search}`;
     window.location.href = newPath;
   };
 

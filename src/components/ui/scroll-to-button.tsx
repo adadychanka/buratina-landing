@@ -1,8 +1,8 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { scrollToSection } from '@/lib/utils/scroll';
 import type { ButtonProps } from '@/components/ui/button';
+import { scrollToSection } from '@/lib/utils/scroll';
 
 interface ScrollToButtonProps extends Omit<ButtonProps, 'onClick'> {
   targetId: string;
