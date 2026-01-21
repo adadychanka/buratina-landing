@@ -151,9 +151,9 @@ export function ContactForm() {
 
             {/* Additional Contact */}
             <div>
-              <Label htmlFor="contact">{t('contact')}</Label>
+              <Label htmlFor="contactDetails">{t('contact')}</Label>
               <Input
-                id="contact"
+                id="contactDetails"
                 {...register('contact')}
                 placeholder={t('contactPlaceholder')}
                 className={cn(errors.contact && 'border-destructive')}
