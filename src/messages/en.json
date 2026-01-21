@@ -30,6 +30,7 @@
   },
   "Menu": {
     "title": "Menu",
+    "description": "Signature cocktails, reimagined classics and a few things you won’t find anywhere else.",
     "categories": {
       "cocktails": "Cocktail menu",
       "alcohol": "Alcoholic drinks",
@@ -43,7 +44,7 @@
     "loadError": "Failed to load menu",
     "loadErrorDescription": "Please try again later or contact us if the problem persists.",
     "menuNotFound": "Menu not available in your language",
-    "menuNotFoundDescription": "The menu is currently only available in English.",
+    "menuNotFoundDescription": "The menu is currently only available in English. You are seeing the English version.",
     "previous": "Previous",
     "next": "Next",
     "page": "Page {current} of {total}",

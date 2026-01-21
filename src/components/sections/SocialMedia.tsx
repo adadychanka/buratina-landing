@@ -53,7 +53,7 @@ export async function SocialMedia() {
         <p className="mb-10 text-center text-muted-foreground">{t('description')}</p>
 
         {/* Social Icons */}
-        <div className="flex items-center justify-center gap-8">
+        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8">
           {socialLinks.map((social) => {
             const Icon = social.icon;
             return (
@@ -62,11 +62,11 @@ export async function SocialMedia() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center gap-3 rounded-lg p-6 text-muted-foreground transition-all hover:scale-110 hover:text-accent"
+                className="flex flex-col items-center gap-2 rounded-lg p-4 text-muted-foreground transition-all hover:scale-110 hover:text-accent sm:gap-3 sm:p-6"
                 aria-label={social.name}
               >
-                <Icon className="h-12 w-12" />
-                <span className="font-medium text-sm">{social.name}</span>
+                <Icon className="h-8 w-8 sm:h-12 sm:w-12" />
+                <span className="font-medium text-xs sm:text-sm">{social.name}</span>
               </Link>
             );
           })}

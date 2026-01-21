@@ -15,11 +15,11 @@ export async function About() {
   const galleryAltTexts = t.raw('gallery.alts') as string[];
 
   const galleryImages = [
-    '/about/IMG_5165.JPG',
-    '/about/IMG_5214.JPG',
-    '/about/IMG_5232.JPG',
-    '/about/IMG_5266.JPG',
-    '/about/IMG_5380.JPG',
+    '/images/about/IMG_5165.JPG',
+    '/images/about/IMG_5214.JPG',
+    '/images/about/IMG_5232.JPG',
+    '/images/about/IMG_5266.JPG',
+    '/images/about/IMG_5380.JPG',
   ];
 
   return (

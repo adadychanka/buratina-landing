@@ -232,7 +232,7 @@ export function ContactForm() {
               />
               <Label
                 htmlFor="consent"
-                className="font-normal text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                className="font-normal text-sm leading-relaxed peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
               >
                 {t('consent')} <span className="text-destructive">*</span>
               </Label>

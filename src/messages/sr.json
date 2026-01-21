@@ -30,6 +30,7 @@
   },
   "Menu": {
     "title": "Meni",
+    "description": "Autorski kokteli, reinterpretirani klasici i nekoliko pića koja nećete naći nigde drugde.",
     "categories": {
       "cocktails": "Koktel karta",
       "alcohol": "Alkoholna pića",
@@ -43,7 +44,7 @@
     "loadError": "Neuspešno učitavanje menija",
     "loadErrorDescription": "Molimo pokušajte kasnije ili nas kontaktirajte ako se problem nastavi.",
     "menuNotFound": "Meni nije dostupan na vašem jeziku",
-    "menuNotFoundDescription": "Meni je trenutno dostupan samo na engleskom jeziku.",
+    "menuNotFoundDescription": "Trenutno je meni dostupan samo na engleskom — prikazana je engleska verzija.",
     "previous": "Prethodna",
     "next": "Sledeća",
     "page": "Strana {current} od {total}",

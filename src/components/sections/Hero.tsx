@@ -1,4 +1,4 @@
-import heroBanner from '@/../public/hero/hero-banner-2560.jpg';
+import heroBanner from '@/../public/images/hero/hero-banner-2560.jpg';
 import { Button } from '@/components/ui/button';
 import { ScrollToButton } from '@/components/ui/scroll-to-button';
 import { getTranslations } from 'next-intl/server';
