@@ -47,6 +47,8 @@ export const contactFormSchema = z.object({
     .optional()
     .or(z.literal('')),
 
+  note: z.string().max(1000, 'Additional notes must not exceed 1000 characters').trim().optional(),
+
   consent: z.boolean().refine((val) => val === true, {
     message: 'Consent to data processing is required',
   }),

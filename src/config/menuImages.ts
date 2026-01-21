@@ -4,12 +4,8 @@
 
 type SupportedLocale = 'en' | 'ru' | 'sr' | (string & {});
 
-const MENU_IMAGES: Record<SupportedLocale, string[] | undefined> = {
-  en: [
-    '/images/menu/menu.en.1.png',
-    '/images/menu/menu.en.2.png',
-    '/images/menu/menu.en.3.png',
-  ],
+const MENU_IMAGES: Partial<Record<SupportedLocale, string[]>> = {
+  en: ['/images/menu/menu.en.1.png', '/images/menu/menu.en.2.png', '/images/menu/menu.en.3.png'],
   // ru: ['/images/menu/menu.ru.1.png', ...]
   // sr: ['/images/menu/menu.sr.1.png', ...]
 };
@@ -47,4 +43,3 @@ export function getMenuImagesForLocale(locale: SupportedLocale): MenuImagesConfi
     isFallback: normalizedLocale !== 'en',
   };
 }
-

@@ -1,11 +1,11 @@
 'use client';
 
-import { getMenuImagesForLocale } from '@/config/menuImages';
 import { Button } from '@/components/ui/button';
+import { getMenuImagesForLocale } from '@/config/menuImages';
+import { ChevronLeft, ChevronRight, RotateCcw, X, ZoomIn, ZoomOut } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useCallback, useEffect, useState } from 'react';
-import { ChevronLeft, ChevronRight, RotateCcw, ZoomIn, ZoomOut, X } from 'lucide-react';
 
 /**
  * Menu section - compact carousel with menu images.
@@ -350,4 +350,3 @@ export function Menu() {
     </section>
   );
 }
-

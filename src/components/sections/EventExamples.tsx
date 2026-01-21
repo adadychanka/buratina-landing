@@ -31,9 +31,7 @@ export async function EventExamples() {
             <div key={image.src} className="group relative aspect-[4/3] overflow-hidden rounded-lg">
               {/* Placeholder for images */}
               <div className="absolute inset-0 flex items-center justify-center bg-neutral-100 dark:bg-neutral-800">
-                <span className="text-neutral-700 text-sm dark:text-neutral-200">
-                  {image.alt}
-                </span>
+                <span className="text-neutral-700 text-sm dark:text-neutral-200">{image.alt}</span>
               </div>
               {/* TODO: Replace with actual Image component when images are available */}
               {/* <Image

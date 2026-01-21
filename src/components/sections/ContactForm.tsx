@@ -46,6 +46,7 @@ export function ContactForm() {
       eventType: undefined,
       guestCount: undefined,
       consent: false,
+      note: '',
     },
   });
 
@@ -68,8 +69,6 @@ export function ContactForm() {
       if (response.ok) {
         setSubmitStatus('success');
         reset();
-        // Scroll to top of form to show success message
-        window.scrollTo({ top: 0, behavior: 'smooth' });
       } else {
         setSubmitStatus('error');
       }
@@ -101,17 +100,16 @@ export function ContactForm() {
 
         {/* Form */}
         <div className="mx-auto max-w-2xl">
-          {/* Success Message */}
+          {/* Submit status messages */}
           {submitStatus === 'success' && (
-            <div className="mb-6 rounded-lg border border-green-200 bg-green-50 p-4 dark:border-green-800 dark:bg-green-900/20">
-              <p className="text-center text-green-800 dark:text-green-200">{t('success')}</p>
+            <div className="mb-8 rounded-xl border border-accent/40 bg-background/80 p-4 text-center text-sm text-foreground shadow-sm">
+              {t('success')}
             </div>
           )}
 
-          {/* Error Message */}
           {submitStatus === 'error' && (
-            <div className="mb-6 rounded-lg border border-red-200 bg-red-50 p-4 dark:border-red-800 dark:bg-red-900/20">
-              <p className="text-center text-red-800 dark:text-red-200">{t('error')}</p>
+            <div className="mb-8 rounded-xl border border-destructive/40 bg-destructive/5 p-4 text-center text-sm text-destructive shadow-sm">
+              {t('error')}
             </div>
           )}
 
@@ -219,6 +217,20 @@ export function ContactForm() {
               />
               {errors.guestCount && (
                 <p className="mt-1 text-destructive text-sm">{errors.guestCount.message}</p>
+              )}
+            </div>
+
+            {/* Note */}
+            <div>
+              <Label htmlFor="note">{t('note')}</Label>
+              <Textarea
+                id="note"
+                {...register('note')}
+                placeholder={t('notePlaceholder')}
+                className={cn('min-h-[80px]', errors.note && 'border-destructive')}
+              />
+              {errors.note && (
+                <p className="mt-1 text-destructive text-sm">{errors.note.message}</p>
               )}
             </div>
 

@@ -109,6 +109,8 @@
     },
     "guestCount": "Number of guests",
     "guestCountPlaceholder": "Enter number of guests",
+    "note": "Additional notes",
+    "notePlaceholder": "Anything else we should know (special requests, timing, format, etc.)",
     "consent": "I consent to the processing of my personal data for the purpose of handling my inquiry and organizing a potential event, in accordance with the Privacy Policy, Regulation (EU) 2016/679 (GDPR) and the applicable data protection laws of the Republic of Serbia.",
     "submit": "Submit",
     "submitting": "Submitting...",

@@ -1,5 +1,8 @@
+import { ContactFormEmail } from '@/emails/ContactFormEmail';
 import { contactFormSchema } from '@/lib/validations/contact';
+import { render } from '@react-email/render';
 import { NextResponse } from 'next/server';
+import React from 'react';
 import { Resend } from 'resend';
 import { z } from 'zod';
 
@@ -15,34 +18,60 @@ export async function POST(request: Request) {
     // Validate data on server using the same schema
     const validatedData = contactFormSchema.parse(body);
 
-    // Format email content
-    const emailContent = formatEmailContent(validatedData);
+    // Render email content using React Email
+    const emailContent = await render(
+      React.createElement(ContactFormEmail, { data: validatedData })
+    );
 
     // Send email via Resend
     const contactEmail = process.env.CONTACT_EMAIL;
     if (!contactEmail) {
+      console.error('[contact] CONTACT_EMAIL env var is not set');
       throw new Error('CONTACT_EMAIL environment variable is not set');
     }
 
+    const fromEmail = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev';
+    const contactValue = validatedData.contact;
+    const isEmail =
+      typeof contactValue === 'string' && contactValue.includes('@') && contactValue.includes('.');
+    const replyTo = isEmail ? contactValue : undefined;
+
     const emailResult = await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev',
+      from: fromEmail,
       to: contactEmail,
       subject: 'New Event Request - Buratina Bar',
       html: emailContent,
-      replyTo: validatedData.contact || validatedData.phone,
+      ...(replyTo ? { replyTo } : {}),
     });
 
+    if (emailResult.error) {
+      console.error('[contact] Resend email error', {
+        name: emailResult.error.name,
+        message: emailResult.error.message,
+        from: fromEmail,
+      });
+
+      // Provide more helpful error messages for common issues
+      if (emailResult.error.message?.includes('domain is not verified')) {
+        throw new Error(
+          `Email domain not verified: The domain in RESEND_FROM_EMAIL (${fromEmail}) is not verified in Resend. Please verify it at https://resend.com/domains or use 'onboarding@resend.dev' for testing.`
+        );
+      }
+
+      throw new Error(`Resend email error: ${emailResult.error.message || 'unknown error'}`);
+    }
+
     // Send notification to Telegram
-    const telegramMessage = formatTelegramMessage(validatedData);
-    await fetch(`https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        chat_id: process.env.TELEGRAM_CHAT_ID,
-        text: telegramMessage,
-        parse_mode: 'HTML',
-      }),
-    });
+    // const telegramMessage = formatTelegramMessage(validatedData);
+    // await fetch(`https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify({
+    //     chat_id: process.env.TELEGRAM_CHAT_ID,
+    //     text: telegramMessage,
+    //     parse_mode: 'HTML',
+    //   }),
+    // });
 
     return NextResponse.json({
       success: true,
@@ -71,94 +100,19 @@ export async function POST(request: Request) {
 }
 
 /**
- * Format form data as HTML email content
+ * (Telegram formatter kept for potential future use)
+ * Currently not used because Telegram sending is disabled.
  */
-function formatEmailContent(data: z.infer<typeof contactFormSchema>): string {
-  return `
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <style>
-          body { font-family: Arial, sans-serif; line-height: 1.6; }
-          .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-          .header { background: #1a1a1a; color: white; padding: 20px; text-align: center; }
-          .content { padding: 20px; background: #f9f9f9; }
-          .field { margin: 10px 0; }
-          .label { font-weight: bold; }
-        </style>
-      </head>
-      <body>
-        <div class="container">
-          <div class="header">
-            <h1>Buratina Bar</h1>
-            <p>New Event Request</p>
-          </div>
-          <div class="content">
-            <div class="field">
-              <span class="label">Name:</span> ${data.name}
-            </div>
-            <div class="field">
-              <span class="label">Phone:</span> ${data.phone}
-            </div>
-            ${
-              data.contact
-                ? `
-            <div class="field">
-              <span class="label">Additional Contact:</span> ${data.contact}
-            </div>
-            `
-                : ''
-            }
-            ${
-              data.eventDate
-                ? `
-            <div class="field">
-              <span class="label">Event Date:</span> ${data.eventDate}
-            </div>
-            `
-                : ''
-            }
-            ${
-              data.eventType
-                ? `
-            <div class="field">
-              <span class="label">Event Type:</span> ${data.eventType}
-            </div>
-            `
-                : ''
-            }
-            ${
-              data.guestCount
-                ? `
-            <div class="field">
-              <span class="label">Number of Guests:</span> ${data.guestCount}
-            </div>
-            `
-                : ''
-            }
-            <div class="field">
-              <span class="label">Consent:</span> ${data.consent ? 'Yes' : 'No'}
-            </div>
-          </div>
-        </div>
-      </body>
-    </html>
-  `;
-}
-
-/**
- * Format form data as Telegram message
- */
-function formatTelegramMessage(data: z.infer<typeof contactFormSchema>): string {
-  return `
-<b>🎉 New Event Request</b>
-
-👤 <b>Name:</b> ${data.name}
-📞 <b>Phone:</b> ${data.phone}
-${data.contact ? `📧 <b>Contact:</b> ${data.contact}\n` : ''}
-${data.eventDate ? `📅 <b>Date:</b> ${data.eventDate}\n` : ''}
-${data.eventType ? `🎭 <b>Type:</b> ${data.eventType}\n` : ''}
-${data.guestCount ? `👥 <b>Guests:</b> ${data.guestCount}\n` : ''}
-  `.trim();
-}
+// function formatTelegramMessage(data: z.infer<typeof contactFormSchema>): string {
+//   return `
+// <b>🎉 New Event Request</b>
+//
+// 👤 <b>Name:</b> ${data.name}
+// 📞 <b>Phone:</b> ${data.phone}
+// ${data.contact ? `📧 <b>Contact:</b> ${data.contact}\n` : ''}
+// ${data.eventDate ? `📅 <b>Date:</b> ${data.eventDate}\n` : ''}
+// ${data.eventType ? `🎭 <b>Type:</b> ${data.eventType}\n` : ''}
+// ${data.guestCount ? `👥 <b>Guests:</b> ${data.guestCount}\n` : ''}
+// ${data.note ? `📝 <b>Notes:</b> ${data.note}\n` : ''}
+//   `.trim();
+// }

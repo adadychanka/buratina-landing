@@ -109,6 +109,8 @@
     },
     "guestCount": "Broj gostiju",
     "guestCountPlaceholder": "Unesite broj gostiju",
+    "note": "Dodatne napomene",
+    "notePlaceholder": "Sve dodatne informacije, želje u vezi formata, vremena ili specifičnosti događaja",
     "consent": "Dajem saglasnost za obradu svojih ličnih podataka u svrhu obrade mog upita i organizacije mogućeg događaja, u skladu sa Politikom privatnosti, Uredbom (EU) 2016/679 (GDPR) i važećim zakonima Republike Srbije o zaštiti podataka o ličnosti.",
     "submit": "Pošalji",
     "submitting": "Slanje...",

@@ -111,7 +111,11 @@ export function MenuImageGalleryModal({ isOpen, onClose }: MenuImageGalleryModal
         }
       }}
       onKeyDown={(event) => {
-        if (event.key === 'Enter' && event.target === event.currentTarget && lightboxIndex === null) {
+        if (
+          event.key === 'Enter' &&
+          event.target === event.currentTarget &&
+          lightboxIndex === null
+        ) {
           onClose();
         }
       }}
@@ -120,10 +124,7 @@ export function MenuImageGalleryModal({ isOpen, onClose }: MenuImageGalleryModal
         {/* Header */}
         <div className="mb-4 flex flex-shrink-0 items-center justify-between">
           <div className="flex flex-col gap-1">
-            <h3
-              id="menu-gallery-title"
-              className="font-serif text-xl font-bold md:text-2xl"
-            >
+            <h3 id="menu-gallery-title" className="font-serif text-xl font-bold md:text-2xl">
               {t('title')}
             </h3>
             {isFallback && hasImages && (
@@ -252,4 +253,3 @@ export function MenuImageGalleryModal({ isOpen, onClose }: MenuImageGalleryModal
     </div>
   );
 }
-
