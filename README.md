@@ -54,7 +54,7 @@ TELEGRAM_BOT_TOKEN=xxxxxxxxxxxxx
 TELEGRAM_CHAT_ID=xxxxxxxxxxxxx
 
 # Contact
-CONTACT_EMAIL=info@buratina-bar.com
+CONTACT_EMAIL=barburatina@gmail.com
 ```
 
 3. Run the development server:

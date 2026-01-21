@@ -23,6 +23,7 @@ import { useForm } from 'react-hook-form';
  * ContactForm section - Event request form
  * Uses React Hook Form with Zod validation
  */
+// biome-ignore lint/complexity/noExcessiveCognitiveComplexity: Form logic is intentionally kept in a single component for clarity
 export function ContactForm() {
   const t = useTranslations('ContactForm');
   const [isSubmitting, setIsSubmitting] = useState(false);

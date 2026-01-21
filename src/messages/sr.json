@@ -91,9 +91,9 @@
     "name": "Ime",
     "namePlaceholder": "Unesite vaše ime",
     "phone": "Telefon",
-    "phonePlaceholder": "+381 61 1096732",
+    "phonePlaceholder": "+381 61 109 6732",
     "contact": "Dodatni kontakt",
-    "contactPlaceholder": "Email, telefon ili Instagram",
+    "contactPlaceholder": "Email, telefon, Instagram ili WhatsApp",
     "eventDate": "Datum događaja",
     "eventType": "Tip događaja",
     "selectEventType": "Izaberite tip događaja",
@@ -108,7 +108,7 @@
     },
     "guestCount": "Broj gostiju",
     "guestCountPlaceholder": "Unesite broj gostiju",
-    "consent": "Slažem se sa obrađom ličnih podataka",
+    "consent": "Dajem saglasnost za obradu svojih ličnih podataka u svrhu obrade mog upita i organizacije mogućeg događaja, u skladu sa Politikom privatnosti, Uredbom (EU) 2016/679 (GDPR) i važećim zakonima Republike Srbije o zaštiti podataka o ličnosti.",
     "submit": "Pošalji",
     "submitting": "Slanje...",
     "success": "Zahtev je uspešno poslat!",
@@ -119,17 +119,18 @@
     "address": "Adresa",
     "hours": "Radno vreme",
     "hoursList": {
-      "weekday": "Ponedeljak - Četvrtak: 18:00 - 02:00",
-      "weekend": "Petak - Subota: 18:00 - 03:00",
-      "sunday": "Nedelja: 18:00 - 01:00"
+      "weekday": "Ponedeljak – Četvrtak: 17:00–00:00",
+      "weekend": "Petak – Subota: 17:00–01:00",
+      "sunday": "Nedelja: 19:00–00:00"
     },
     "directions": "Kako doći",
-    "directionsText": "Detaljne uputstva kako doći do bara biće data ovde.",
-    "mapPlaceholder": "Mapa će biti ugrađena ovde",
-    "mapIntegration": "Google Maps ili Leaflet integracija"
+    "directionsText": "Bar se nalazi na nekoliko minuta hoda od stanice Takovska i par minuta od stanice 27. marta. Od zgrade Narodne skupštine (Trg Nikole Pašića 13) potrebno je oko 8 minuta pešice. Uđite kroz ulaz zgrade na adresi Svetogorska 46, prođite kroz prolaz do dvorišta i siđite u podrum — bar je odmah desno. U istom dvorištu nalaze se i Restoran Tri i Mezestoran Dvorište. Poseban parking u blizini bara ne postoji.",
+    "mapPlaceholder": "Otvori u Google Maps",
+    "mapIntegration": "Interaktivna mapa je dostupna radi vaše praktičnosti"
   },
   "SocialMedia": {
-    "title": "Pratite nas"
+    "title": "Pratite nas",
+    "description": "Pratite najave događaja, fotografije iz bara i vesti o našem programu — najaktivniji smo na Instagramu."
   },
   "Navigation": {
     "about": "O nama",
@@ -144,6 +145,20 @@
   "Footer": {
     "subtitle": "Najmističniji bar u Beogradu",
     "contact": "Kontakt",
+    "privacyPolicy": "Politika privatnosti",
     "copyright": "© {year} Buratina Bar. Sva prava zadržana."
+  },
+  "PrivacyPolicy": {
+    "title": "Politika privatnosti",
+    "lastUpdated": "Poslednje ažuriranje: januar 2026",
+    "paragraphs": [
+      "Ova Politika privatnosti objašnjava kako bar Buratina prikuplja, koristi i štiti vaše lične podatke kada nas kontaktirate ili koristite ovaj sajt.",
+      "Pre svega prikupljamo lične podatke koje nam dobrovoljno ostavite putem kontakt forme, uključujući vaše ime, broj telefona, dodatni kontakt (na primer email, Instagram ili WhatsApp), informacije o događaju i sve druge podatke koje odlučite da podelite.",
+      "Ove podatke koristimo isključivo kako bismo obradili vaš upit, komunicirali sa vama u vezi vašeg zahteva i, po potrebi, organizovali i podržali događaj u baru. Pravni osnov obrade je vaša saglasnost, kao i, kada je primenljivo, izvršenje ugovora ili preduzimanje radnji na vaš zahtev pre zaključenja ugovora.",
+      "Vaši podaci se mogu obrađivati uz pomoć trećih strana koje koristimo za komunikaciju i obaveštenja, kao što su provajderi elektronske pošte (na primer Resend) i aplikacije za razmenu poruka (na primer Telegram). Ovi obrađivači postupaju po našem nalogu i dužni su da poštuju propise o zaštiti podataka.",
+      "Vaše lične podatke čuvamo samo onoliko dugo koliko je neophodno da bismo odgovorili na vaš upit, organizovali traženi događaj i ispunili zakonske obaveze. Nakon toga, podaci se brišu ili anonimizuju.",
+      "Imate pravo da zatražite pristup svojim ličnim podacima, njihovu ispravku ili brisanje, ograničenje obrade, kao i, kada je primenljivo, prenosivost podataka. Takođe možete u bilo kom trenutku povući svoju saglasnost, bez uticaja na zakonitost obrade zasnovane na saglasnosti pre njenog povlačenja.",
+      "Ako imate pitanja u vezi sa ovom Politikom privatnosti ili želite da ostvarite svoja prava, možete nas kontaktirati na adresu barburatina@gmail.com. Takođe imate pravo da podnesete pritužbu nadležnom organu za zaštitu podataka u Republici Srbiji."
+    ]
   }
 }

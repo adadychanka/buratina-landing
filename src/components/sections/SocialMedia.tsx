@@ -1,4 +1,4 @@
-import { Instagram, Music, Send } from 'lucide-react';
+import { Facebook, Instagram, MessageCircle, Music, Send } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 
@@ -13,21 +13,33 @@ export async function SocialMedia() {
   const socialLinks = [
     {
       name: 'Instagram',
-      href: 'https://instagram.com/buratina.bar',
+      href: 'https://www.instagram.com/buratina_beograd',
       icon: Instagram,
       color: 'hover:text-pink-500',
     },
     {
-      name: 'Telegram',
-      href: 'https://t.me/buratina.bar',
-      icon: Send,
-      color: 'hover:text-blue-500',
+      name: 'Facebook',
+      href: 'https://www.facebook.com/people/Buratina-bar/61564934115698/',
+      icon: Facebook,
+      color: 'hover:text-blue-600',
     },
     {
       name: 'TikTok',
-      href: 'https://tiktok.com/@buratina.bar',
+      href: 'https://www.tiktok.com/@buratina_beograd',
       icon: Music,
       color: 'hover:text-black dark:hover:text-white',
+    },
+    {
+      name: 'Threads',
+      href: 'https://www.threads.com/@buratina_beograd',
+      icon: Send,
+      color: 'hover:text-neutral-500',
+    },
+    {
+      name: 'WhatsApp',
+      href: 'https://api.whatsapp.com/send/?phone=381611096732&text&type=phone_number&app_absent=0',
+      icon: MessageCircle,
+      color: 'hover:text-green-500',
     },
   ];
 
@@ -35,9 +47,10 @@ export async function SocialMedia() {
     <section id="social" className="bg-muted/50 py-20">
       <div className="container mx-auto px-4">
         {/* Title */}
-        <h2 className="mb-12 text-center font-bold font-serif text-4xl text-foreground md:text-5xl">
+        <h2 className="mb-4 text-center font-bold font-serif text-4xl text-foreground md:text-5xl">
           {t('title')}
         </h2>
+        <p className="mb-10 text-center text-muted-foreground">{t('description')}</p>
 
         {/* Social Icons */}
         <div className="flex items-center justify-center gap-8">

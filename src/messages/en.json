@@ -91,9 +91,9 @@
     "name": "Name",
     "namePlaceholder": "Enter your name",
     "phone": "Phone",
-    "phonePlaceholder": "+381 61 1096732",
+    "phonePlaceholder": "+381 61 109 6732",
     "contact": "Additional contact",
-    "contactPlaceholder": "Email, phone or Instagram",
+    "contactPlaceholder": "Email, phone, Instagram or WhatsApp",
     "eventDate": "Event date",
     "eventType": "Event type",
     "selectEventType": "Select event type",
@@ -108,7 +108,7 @@
     },
     "guestCount": "Number of guests",
     "guestCountPlaceholder": "Enter number of guests",
-    "consent": "I agree to the processing of personal data",
+    "consent": "I consent to the processing of my personal data for the purpose of handling my inquiry and organizing a potential event, in accordance with the Privacy Policy, Regulation (EU) 2016/679 (GDPR) and the applicable data protection laws of the Republic of Serbia.",
     "submit": "Submit",
     "submitting": "Submitting...",
     "success": "Request submitted successfully!",
@@ -119,17 +119,18 @@
     "address": "Address",
     "hours": "Opening hours",
     "hoursList": {
-      "weekday": "Monday - Thursday: 18:00 - 02:00",
-      "weekend": "Friday - Saturday: 18:00 - 03:00",
-      "sunday": "Sunday: 18:00 - 01:00"
+      "weekday": "Monday - Thursday: 17:00 - 00:00",
+      "weekend": "Friday - Saturday: 17:00 - 01:00",
+      "sunday": "Sunday: 19:00 - 00:00"
     },
     "directions": "How to get here",
-    "directionsText": "Detailed directions on how to reach the bar will be provided here.",
-    "mapPlaceholder": "Map will be embedded here",
-    "mapIntegration": "Google Maps or Leaflet integration"
+    "directionsText": "The bar is a short walk from the Takovska tram stop and a few minutes from the 27. marta stop. From the House of the National Assembly (Trg Nikole Pašića 13), it is about an 8-minute walk. Enter through the residential doorway at Svetogorska 46, walk through the passage into the courtyard and go down to the basement entrance immediately on the right. In the same courtyard you will also find Restoran Tri and Mezestoran Dvoriste. There is no dedicated parking near the bar.",
+    "mapPlaceholder": "Open in Google Maps",
+    "mapIntegration": "Interactive map is provided for your convenience"
   },
   "SocialMedia": {
-    "title": "Follow us"
+    "title": "Follow us",
+    "description": "See upcoming events, photos from the bar, and news about our programme — we are most active on Instagram."
   },
   "Navigation": {
     "about": "About",
@@ -144,6 +145,20 @@
   "Footer": {
     "subtitle": "The most mystical bar in Belgrade",
     "contact": "Contact",
+    "privacyPolicy": "Privacy Policy",
     "copyright": "© {year} Buratina Bar. All rights reserved."
+  },
+  "PrivacyPolicy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: January 2026",
+    "paragraphs": [
+      "This Privacy Policy explains how Buratina Bar collects, uses and protects your personal data when you contact us or use this website.",
+      "We primarily collect personal data that you voluntarily provide through the contact form, including your name, phone number, additional contact details (such as email, Instagram or WhatsApp), event information and any other details you choose to share.",
+      "We use this data exclusively to handle your inquiry, communicate with you about your request, and, if applicable, organise and support your event at the bar. The legal basis for processing is your consent and, where relevant, the performance of a contract or steps taken at your request before entering into a contract.",
+      "Your data may be processed using third-party services we rely on for communication and notifications, such as email providers (for example, Resend) and messaging platforms (for example, Telegram). These processors act on our behalf and are bound by data protection obligations.",
+      "We store your personal data only for as long as it is necessary to respond to your inquiry, organise the requested event, and comply with applicable legal obligations. After this period, your data is deleted or anonymised.",
+      "You have the right to request access to your personal data, its rectification or erasure, restriction of processing, and, where applicable, data portability. You may also withdraw your consent at any time, without affecting the lawfulness of processing based on consent before its withdrawal.",
+      "If you have any questions about this Privacy Policy or wish to exercise your rights, you can contact us at barburatina@gmail.com. You also have the right to lodge a complaint with the competent data protection authority in the Republic of Serbia."
+    ]
   }
 }

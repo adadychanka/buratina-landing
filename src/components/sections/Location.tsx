@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import Link from 'next/link';
 
 /**
  * Location section - How to find us
@@ -8,9 +9,9 @@ import { getTranslations } from 'next-intl/server';
 export async function Location() {
   const t = await getTranslations('Location');
 
-  // TODO: Replace with actual address and coordinates
-  const address = 'Belgrade, Serbia';
-  const coordinates = { lat: 44.7866, lng: 20.4489 }; // Example coordinates
+  // Buratina Bar entrance address and coordinates
+  const address = 'Svetogorska 46, 11103 Beograd, Serbia';
+  const coordinates = { lat: 44.8127834, lng: 20.4699155 };
 
   return (
     <section id="location" className="bg-background py-20">
@@ -56,18 +57,32 @@ export async function Location() {
           </div>
 
           {/* Right Column - Map */}
-          <div className="relative h-[400px] overflow-hidden rounded-lg border">
-            {/* Placeholder for Google Maps */}
-            <div className="absolute inset-0 flex items-center justify-center bg-neutral-200 dark:bg-neutral-800">
-              <div className="text-center">
-                <p className="mb-2 text-neutral-400">{t('mapPlaceholder')}</p>
-                <p className="text-neutral-500 text-sm">{t('mapIntegration')}</p>
-                <p className="mt-2 text-neutral-500 text-xs">
-                  Coordinates: {coordinates.lat}, {coordinates.lng}
-                </p>
-              </div>
+          <div className="space-y-4">
+            <div className="relative h-[400px] overflow-hidden rounded-lg border">
+              <iframe
+                title={t('title')}
+                src={`https://www.google.com/maps?q=${coordinates.lat},${coordinates.lng}&hl=en&z=17&output=embed`}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="h-full w-full border-0"
+              />
             </div>
-            {/* TODO: Add Google Maps or Leaflet component */}
+            <div className="space-y-1 text-center text-muted-foreground text-xs">
+              <p>
+                Coordinates: {coordinates.lat}, {coordinates.lng}
+              </p>
+              <p>
+                <Link
+                  href="https://maps.app.goo.gl/Z3yH99uPy9MUYEnR8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-4 hover:text-foreground"
+                >
+                  {t('mapPlaceholder')}
+                </Link>
+              </p>
+              <p>{t('mapIntegration')}</p>
+            </div>
           </div>
         </div>
       </div>
