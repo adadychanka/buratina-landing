@@ -10,11 +10,11 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
+import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/utils/cn';
 import { scrollToSection } from '@/lib/utils/scroll';
 import { Menu } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
 import { useState } from 'react';
 
 /**
@@ -26,14 +26,17 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { key: 'about', href: '#about', label: t('about') },
-    { key: 'menu', href: '#menu', label: t('menu') },
-    { key: 'events', href: '#events', label: t('events') },
-    { key: 'contact', href: '#contact', label: t('contact') },
-    { key: 'location', href: '#location', label: t('location') },
+    { key: 'about', href: '#about', label: t('about'), isAnchor: true },
+    { key: 'menu', href: '#menu', label: t('menu'), isAnchor: true },
+    { key: 'events', href: '#events', label: t('events'), isAnchor: true },
+    { key: 'pastEvents', href: '/past-events', label: t('pastEvents'), isAnchor: false },
+    { key: 'contact', href: '#contact', label: t('contact'), isAnchor: true },
+    { key: 'location', href: '#location', label: t('location'), isAnchor: true },
   ];
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, isAnchor: boolean) => {
+    if (!isAnchor) return; // Let normal navigation happen for non-anchor links
+
     e.preventDefault();
     const href = e.currentTarget.getAttribute('href');
     if (href?.startsWith('#')) {
@@ -64,7 +67,7 @@ export function Header() {
             <Link
               key={item.key}
               href={item.href}
-              onClick={handleNavClick}
+              onClick={(e) => handleNavClick(e, item.isAnchor)}
               className="font-medium text-sm transition-colors hover:text-accent"
             >
               {item.label}
@@ -97,7 +100,7 @@ export function Header() {
                   <Link
                     key={item.key}
                     href={item.href}
-                    onClick={handleNavClick}
+                    onClick={(e) => handleNavClick(e, item.isAnchor)}
                     className={cn(
                       'font-medium text-sm transition-colors hover:text-accent',
                       'py-2'

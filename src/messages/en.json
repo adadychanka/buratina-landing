@@ -55,36 +55,187 @@
     "zoomLevel": "Zoom level"
   },
   "Events": {
-    "title": "Events and conditions",
-    "formats": "Event formats description...",
+    "title": "Host your event",
+    "subtitle": "Transform Buratina into your private stage. Underground atmosphere, professional equipment, and endless possibilities.",
     "formatsTitle": "Event Formats",
-    "formatsList": {
-      "birthday": "Birthdays",
-      "corporate": "Corporate events",
-      "privateParty": "Private parties",
-      "concert": "Concerts / DJ sets",
-      "lecture": "Lectures",
-      "photoshoot": "Photoshoots"
+    "formatsDescription": "From intimate gatherings to full venue takeovers, we adapt to your vision.",
+    "formats": {
+      "birthday": {
+        "title": "Birthdays",
+        "description": "Celebrate in style with signature cocktails, live music, and an atmosphere unlike anywhere else in Belgrade."
+      },
+      "corporate": {
+        "title": "Corporate Events",
+        "description": "Team building, product launches, or client entertainment in a unique speakeasy setting."
+      },
+      "privateParty": {
+        "title": "Private Parties",
+        "description": "Exclusive venue hire for your special occasion. Make Buratina entirely yours for the evening."
+      },
+      "concert": {
+        "title": "Concerts & DJ Sets",
+        "description": "Professional sound system and intimate underground space perfect for live performances and DJ nights."
+      },
+      "lecture": {
+        "title": "Lectures & Talks",
+        "description": "Cultural events, presentations, and discussions in an atmospheric setting with full technical support."
+      },
+      "photoshoot": {
+        "title": "Photo & Video Shoots",
+        "description": "Distinctive underground aesthetic ideal for creative projects, fashion shoots, and content creation."
+      }
     },
-    "conditions": "Event conditions...",
-    "conditionsTitle": "Conditions",
-    "conditionsList": {
-      "capacity": "Capacity: Up to 200 guests",
-      "deposit": "Minimum deposit required",
-      "duration": "Event duration: Flexible",
-      "equipment": "Available equipment: Sound system, lighting",
-      "catering": "Catering options: Partner catering or own food",
-      "specialMenu": "Special menu available"
+    "equipmentTitle": "Equipment & Facilities",
+    "equipment": {
+      "sound": {
+        "title": "Professional Sound System",
+        "description": "High-quality audio equipment, wireless microphones, DJ setup, and aux connectivity for your music."
+      },
+      "lighting": {
+        "title": "Theatrical Lighting",
+        "description": "Customizable ambient lighting, stage lights, and atmospheric effects to set the perfect mood."
+      },
+      "space": {
+        "title": "Flexible Space",
+        "description": "Underground speakeasy atmosphere accommodating up to 30 guests with adjustable seating arrangements."
+      },
+      "technical": {
+        "title": "Technical Setup",
+        "description": "Projector and screen available, reliable Wi-Fi, power outlets, and technical support throughout your event."
+      },
+      "bar": {
+        "title": "Full Bar Service",
+        "description": "Professional bartenders, signature cocktail menu, custom drink creation, and extensive spirits selection."
+      },
+      "atmosphere": {
+        "title": "Unique Atmosphere",
+        "description": "Hidden courtyard entrance, theatrical underground setting, intimate speakeasy vibe blending bar culture with performance space."
+      }
     },
-    "cta": "Submit event request"
+    "activitiesTitle": "Activities & Services",
+    "activities": {
+      "liveMusic": "Live music performances and DJ sets",
+      "cocktailClass": "Cocktail masterclasses and mixology workshops",
+      "theatre": "Theatrical performances and entertainment",
+      "customMenu": "Custom menu and cocktail creation for your event",
+      "bartenders": "Professional bartender service throughout",
+      "photoFriendly": "Photography and videography welcomed",
+      "hosting": "Dedicated event coordination and hosting",
+      "catering": "Flexible catering options with partner services"
+    },
+    "conditionsTitle": "Booking Information",
+    "conditions": {
+      "capacity": {
+        "title": "Capacity",
+        "description": "Up to 30 guests comfortably, with flexible arrangements for intimate gatherings or full venue hire."
+      },
+      "deposit": {
+        "title": "Booking Requirements",
+        "description": "Minimum deposit required to secure your date. Final pricing depends on guest count, duration, and services."
+      },
+      "duration": {
+        "title": "Event Duration",
+        "description": "Flexible timing to suit your needs. Minimum booking periods apply, with extended hours available."
+      },
+      "catering": {
+        "title": "Food & Drinks",
+        "description": "Full bar service included. Partner with our catering services or arrange your own food options."
+      },
+      "planning": {
+        "title": "Event Planning",
+        "description": "Work directly with our team to plan every detail, from menu to music to atmosphere."
+      },
+      "booking": {
+        "title": "How to Book",
+        "description": "Submit an inquiry through our contact form or call us directly. We'll discuss your vision and provide a tailored proposal."
+      }
+    },
+    "cta": "Submit event inquiry"
   },
   "EventExamples": {
-    "title": "Event examples",
-    "descriptions": {
-      "birthday": "Birthday party",
-      "corporate": "Corporate event",
-      "concert": "Concert",
-      "privateParty": "Private party"
+    "title": "Past Events",
+    "subtitle": "See how others have transformed Buratina into their perfect venue.",
+    "viewAll": "View All Events",
+    "backToHome": "Back to Home",
+    "cards": {
+      "birthday": {
+        "title": "Milestone Birthday",
+        "eventType": "Birthday Celebration",
+        "date": "September 2025",
+        "guests": "80 guests",
+        "description": "An unforgettable 30th birthday celebration featuring live jazz, signature cocktails, and an intimate atmosphere that turned strangers into friends.",
+        "highlights": [
+          "Live jazz trio performance",
+          "Custom cocktail menu",
+          "Exclusive venue hire",
+          "Theatrical lighting setup"
+        ]
+      },
+      "corporate": {
+        "title": "Tech Company Launch",
+        "eventType": "Corporate Event",
+        "date": "October 2025",
+        "guests": "120 guests",
+        "description": "Product launch event combining professional presentations with Belgrade's most unique venue. Client impressed, team inspired.",
+        "highlights": [
+          "Projection and sound setup",
+          "Cocktail reception",
+          "Professional networking space",
+          "Branded cocktail creations"
+        ]
+      },
+      "concert": {
+        "title": "Underground Electronic Night",
+        "eventType": "DJ Set & Concert",
+        "date": "November 2025",
+        "guests": "150 guests",
+        "description": "Three local DJs took over the space for an underground electronic music experience that lasted until sunrise.",
+        "highlights": [
+          "Professional DJ equipment",
+          "Full sound system utilization",
+          "Dynamic lighting design",
+          "Extended hours arrangement"
+        ]
+      },
+      "privateParty": {
+        "title": "Anniversary Celebration",
+        "eventType": "Private Party",
+        "date": "August 2025",
+        "guests": "60 guests",
+        "description": "An elegant anniversary party with curated wine selection, acoustic music, and the intimacy that only an underground speakeasy can provide.",
+        "highlights": [
+          "Private venue access",
+          "Custom menu design",
+          "Acoustic live performance",
+          "Personal bartender service"
+        ]
+      },
+      "cultural": {
+        "title": "Poetry & Music Evening",
+        "eventType": "Cultural Event",
+        "date": "December 2025",
+        "guests": "90 guests",
+        "description": "A fusion of spoken word poetry and ambient music created an atmospheric evening celebrating local artists.",
+        "highlights": [
+          "Stage setup for performances",
+          "Professional microphone system",
+          "Artistic lighting atmosphere",
+          "Author-signature cocktails"
+        ]
+      },
+      "photoshoot": {
+        "title": "Fashion Editorial Shoot",
+        "eventType": "Photo Shoot",
+        "date": "July 2025",
+        "guests": "15 person crew",
+        "description": "Local fashion magazine utilized our unique underground aesthetic for an editorial spread, with full access to create the perfect shots.",
+        "highlights": [
+          "Flexible space arrangement",
+          "Lighting control access",
+          "Extended shoot hours",
+          "Distinctive visual backdrop"
+        ]
+      }
     }
   },
   "ContactForm": {
@@ -139,6 +290,7 @@
     "about": "About",
     "menu": "Menu",
     "events": "Events",
+    "pastEvents": "Past Events",
     "contact": "Contact",
     "location": "Location",
     "toggleMenu": "Toggle menu",

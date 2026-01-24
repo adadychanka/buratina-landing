@@ -26,6 +26,7 @@
     "@react-email/render": "^2.0.4",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "embla-carousel-react": "^8.6.0",
     "next": "^15.5.9",
     "next-intl": "^3.22.0",
     "pdfjs-dist": "^4.8.69",

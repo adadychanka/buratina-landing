@@ -55,36 +55,187 @@
     "zoomLevel": "Nivo zumiranja"
   },
   "Events": {
-    "title": "Događaji i uslovi",
-    "formats": "Opis formata događaja...",
+    "title": "Organizujte događaj",
+    "subtitle": "Pretvorite Buratinu u svoju privatnu scenu. Podzemna atmosfera, profesionalna oprema i beskrajne mogućnosti.",
     "formatsTitle": "Formati događaja",
-    "formatsList": {
-      "birthday": "Rođendani",
-      "corporate": "Korporativni događaji",
-      "privateParty": "Privatne žurke",
-      "concert": "Koncerti / DJ setovi",
-      "lecture": "Predavanja",
-      "photoshoot": "Fotografisanja"
+    "formatsDescription": "Od intimnih okupljanja do potpunog iznajmljivanja prostora — prilagođavamo se vašoj viziji.",
+    "formats": {
+      "birthday": {
+        "title": "Rođendani",
+        "description": "Proslavite u stilu sa autorskim koktelima, živom muzikom i atmosferom kakve nigde drugde nema u Beogradu."
+      },
+      "corporate": {
+        "title": "Korporativni događaji",
+        "description": "Timbilding, lansiranje proizvoda ili zabava za klijente u jedinstvenom speakeasy okruženju."
+      },
+      "privateParty": {
+        "title": "Privatne žurke",
+        "description": "Ekskluzivno iznajmljivanje prostora za vašu posebnu priliku. Buratina postaje potpuno vaša za to veče."
+      },
+      "concert": {
+        "title": "Koncerti i DJ setovi",
+        "description": "Profesionalni zvučni sistem i intiman podzemni prostor savršen za žive nastupe i DJ večeri."
+      },
+      "lecture": {
+        "title": "Predavanja i razgovori",
+        "description": "Kulturni događaji, prezentacije i diskusije u atmosferskom okruženju sa punom tehničkom podrškom."
+      },
+      "photoshoot": {
+        "title": "Foto i video snimanja",
+        "description": "Prepoznatljiva podzemna estetika idealna za kreativne projekte, modne sesije i kreiranje sadržaja."
+      }
     },
-    "conditions": "Uslovi za organizaciju događaja...",
-    "conditionsTitle": "Uslovi",
-    "conditionsList": {
-      "capacity": "Kapacitet: Do 200 gostiju",
-      "deposit": "Potreban je minimalni depozit",
-      "duration": "Trajanje događaja: Fleksibilno",
-      "equipment": "Dostupna oprema: Zvučni sistem, osvetljenje",
-      "catering": "Opcije kateringa: Partner katering ili sopstvena hrana",
-      "specialMenu": "Dostupan poseban meni"
+    "equipmentTitle": "Oprema i mogućnosti",
+    "equipment": {
+      "sound": {
+        "title": "Profesionalni zvučni sistem",
+        "description": "Visokokvalitetna audio oprema, bežični mikrofoni, DJ oprema i mogućnost povezivanja vaše muzike."
+      },
+      "lighting": {
+        "title": "Pozorišno osvetljenje",
+        "description": "Prilagodljivo ambijentalno osvetljenje, scensko svetlo i atmosferski efekti za savršeno raspoloženje."
+      },
+      "space": {
+        "title": "Fleksibilan prostor",
+        "description": "Podzemna speakeasy atmosfera koja može da primi do 30 gostiju sa prilagodljivim rasporedom sedenja."
+      },
+      "technical": {
+        "title": "Tehnička oprema",
+        "description": "Projektor i ekran dostupni, pouzdan Wi-Fi, utičnice i tehnička podrška tokom celog događaja."
+      },
+      "bar": {
+        "title": "Kompletna usluga bara",
+        "description": "Profesionalni barmeni, meni autorskih koktela, kreiranje posebnih pića i širok izbor alkohola."
+      },
+      "atmosphere": {
+        "title": "Jedinstvena atmosfera",
+        "description": "Skriven ulaz kroz dvorište, teatralno podzemno okruženje, intimna speakeasy atmosfera koja spaja bar kulturu sa prostorom za nastupe."
+      }
     },
-    "cta": "Pošalji zahtev za događaj"
+    "activitiesTitle": "Aktivnosti i usluge",
+    "activities": {
+      "liveMusic": "Živa muzika i DJ nastupi",
+      "cocktailClass": "Radionice koktela i miksologije",
+      "theatre": "Pozorišne predstave i zabava",
+      "customMenu": "Kreiranje posebnog menija i koktela za vaš događaj",
+      "bartenders": "Profesionalna usluga barmena tokom celog događaja",
+      "photoFriendly": "Fotografisanje i snimanje su dobrodošli",
+      "hosting": "Posvećena koordinacija i organizacija događaja",
+      "catering": "Fleksibilne opcije kateringa sa partnerskim servisima"
+    },
+    "conditionsTitle": "Informacije o rezervaciji",
+    "conditions": {
+      "capacity": {
+        "title": "Kapacitet",
+        "description": "Do 30 gostiju udobno, sa fleksibilnim opcijama za intimna okupljanja ili potpuno iznajmljivanje prostora."
+      },
+      "deposit": {
+        "title": "Uslovi rezervacije",
+        "description": "Potreban je minimalni depozit za osiguravanje datuma. Konačna cena zavisi od broja gostiju, trajanja i usluga."
+      },
+      "duration": {
+        "title": "Trajanje događaja",
+        "description": "Fleksibilno vreme prema vašim potrebama. Primenjuju se minimalni periodi rezervacije, dostupni su produženi sati."
+      },
+      "catering": {
+        "title": "Hrana i piće",
+        "description": "Kompletna usluga bara uključena. Partnerstvo sa našim ketering servisima ili mogućnost organizovanja sopstvene hrane."
+      },
+      "planning": {
+        "title": "Planiranje događaja",
+        "description": "Radite direktno sa našim timom da isplanirate svaki detalj — od menija do muzike i atmosfere."
+      },
+      "booking": {
+        "title": "Kako rezervisati",
+        "description": "Pošaljite upit preko kontakt forme ili nas pozovite direktno. Razgovaraćemo o vašoj viziji i pružiti prilagođenu ponudu."
+      }
+    },
+    "cta": "Pošaljite upit za događaj"
   },
   "EventExamples": {
-    "title": "Primeri događaja",
-    "descriptions": {
-      "birthday": "Rođendan",
-      "corporate": "Korporativni događaj",
-      "concert": "Koncert",
-      "privateParty": "Privatna žurka"
+    "title": "Prošli događaji",
+    "subtitle": "Vidite kako su drugi pretvorili Buratinu u svoj savršen prostor.",
+    "viewAll": "Pogledaj sve događaje",
+    "backToHome": "Nazad na početnu",
+    "cards": {
+      "birthday": {
+        "title": "Jubilejarni rođendan",
+        "eventType": "Proslava rođendana",
+        "date": "Septembar 2025",
+        "guests": "80 gostiju",
+        "description": "Nezaboravna proslava 30. rođendana sa živim džezom, autorskim koktelima i intimnom atmosferom koja je od stranaca napravila prijatelje.",
+        "highlights": [
+          "Nastup džez tria",
+          "Prilagođeni meni koktela",
+          "Ekskluzivno iznajmljivanje prostora",
+          "Pozorišna svetlosna postavka"
+        ]
+      },
+      "corporate": {
+        "title": "Lansiranje tehnološke kompanije",
+        "eventType": "Korporativni događaj",
+        "date": "Oktobar 2025",
+        "guests": "120 gostiju",
+        "description": "Događaj za lansiranje proizvoda koji kombinuje profesionalne prezentacije sa najjedinstvenijem prostorom u Beogradu. Klijent impresioniran, tim inspirisan.",
+        "highlights": [
+          "Projekcija i zvučna oprema",
+          "Koktel prijem",
+          "Profesionalan prostor za networking",
+          "Brendirani autorski kokteli"
+        ]
+      },
+      "concert": {
+        "title": "Andergraund elektronska noć",
+        "eventType": "DJ set i koncert",
+        "date": "Novembar 2025",
+        "guests": "150 gostiju",
+        "description": "Tri lokalna DJ-a su preuzela prostor za andergraund iskustvo elektronske muzike koje je trajalo do svitanja.",
+        "highlights": [
+          "Profesionalna DJ oprema",
+          "Potpuno korišćenje zvučnog sistema",
+          "Dinamičan svetlosni dizajn",
+          "Produženi sati rada"
+        ]
+      },
+      "privateParty": {
+        "title": "Proslava godišnjice",
+        "eventType": "Privatna žurka",
+        "date": "Avgust 2025",
+        "guests": "60 gostiju",
+        "description": "Elegantna proslava godišnjice sa kuriranom selekcijom vina, akustičnom muzikom i intimnošću koju samo podzemni speakeasy može da pruži.",
+        "highlights": [
+          "Privatni pristup prostoru",
+          "Dizajn posebnog menija",
+          "Živi akustični nastup",
+          "Lična usluga barmena"
+        ]
+      },
+      "cultural": {
+        "title": "Veče poezije i muzike",
+        "eventType": "Kulturni događaj",
+        "date": "Decembar 2025",
+        "guests": "90 gostiju",
+        "description": "Spoj govorne poezije i ambijentalne muzike stvorio je atmosferično veče posvećeno lokalnim umetnicima.",
+        "highlights": [
+          "Postavljanje scene za nastupe",
+          "Profesionalni mikrofon sistem",
+          "Umetnička svetlosna atmosfera",
+          "Autorski kokteli inspirisani umetnicima"
+        ]
+      },
+      "photoshoot": {
+        "title": "Modni editorijal",
+        "eventType": "Fotografisanje",
+        "date": "Jul 2025",
+        "guests": "15 članova ekipe",
+        "description": "Lokalni modni magazin iskoristio je našu jedinstvenu podzemnu estetiku za editorijal, sa punim pristupom za kreiranje savršenih fotografija.",
+        "highlights": [
+          "Fleksibilna organizacija prostora",
+          "Pristup kontroli osvetljenja",
+          "Produženi sati snimanja",
+          "Prepoznatljiva vizuelna pozadina"
+        ]
+      }
     }
   },
   "ContactForm": {
@@ -139,6 +290,7 @@
     "about": "O nama",
     "menu": "Meni",
     "events": "Događaji",
+    "pastEvents": "Prošli događaji",
     "contact": "Kontakt",
     "location": "Lokacija",
     "toggleMenu": "Prebaci meni",

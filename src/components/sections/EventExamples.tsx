@@ -1,55 +1,67 @@
-import { getTranslations } from 'next-intl/server';
-import Image from 'next/image';
+'use client';
+
+import { EventCard } from '@/components/sections/EventCard';
+import { Link } from '@/i18n/navigation';
+import { useTranslations } from 'next-intl';
 
 /**
- * EventExamples section - Gallery of past events
- * Features photos/videos from previous events with optional descriptions
- * Server component - hover effects work via CSS
+ * EventExamples section - Showcase of successful past events (homepage preview)
+ * Features card-based layout with photos, descriptions, and highlights
+ * Shows limited cards with link to full past events page
+ * Uses reusable EventCard component with carousel support
  */
-export async function EventExamples() {
-  const t = await getTranslations('EventExamples');
+export function EventExamples() {
+  const t = useTranslations('EventExamples');
 
-  // TODO: Replace with actual images
-  const eventImages = [
-    { src: '/images/events/1.jpg', alt: 'Event 1', descriptionKey: 'birthday' },
-    { src: '/images/events/2.jpg', alt: 'Event 2', descriptionKey: 'corporate' },
-    { src: '/images/events/3.jpg', alt: 'Event 3', descriptionKey: 'concert' },
-    { src: '/images/events/4.jpg', alt: 'Event 4', descriptionKey: 'privateParty' },
+  // Define events with their images
+  // TODO: Replace with actual image paths when photos are available
+  const events = [
+    {
+      key: 'birthday' as const,
+      images: ['placeholder-1', 'placeholder-2', 'placeholder-3'], // 3 images for birthday
+    },
+    {
+      key: 'corporate' as const,
+      images: ['placeholder-1', 'placeholder-2'], // 2 images for corporate
+    },
+    {
+      key: 'concert' as const,
+      images: ['placeholder-1'], // Single image for concert
+    },
+    {
+      key: 'privateParty' as const,
+      images: ['placeholder-1', 'placeholder-2', 'placeholder-3', 'placeholder-4'], // 4 images
+    },
   ];
 
   return (
     <section id="event-examples" className="bg-muted/50 py-20">
       <div className="container mx-auto px-4">
-        {/* Title */}
-        <h2 className="mb-12 text-center font-bold font-serif text-4xl text-foreground md:text-5xl">
-          {t('title')}
-        </h2>
+        {/* Section Header */}
+        <div className="mx-auto mb-12 max-w-3xl text-center">
+          <h2 className="mb-4 font-bold font-serif text-4xl text-foreground md:text-5xl">
+            {t('title')}
+          </h2>
+          <p className="text-lg text-muted-foreground">{t('subtitle')}</p>
+        </div>
 
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {eventImages.map((image) => (
-            <div key={image.src} className="group relative aspect-[4/3] overflow-hidden rounded-lg">
-              {/* Placeholder for images */}
-              <div className="absolute inset-0 flex items-center justify-center bg-neutral-100 dark:bg-neutral-800">
-                <span className="text-neutral-700 text-sm dark:text-neutral-200">{image.alt}</span>
-              </div>
-              {/* TODO: Replace with actual Image component when images are available */}
-              {/* <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                className="object-cover transition-transform group-hover:scale-105"
-                loading="lazy"
-              /> */}
-
-              {/* Description overlay */}
-              <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent p-4 opacity-0 transition-opacity group-hover:opacity-100">
-                <p className="font-medium text-sm text-white">
-                  {t(`descriptions.${image.descriptionKey}`)}
-                </p>
-              </div>
+        {/* Event Cards Grid */}
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-2">
+          {events.map((event, index) => (
+            <div key={event.key} className={index === 3 ? 'hidden md:block' : ''}>
+              <EventCard cardKey={event.key} variant="default" images={event.images} />
             </div>
           ))}
+        </div>
+
+        {/* View All Button */}
+        <div className="mt-12 text-center">
+          <Link
+            href="/past-events"
+            className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+          >
+            {t('viewAll')}
+          </Link>
         </div>
       </div>
     </section>

@@ -8,7 +8,7 @@ import type { MetadataRoute } from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://buratina-bar.com';
 
-  const routes = [''];
+  const routes = ['', '/past-events', '/privacy-policy'];
 
   const sitemapEntries: MetadataRoute.Sitemap = [];
 
