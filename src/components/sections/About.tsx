@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
+import { ScrollToButton } from '@/components/ui/scroll-to-button';
 import Link from 'next/link';
 
 /**

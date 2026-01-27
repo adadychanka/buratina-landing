@@ -3,6 +3,7 @@
     "title": "Buratina Bar",
     "subtitle": "Najmističniji bar u Beogradu",
     "description": "Ovaj bar se ne traži — u njega se ulazi.\nSkriven u dvorištu, iza običnih vrata zgrade, počinje tamo gde grad utihne.\nOvde se teatar meša sa barom, muzika sa šapatima, a kokteli sa pričama koje se ne izgovaraju naglas.\nSvaka večer je scena bez scenarija.\nAko si ovde — već si pozvan.",
+    "imageAlt": "Enterijer Buratina Bara sa mističnom atmosferskom rasvetu, drvenim dekorom i toplim ambijentom u Beogradu",
     "cta": {
       "book": "Rezerviši sto",
       "event": "Organizuj događaj"
@@ -31,6 +32,7 @@
   "Menu": {
     "title": "Meni",
     "description": "Autorski kokteli, reinterpretirani klasici i nekoliko pića koja nećete naći nigde drugde.",
+    "imageAlt": "Meni Buratina Bara stranica {page} - kokteli, pića i napitci",
     "categories": {
       "cocktails": "Koktel karta",
       "alcohol": "Alkoholna pića",
@@ -316,5 +318,44 @@
       "Imate pravo da zatražite pristup svojim ličnim podacima, njihovu ispravku ili brisanje, ograničenje obrade, kao i, kada je primenljivo, prenosivost podataka. Takođe možete u bilo kom trenutku povući svoju saglasnost, bez uticaja na zakonitost obrade zasnovane na saglasnosti pre njenog povlačenja.",
       "Ako imate pitanja u vezi sa ovom Politikom privatnosti ili želite da ostvarite svoja prava, možete nas kontaktirati na adresu barburatina@gmail.com. Takođe imate pravo da podnesete pritužbu nadležnom organu za zaštitu podataka u Republici Srbiji."
     ]
+  },
+  "FAQ": {
+    "title": "Često postavljana pitanja",
+    "subtitle": "Sve što treba da znate o Buratina Baru",
+    "contactText": "Imate još pitanja? Kontaktirajte nas na",
+    "questions": {
+      "hours": {
+        "question": "Koje su vaše radno vreme?",
+        "answer": "Otvoreni smo svakog dana od 18 do 02 sata (ponedeljak-nedelja). Naša mistična atmosfera oživljava tokom večernjih sati, savršena za koktele, događaje i nezaboravna iskustva."
+      },
+      "reservation": {
+        "question": "Da li mi je potrebna rezervacija?",
+        "answer": "Rezervacije se preporučuju, posebno za vikende i posebne događaje. Možete rezervisati sto pozivom na +381 61 1096732 ili korišćenjem našeg kontakt formulara. Dobrodošli ste i bez rezervacije, u zavisnosti od dostupnosti."
+      },
+      "events": {
+        "question": "Mogu li organizovati privatni događaj?",
+        "answer": "Da, organizujemo različite događaje uključujući rođendane, korporativne skupove, koncerte i privatne zabave. Naš prostor može da primi različite formate događaja sa profesionalnim zvukom, osvetljenjem i punim bar servisom. Kontaktirajte nas da razgovaramo o vašim potrebama."
+      },
+      "capacity": {
+        "question": "Koji je kapacitet prostora?",
+        "answer": "Naš prostor može da primi različite veličine grupa u zavisnosti od formata događaja. Nudimo fleksibilne prostorne aranžmane za intimna okupljanja do većih proslava. Kontaktirajte nas da razgovaramo o vašim specifičnim zahtevima."
+      },
+      "dress": {
+        "question": "Da li postoji dress code?",
+        "answer": "Imamo smart casual dress code. Obucite se udobno ali sa stilom da odgovara našoj mističnoj atmosferi. Pozdravljamo kreativne i jedinstvene modne izbore koji unapređuju večernji ambijent."
+      },
+      "parking": {
+        "question": "Da li je parking dostupan?",
+        "answer": "Ulični parking je dostupan u blizini lokala na Svetogorskoj 46 u Beogradu. Preporučujemo dolazak taksijem ili javnim prevozom radi pogodnosti, posebno tokom vikend večeri."
+      },
+      "payment": {
+        "question": "Koje načine plaćanja prihvatate?",
+        "answer": "Prihvatamo gotovinu i glavne kreditne/debitne kartice. Za privatne događaje zahtevamo depozit za obezbeđivanje rezervacije, sa opcijama konačne uplate koje se razgovaraju tokom planiranja."
+      },
+      "menu": {
+        "question": "Kakve pića i hranu nudite?",
+        "answer": "Specijalizovani smo za kreativne koktele i jedinstvena pića koja odgovaraju našoj mističnoj temi. Naš meni sadrži pažljivo odabrane napitke i lagane zalogaje. Potpuni detalji menija dostupni su na našoj veb stranici ili na zahtev."
+      }
+    }
   }
 }

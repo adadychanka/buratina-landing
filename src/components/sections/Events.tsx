@@ -1,4 +1,5 @@
 import { ScrollToButton } from '@/components/ui/scroll-to-button';
+import { Link } from '@/i18n/navigation';
 import { getTranslations } from 'next-intl/server';
 
 /**
@@ -110,11 +111,17 @@ export async function Events() {
           </div>
         </div>
 
-        {/* CTA Button */}
-        <div className="text-center">
+        {/* CTA Buttons */}
+        <div className="flex flex-col items-center justify-center gap-4 text-center sm:flex-row">
           <ScrollToButton targetId="contact" size="lg">
             {t('cta')}
           </ScrollToButton>
+          <Link
+            href="/past-events"
+            className="inline-flex items-center justify-center rounded-md border border-primary/40 bg-background px-8 py-3 font-medium text-primary transition-colors hover:bg-primary/10"
+          >
+            View Past Events →
+          </Link>
         </div>
       </div>
     </section>

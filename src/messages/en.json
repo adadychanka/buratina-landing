@@ -4,6 +4,7 @@
     "subtitle": "The most mystical bar in Belgrade",
     "description": "This bar isn’t found — it’s entered.\nHidden in a quiet courtyard, behind an ordinary doorway, it begins where the city fades away.\nHere, theatre blends with the bar, music with whispers, and cocktails with stories never told out loud.\nEvery night is a stage without a script.\nIf you’re here, you’ve already been let in.",
     "cta": {
+    "imageAlt": "Buratina Bar interior showcasing mystical atmospheric lighting, wooden decor, and warm ambiance in Belgrade",
       "book": "Book a table",
       "event": "Host an event"
     }
@@ -31,6 +32,7 @@
   "Menu": {
     "title": "Menu",
     "description": "Signature cocktails, reimagined classics and a few things you won’t find anywhere else.",
+    "imageAlt": "Buratina Bar menu page {page} - cocktails, drinks and beverages list",
     "categories": {
       "cocktails": "Cocktail menu",
       "alcohol": "Alcoholic drinks",
@@ -316,5 +318,44 @@
       "You have the right to request access to your personal data, its rectification or erasure, restriction of processing, and, where applicable, data portability. You may also withdraw your consent at any time, without affecting the lawfulness of processing based on consent before its withdrawal.",
       "If you have any questions about this Privacy Policy or wish to exercise your rights, you can contact us at barburatina@gmail.com. You also have the right to lodge a complaint with the competent data protection authority in the Republic of Serbia."
     ]
+  },
+  "FAQ": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about Buratina Bar",
+    "contactText": "Have more questions? Contact us at",
+    "questions": {
+      "hours": {
+        "question": "What are your opening hours?",
+        "answer": "We are open daily from 6 PM to 2 AM (Monday-Sunday). Our mystical atmosphere comes alive in the evening hours, perfect for cocktails, events, and unforgettable experiences."
+      },
+      "reservation": {
+        "question": "Do I need a reservation?",
+        "answer": "Reservations are recommended, especially for weekends and special events. You can book a table by calling +381 61 1096732 or using our contact form. Walk-ins are welcome based on availability."
+      },
+      "events": {
+        "question": "Can I host a private event?",
+        "answer": "Yes, we host various events including birthdays, corporate gatherings, concerts, and private parties. Our venue accommodates different event formats with professional sound, lighting, and full bar service. Contact us to discuss your event needs."
+      },
+      "capacity": {
+        "question": "What is the venue capacity?",
+        "answer": "Our venue can accommodate different group sizes depending on the event format. We offer flexible space arrangements for intimate gatherings to larger celebrations. Contact us to discuss your specific requirements."
+      },
+      "dress": {
+        "question": "Is there a dress code?",
+        "answer": "We have a smart casual dress code. Dress comfortably but stylishly to match our mystical atmosphere. We welcome creative and unique fashion choices that enhance the evening's ambiance."
+      },
+      "parking": {
+        "question": "Is parking available?",
+        "answer": "Street parking is available near the venue on Svetogorska 46 in Belgrade. We recommend arriving by taxi or public transport for convenience, especially during weekend evenings."
+      },
+      "payment": {
+        "question": "What payment methods do you accept?",
+        "answer": "We accept cash and major credit/debit cards. For private events, we require a deposit to secure your booking, with final payment options discussed during planning."
+      },
+      "menu": {
+        "question": "What kind of drinks and food do you serve?",
+        "answer": "We specialize in creative cocktails and unique drinks that match our mystical theme. Our menu features carefully curated beverages and light bites. Full menu details are available on our website or by request."
+      }
+    }
   }
 }

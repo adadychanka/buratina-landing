@@ -22,7 +22,7 @@ export async function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src={heroBanner}
-          alt="Buratina Bar interior showcasing mystical atmospheric lighting, wooden decor, and warm ambiance in Belgrade"
+          alt={t('imageAlt')}
           fill
           priority
           placeholder="blur"

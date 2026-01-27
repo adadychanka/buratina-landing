@@ -82,6 +82,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     other: {
       'article:modified_time': lastModified.toISOString(),
       'og:updated_time': lastModified.toISOString(),
+      // Apple Web App meta tags for iOS
+      'apple-mobile-web-app-capable': 'yes',
+      'apple-mobile-web-app-status-bar-style': 'black-translucent',
+      'apple-mobile-web-app-title': 'Buratina Bar',
+    },
+    appleWebApp: {
+      capable: true,
+      title: 'Buratina Bar',
+      statusBarStyle: 'black-translucent',
     },
   };
 }
