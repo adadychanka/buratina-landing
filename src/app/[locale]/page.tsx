@@ -6,10 +6,12 @@ import { Hero } from '@/components/sections/Hero';
 import { Location } from '@/components/sections/Location';
 import { Menu } from '@/components/sections/Menu';
 import { SocialMedia } from '@/components/sections/SocialMedia';
+import { LocalBusinessSchema } from '@/components/structured-data/LocalBusinessSchema';
 /**
  * Main landing page
  * Single-page application with all sections
  * Most components are server components for better performance
+ * Includes LocalBusiness structured data for SEO/AI platforms
  */
 import { setRequestLocale } from 'next-intl/server';
 
@@ -24,15 +26,18 @@ export default async function HomePage({ params }: Props) {
   setRequestLocale(locale);
 
   return (
-    <main>
-      <Hero />
-      <About />
-      <Menu />
-      <Events />
-      <EventExamples />
-      <ContactForm />
-      <Location />
-      <SocialMedia />
-    </main>
+    <>
+      <LocalBusinessSchema />
+      <main>
+        <Hero />
+        <About />
+        <Menu />
+        <Events />
+        <EventExamples />
+        <ContactForm />
+        <Location />
+        <SocialMedia />
+      </main>
+    </>
   );
 }

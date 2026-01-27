@@ -125,7 +125,7 @@ export function Menu() {
                 <div className="relative aspect-[3/4] w-full">
                   <Image
                     src={images[currentIndex]}
-                    alt={t('title')}
+                    alt={`Buratina Bar menu page ${currentIndex + 1} - cocktails, drinks and beverages list`}
                     fill
                     className="h-full w-full object-contain transition-transform duration-300 ease-out"
                     priority

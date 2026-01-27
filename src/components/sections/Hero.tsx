@@ -22,7 +22,7 @@ export async function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src={heroBanner}
-          alt={t('title')}
+          alt="Buratina Bar interior showcasing mystical atmospheric lighting, wooden decor, and warm ambiance in Belgrade"
           fill
           priority
           placeholder="blur"
@@ -44,9 +44,9 @@ export async function Hero() {
           </div>
 
           {/* Subtitle */}
-          <h2 className="mb-6 font-semibold font-serif text-2xl text-foreground md:text-3xl">
+          <p className="mb-6 font-semibold font-serif text-2xl text-foreground md:text-3xl">
             {t('subtitle')}
-          </h2>
+          </p>
 
           {/* Description */}
           <p className="mx-auto mb-10 max-w-3xl whitespace-pre-line text-base text-foreground/90 md:text-lg">

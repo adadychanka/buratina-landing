@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Background circle -->
+  <circle cx="16" cy="16" r="16" fill="#2D1810"/>
+  
+  <!-- Stylized 'B' with mystical theme -->
+  <g fill="#D4AF37">
+    <!-- B letter -->
+    <path d="M11 8 H16 C18 8 19 9 19 10.5 C19 11.5 18.5 12 17.5 12.2 C18.8 12.5 20 13.5 20 15.5 C20 17.5 18.5 19 16 19 H11 Z M13 10 V12 H16 C17 12 17.5 11.5 17.5 10.5 C17.5 9.5 17 9 16 9 H13 Z M13 13.5 V18 H16 C17.5 18 18 17 18 15.5 C18 14 17 13.5 16 13.5 H13 Z"/>
+    
+    <!-- Mystical stars -->
+    <circle cx="23" cy="9" r="1" opacity="0.8"/>
+    <circle cx="26" cy="14" r="0.8" opacity="0.6"/>
+    <circle cx="8" cy="24" r="1" opacity="0.8"/>
+  </g>
+</svg>
