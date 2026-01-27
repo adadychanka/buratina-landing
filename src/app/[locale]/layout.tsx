@@ -29,6 +29,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const localePath = locale === 'en' ? '' : `/${locale}`;
   const url = `${baseUrl}${localePath}`;
 
+  // Current date for freshness signals (update this when content changes)
+  const lastModified = new Date('2026-01-27');
+
   return {
     title: 'Buratina Bar - The Most Mystical Bar in Belgrade',
     description:
@@ -75,6 +78,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         'max-image-preview': 'large',
         'max-snippet': -1,
       },
+    },
+    other: {
+      'article:modified_time': lastModified.toISOString(),
+      'og:updated_time': lastModified.toISOString(),
     },
   };
 }
