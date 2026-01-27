@@ -7,11 +7,16 @@ import { Location } from '@/components/sections/Location';
 import { Menu } from '@/components/sections/Menu';
 import { SocialMedia } from '@/components/sections/SocialMedia';
 import { LocalBusinessSchema } from '@/components/structured-data/LocalBusinessSchema';
+import { OrganizationSchema } from '@/components/structured-data/OrganizationSchema';
+import { WebSiteSchema } from '@/components/structured-data/WebSiteSchema';
 /**
  * Main landing page
  * Single-page application with all sections
  * Most components are server components for better performance
- * Includes LocalBusiness structured data for SEO/AI platforms
+ * Includes comprehensive structured data for SEO/AI platforms:
+ * - LocalBusiness: Bar information and details
+ * - Organization: Brand identity and contact
+ * - WebSite: Site-level information with search
  */
 import { setRequestLocale } from 'next-intl/server';
 
@@ -27,7 +32,11 @@ export default async function HomePage({ params }: Props) {
 
   return (
     <>
+      {/* Structured Data for SEO & AI Platforms */}
       <LocalBusinessSchema />
+      <OrganizationSchema />
+      <WebSiteSchema />
+
       <main>
         <Hero />
         <About />

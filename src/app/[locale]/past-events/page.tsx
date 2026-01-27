@@ -3,6 +3,8 @@ import { Link } from '@/i18n/navigation';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { setRequestLocale } from 'next-intl/server';
+import { EventsCollectionSchema } from '@/components/structured-data/EventSchema';
+import { BreadcrumbSchema, breadcrumbs } from '@/components/structured-data/BreadcrumbSchema';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -59,39 +61,45 @@ export default async function PastEventsPage({ params }: Props) {
   ];
 
   return (
-    <main className="min-h-screen bg-background">
-      <div className="container mx-auto px-4 py-20">
-        {/* Page Header */}
-        <div className="mx-auto mb-16 max-w-3xl text-center">
-          <h1 className="mb-4 font-bold font-serif text-4xl text-foreground md:text-5xl">
-            {t('title')}
-          </h1>
-          <p className="text-lg text-muted-foreground leading-relaxed">{t('subtitle')}</p>
-        </div>
+    <>
+      {/* Structured Data for SEO & AI Platforms */}
+      <EventsCollectionSchema />
+      <BreadcrumbSchema items={breadcrumbs.pastEvents(locale)} />
 
-        {/* Event Cards Grid */}
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {events.map((event) => (
-            <EventCard
-              key={event.key}
-              cardKey={event.key}
-              variant="compact"
-              images={event.images}
-            />
-          ))}
-        </div>
+      <main className="min-h-screen bg-background">
+        <div className="container mx-auto px-4 py-20">
+          {/* Page Header */}
+          <div className="mx-auto mb-16 max-w-3xl text-center">
+            <h1 className="mb-4 font-bold font-serif text-4xl text-foreground md:text-5xl">
+              {t('title')}
+            </h1>
+            <p className="text-lg text-muted-foreground leading-relaxed">{t('subtitle')}</p>
+          </div>
 
-        {/* Back to Home */}
-        <div className="mt-16 text-center">
-          <Link
-            href="/#event-examples"
-            className="inline-flex items-center justify-center gap-2 text-muted-foreground transition-colors hover:text-primary"
-          >
-            <span>←</span>
-            <span>{t('backToHome')}</span>
-          </Link>
+          {/* Event Cards Grid */}
+          <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {events.map((event) => (
+              <EventCard
+                key={event.key}
+                cardKey={event.key}
+                variant="compact"
+                images={event.images}
+              />
+            ))}
+          </div>
+
+          {/* Back to Home */}
+          <div className="mt-16 text-center">
+            <Link
+              href="/#event-examples"
+              className="inline-flex items-center justify-center gap-2 text-muted-foreground transition-colors hover:text-primary"
+            >
+              <span>←</span>
+              <span>{t('backToHome')}</span>
+            </Link>
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </>
   );
 }
