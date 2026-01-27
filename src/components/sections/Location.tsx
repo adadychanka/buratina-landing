@@ -38,6 +38,7 @@ export async function Location() {
                 {t('hours')}
               </h3>
               <div className="space-y-2 text-muted-foreground">
+                <p>{t('hoursList.closed')}</p>
                 <p>{t('hoursList.weekday')}</p>
                 <p>{t('hoursList.weekend')}</p>
                 <p>{t('hoursList.sunday')}</p>

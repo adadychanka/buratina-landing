@@ -5,7 +5,7 @@ import { ScrollRestorer } from '@/components/layout/ScrollRestorer';
 import { routing } from '@/i18n/routing';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 
 /**
@@ -108,14 +108,22 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   // Load messages for the locale - use direct import to ensure correct locale
   const messages = (await import(`@/messages/${locale}.json`)).default;
+  const t = await getTranslations({ locale, namespace: 'Navigation' });
 
   return (
     <NextIntlClientProvider messages={messages} locale={locale}>
       <HtmlLang />
+      {/* Skip-to-content link for keyboard navigation accessibility */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+      >
+        {t('skipToContent')}
+      </a>
       <div className="flex min-h-screen flex-col">
         <ScrollRestorer />
         <Header />
-        <main className="flex-1">{children}</main>
+        <main id="main-content" className="flex-1">{children}</main>
         <Footer />
       </div>
     </NextIntlClientProvider>

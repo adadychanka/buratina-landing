@@ -152,6 +152,7 @@
         "description": "Pošaljite upit preko kontakt forme ili nas pozovite direktno. Razgovaraćemo o vašoj viziji i pružiti prilagođenu ponudu."
       }
     },
+    "viewPastEvents": "Pogledajte prošle događaje",
     "cta": "Pošaljite upit za događaj"
   },
   "EventExamples": {
@@ -275,8 +276,9 @@
     "address": "Adresa",
     "hours": "Radno vreme",
     "hoursList": {
-      "weekday": "Ponedeljak – Četvrtak: 17:00–00:00",
-      "weekend": "Petak – Subota: 17:00–01:00",
+      "closed": "Ponedeljak: Zatvoreno",
+      "weekday": "Utorak – Četvrtak: 19:00–00:00",
+      "weekend": "Petak – Subota: 19:00–01:00",
       "sunday": "Nedelja: 19:00–00:00"
     },
     "directions": "Kako doći",
@@ -297,6 +299,7 @@
     "location": "Lokacija",
     "toggleMenu": "Prebaci meni",
     "menuTitle": "Meni",
+    "skipToContent": "Pređi na glavni sadržaj",
     "menuDescription": "Navigacija kroz stranicu"
   },
   "Footer": {
@@ -326,7 +329,7 @@
     "questions": {
       "hours": {
         "question": "Koje su vaše radno vreme?",
-        "answer": "Otvoreni smo svakog dana od 18 do 02 sata (ponedeljak-nedelja). Naša mistična atmosfera oživljava tokom večernjih sati, savršena za koktele, događaje i nezaboravna iskustva."
+        "answer": "Otvoreni smo utorkom, sredom, četvrtkom i nedeljom od 19 do 00 sati, a petkom i subotom od 19 do 01 sat. Ponedeljkom smo zatvoreni. Naša mistična atmosfera oživljava tokom večernjih sati, savršena za koktele, događaje i nezaboravna iskustva."
       },
       "reservation": {
         "question": "Da li mi je potrebna rezervacija?",

@@ -118,9 +118,10 @@ export async function Events() {
           </ScrollToButton>
           <Link
             href="/past-events"
-            className="inline-flex items-center justify-center rounded-md border border-primary/40 bg-background px-8 py-3 font-medium text-primary transition-colors hover:bg-primary/10"
+            className="inline-flex items-center justify-center gap-2 rounded-md border-2 border-primary bg-transparent px-8 py-3 font-medium text-primary transition-all hover:bg-primary hover:text-primary-foreground"
           >
-            View Past Events →
+            {t('viewPastEvents')}
+            <span aria-hidden="true">→</span>
           </Link>
         </div>
       </div>

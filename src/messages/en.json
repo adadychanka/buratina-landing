@@ -152,6 +152,7 @@
         "description": "Submit an inquiry through our contact form or call us directly. We'll discuss your vision and provide a tailored proposal."
       }
     },
+    "viewPastEvents": "View Past Events",
     "cta": "Submit event inquiry"
   },
   "EventExamples": {
@@ -275,8 +276,9 @@
     "address": "Address",
     "hours": "Opening hours",
     "hoursList": {
-      "weekday": "Monday - Thursday: 17:00 - 00:00",
-      "weekend": "Friday - Saturday: 17:00 - 01:00",
+      "closed": "Monday: Closed",
+      "weekday": "Tuesday - Thursday: 19:00 - 00:00",
+      "weekend": "Friday - Saturday: 19:00 - 01:00",
       "sunday": "Sunday: 19:00 - 00:00"
     },
     "directions": "How to get here",
@@ -297,6 +299,7 @@
     "location": "Location",
     "toggleMenu": "Toggle menu",
     "menuTitle": "Menu",
+    "skipToContent": "Skip to main content",
     "menuDescription": "Navigate through the page"
   },
   "Footer": {
@@ -326,7 +329,7 @@
     "questions": {
       "hours": {
         "question": "What are your opening hours?",
-        "answer": "We are open daily from 6 PM to 2 AM (Monday-Sunday). Our mystical atmosphere comes alive in the evening hours, perfect for cocktails, events, and unforgettable experiences."
+        "answer": "We are open Tuesday-Thursday and Sunday from 7 PM to midnight, and Friday-Saturday from 7 PM to 1 AM. We are closed on Mondays. Our mystical atmosphere comes alive in the evening hours, perfect for cocktails, events, and unforgettable experiences."
       },
       "reservation": {
         "question": "Do I need a reservation?",

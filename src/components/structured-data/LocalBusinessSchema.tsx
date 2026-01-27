@@ -30,13 +30,13 @@ export function LocalBusinessSchema() {
       longitude: 20.4699155,
     },
     openingHours: [
-      'Mo 18:00-02:00',
-      'Tu 18:00-02:00',
-      'We 18:00-02:00',
-      'Th 18:00-02:00',
-      'Fr 18:00-02:00',
-      'Sa 18:00-02:00',
-      'Su 18:00-02:00',
+      // Monday: Closed
+      'Tu 19:00-00:00',
+      'We 19:00-00:00',
+      'Th 19:00-00:00',
+      'Fr 19:00-01:00',
+      'Sa 19:00-01:00',
+      'Su 19:00-00:00',
     ],
     sameAs: [
       'https://www.instagram.com/buratina_bar/',
