@@ -76,10 +76,7 @@ export async function FAQ() {
           <div className="mt-12 text-center">
             <p className="text-muted-foreground">
               {t('contactText')}{' '}
-              <a
-                href="tel:+381611096732"
-                className="font-semibold text-primary hover:underline"
-              >
+              <a href="tel:+381611096732" className="font-semibold text-primary hover:underline">
                 +381 61 1096732
               </a>{' '}
               or{' '}

@@ -3,8 +3,8 @@
     "title": "Buratina Bar",
     "subtitle": "An intimate bar in the heart of Belgrade for evenings, gatherings, and private events",
     "description": "A cozy, atmospheric space for up to 25 seated or 40 standing guests. Perfect for quiet nights, celebrations, and private events.",
+    "imageAlt": "Buratina Bar interior showcasing mystical atmospheric lighting, wooden decor, and warm ambiance in Belgrade",
     "cta": {
-      "imageAlt": "Buratina Bar interior showcasing mystical atmospheric lighting, wooden decor, and warm ambiance in Belgrade",
       "book": "Book a table",
       "event": "Host an event"
     }
@@ -12,11 +12,10 @@
   "About": {
     "title": "About us",
     "paragraphs": [
-      "We believe a bar is more than a place to drink. It’s a space where you slow down, listen, observe, and become part of what’s happening.",
-      "Our bar is hidden from the city’s noise — in a quiet courtyard, underground, behind an unremarkable door. Not for the sake of secrecy, but because atmosphere needs silence, intimacy, and attention to detail.",
-      "Here, speakeasy culture meets theatricality and live music. Each evening feels like a performance without a poster — light, sound, movement behind the bar, and guests who become part of the scene themselves.",
-      "We work with signature cocktails, mood, and the moment. No rush. No templates. No need to pretend.",
-      "This is a place for conversations, pauses, and nights that stay with you. If you’re here, you already know why."
+      "Buratina is a small, intimate bar hidden in the city center of Belgrade.",
+      "We focus on atmosphere, conversation, and carefully crafted evenings — a place where people come not for loud crowds, but for mood, connection, and character.",
+      "The interior is simple and warm, with soft lighting and a relaxed, slightly theatrical feel. It's a bar for birthdays, small celebrations, quiet dates, and private gatherings — a place that feels personal rather than generic.",
+      "Buratina works best when the space is shared by people who enjoy being present, talking, and staying a little longer than planned."
     ],
     "gallery": {
       "alts": [
