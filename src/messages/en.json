@@ -1,10 +1,10 @@
 {
   "Hero": {
     "title": "Buratina Bar",
-    "subtitle": "The most mystical bar in Belgrade",
-    "description": "This bar isn’t found — it’s entered.\nHidden in a quiet courtyard, behind an ordinary doorway, it begins where the city fades away.\nHere, theatre blends with the bar, music with whispers, and cocktails with stories never told out loud.\nEvery night is a stage without a script.\nIf you’re here, you’ve already been let in.",
+    "subtitle": "An intimate bar in the heart of Belgrade for evenings, gatherings, and private events",
+    "description": "A cozy, atmospheric space for up to 25 seated or 40 standing guests. Perfect for quiet nights, celebrations, and private events.",
     "cta": {
-    "imageAlt": "Buratina Bar interior showcasing mystical atmospheric lighting, wooden decor, and warm ambiance in Belgrade",
+      "imageAlt": "Buratina Bar interior showcasing mystical atmospheric lighting, wooden decor, and warm ambiance in Belgrade",
       "book": "Book a table",
       "event": "Host an event"
     }
