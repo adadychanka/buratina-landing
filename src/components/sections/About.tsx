@@ -17,9 +17,9 @@ export async function About() {
 
   const galleryImages = [
     '/images/about/IMG_5165.JPG',
-    '/images/about/IMG_5214.JPG',
-    '/images/about/IMG_5232.JPG',
-    '/images/about/IMG_5266.JPG',
+    '/images/about/Daiquiri3.JPEG',
+    '/images/about/IMG_5310.JPG',
+    '/images/about/IMG_2419.JPG',
     '/images/about/IMG_5380.JPG',
   ];
 
