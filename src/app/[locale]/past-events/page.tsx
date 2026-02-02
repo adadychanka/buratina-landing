@@ -1,10 +1,10 @@
 import { EventCard } from '@/components/sections/EventCard';
+import { BreadcrumbSchema, breadcrumbs } from '@/components/structured-data/BreadcrumbSchema';
+import { EventsCollectionSchema } from '@/components/structured-data/EventSchema';
 import { Link } from '@/i18n/navigation';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { setRequestLocale } from 'next-intl/server';
-import { EventsCollectionSchema } from '@/components/structured-data/EventSchema';
-import { BreadcrumbSchema, breadcrumbs } from '@/components/structured-data/BreadcrumbSchema';
 
 type Props = {
   params: Promise<{ locale: string }>;

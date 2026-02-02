@@ -124,7 +124,7 @@ export function MenuImageGalleryModal({ isOpen, onClose }: MenuImageGalleryModal
         {/* Header */}
         <div className="mb-4 flex flex-shrink-0 items-center justify-between">
           <div className="flex flex-col gap-1">
-            <h3 id="menu-gallery-title" className="font-serif text-xl font-bold md:text-2xl">
+            <h3 id="menu-gallery-title" className="font-bold font-serif text-xl md:text-2xl">
               {t('title')}
             </h3>
             {isFallback && hasImages && (
@@ -219,7 +219,7 @@ export function MenuImageGalleryModal({ isOpen, onClose }: MenuImageGalleryModal
               <button
                 type="button"
                 onClick={goToPrevious}
-                className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-black/50 px-3 py-2 text-sm text-white hover:bg-black/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                className="-translate-y-1/2 absolute top-1/2 left-4 rounded-full bg-black/50 px-3 py-2 text-sm text-white hover:bg-black/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 {t('previous')}
               </button>
@@ -242,7 +242,7 @@ export function MenuImageGalleryModal({ isOpen, onClose }: MenuImageGalleryModal
               <button
                 type="button"
                 onClick={goToNext}
-                className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-black/50 px-3 py-2 text-sm text-white hover:bg-black/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                className="-translate-y-1/2 absolute top-1/2 right-4 rounded-full bg-black/50 px-3 py-2 text-sm text-white hover:bg-black/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 {t('next')}
               </button>

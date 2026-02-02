@@ -102,13 +102,13 @@ export function ContactForm() {
         <div className="mx-auto max-w-2xl">
           {/* Submit status messages */}
           {submitStatus === 'success' && (
-            <div className="mb-8 rounded-xl border border-accent/40 bg-background/80 p-4 text-center text-sm text-foreground shadow-sm">
+            <div className="mb-8 rounded-xl border border-accent/40 bg-background/80 p-4 text-center text-foreground text-sm shadow-sm">
               {t('success')}
             </div>
           )}
 
           {submitStatus === 'error' && (
-            <div className="mb-8 rounded-xl border border-destructive/40 bg-destructive/5 p-4 text-center text-sm text-destructive shadow-sm">
+            <div className="mb-8 rounded-xl border border-destructive/40 bg-destructive/5 p-4 text-center text-destructive text-sm shadow-sm">
               {t('error')}
             </div>
           )}

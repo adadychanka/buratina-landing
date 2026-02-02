@@ -92,16 +92,16 @@ export function Menu() {
     <section id="menu" className="bg-muted/50 py-20">
       <div className="container mx-auto px-4">
         {/* Title */}
-        <h2 className="mb-4 text-center font-serif text-4xl font-bold text-foreground md:mb-5 md:text-5xl">
+        <h2 className="mb-4 text-center font-bold font-serif text-4xl text-foreground md:mb-5 md:text-5xl">
           {t('title')}
         </h2>
-        <p className="mx-auto mb-6 max-w-2xl text-center text-sm text-muted-foreground md:mb-8 md:text-base">
+        <p className="mx-auto mb-6 max-w-2xl text-center text-muted-foreground text-sm md:mb-8 md:text-base">
           {t('description')}
         </p>
 
         {/* Fallback note when we show English images for non-English locales */}
         {isFallback && hasImages && (
-          <p className="mx-auto mb-6 max-w-2xl text-center text-sm text-muted-foreground md:mb-8 md:text-base">
+          <p className="mx-auto mb-6 max-w-2xl text-center text-muted-foreground text-sm md:mb-8 md:text-base">
             {t('menuNotFoundDescription')}
           </p>
         )}
@@ -143,7 +143,7 @@ export function Menu() {
                     openLightbox();
                   }
                 }}
-                className="absolute right-3 top-3 flex items-center justify-center rounded-lg bg-black/70 p-2 text-white shadow-lg backdrop-blur-sm transition hover:bg-black/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                className="absolute top-3 right-3 flex items-center justify-center rounded-lg bg-black/70 p-2 text-white shadow-lg backdrop-blur-sm transition hover:bg-black/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 aria-label={t('zoomIn')}
               >
                 <ZoomIn className="h-5 w-5" />
@@ -158,7 +158,7 @@ export function Menu() {
                       e.stopPropagation();
                       goToPrevious();
                     }}
-                    className="absolute left-3 top-1/2 flex -translate-y-1/2 items-center justify-center rounded-full bg-black/60 p-2 text-white shadow-md transition hover:bg-black/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                    className="-translate-y-1/2 absolute top-1/2 left-3 flex items-center justify-center rounded-full bg-black/60 p-2 text-white shadow-md transition hover:bg-black/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                     aria-label={t('previous')}
                   >
                     <ChevronLeft className="h-5 w-5" />
@@ -169,7 +169,7 @@ export function Menu() {
                       e.stopPropagation();
                       goToNext();
                     }}
-                    className="absolute right-3 top-1/2 flex -translate-y-1/2 items-center justify-center rounded-full bg-black/60 p-2 text-white shadow-md transition hover:bg-black/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                    className="-translate-y-1/2 absolute top-1/2 right-3 flex items-center justify-center rounded-full bg-black/60 p-2 text-white shadow-md transition hover:bg-black/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                     aria-label={t('next')}
                   >
                     <ChevronRight className="h-5 w-5" />
@@ -198,7 +198,7 @@ export function Menu() {
         )}
 
         {!hasImages && (
-          <p className="mt-6 text-center text-sm text-muted-foreground md:text-base">
+          <p className="mt-6 text-center text-muted-foreground text-sm md:text-base">
             {t('loadError')}
           </p>
         )}
@@ -222,7 +222,7 @@ export function Menu() {
         >
           <div className="relative flex h-full w-full flex-col">
             {/* Header with page info, zoom controls and close */}
-            <div className="absolute left-0 right-0 top-0 z-10 flex items-center justify-between bg-gradient-to-b from-black/80 to-transparent p-4">
+            <div className="absolute top-0 right-0 left-0 z-10 flex items-center justify-between bg-gradient-to-b from-black/80 to-transparent p-4">
               <div className="flex items-center gap-2">
                 <span className="text-sm text-white/80">
                   {t('page', { current: currentIndex + 1, total: images.length })}
@@ -319,7 +319,7 @@ export function Menu() {
                     e.stopPropagation();
                     goToPrevious();
                   }}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-black/60 p-3 text-white shadow-lg backdrop-blur-sm transition hover:bg-black/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                  className="-translate-y-1/2 absolute top-1/2 left-4 rounded-full bg-black/60 p-3 text-white shadow-lg backdrop-blur-sm transition hover:bg-black/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                   aria-label={t('previous')}
                 >
                   <ChevronLeft className="h-6 w-6" />
@@ -330,7 +330,7 @@ export function Menu() {
                     e.stopPropagation();
                     goToNext();
                   }}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-black/60 p-3 text-white shadow-lg backdrop-blur-sm transition hover:bg-black/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                  className="-translate-y-1/2 absolute top-1/2 right-4 rounded-full bg-black/60 p-3 text-white shadow-lg backdrop-blur-sm transition hover:bg-black/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                   aria-label={t('next')}
                 >
                   <ChevronRight className="h-6 w-6" />
@@ -339,8 +339,8 @@ export function Menu() {
             )}
 
             {/* Footer hint */}
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-              <p className="text-center text-xs text-white/60">
+            <div className="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+              <p className="text-center text-white/60 text-xs">
                 Double-click or use controls to zoom · Pinch to zoom on mobile
               </p>
             </div>
