@@ -56,8 +56,37 @@
     "zoomLevel": "Nivo zumiranja"
   },
   "Events": {
-    "title": "Organizujte događaj",
-    "subtitle": "Pretvorite Buratinu u svoju privatnu scenu. Podzemna atmosfera, profesionalna oprema i beskrajne mogućnosti.",
+    "title": "Organizujte privatni događaj u Buratini",
+    "subtitle": "Buratina je dostupna za privatne događaje i manja okupljanja u intimnom, atmosferičnom ambijentu. Organizujemo rođendane, korporativne sastanke, privatne žurke i kreativne događaje.",
+    "keyFactsTitle": "Ključne informacije",
+    "keyFacts": {
+      "capacity": {
+        "title": "Kapacitet",
+        "items": ["Do 25 gostiju za sedenje", "Do 40 gostiju stojeći"]
+      },
+      "formats": {
+        "title": "Formati:",
+        "items": [
+          "Rođendani i proslave",
+          "Korporativni i timski skupovi",
+          "Privatne žurke",
+          "Mali kreativni ili kulturni događaji"
+        ]
+      },
+      "offer": {
+        "title": "Šta nudimo:",
+        "items": [
+          "Prijatan bar sa karakterom",
+          "Fleksibilan raspored i prostor",
+          "Usluga bara i kokteli",
+          "Centralna lokacija u Beogradu"
+        ]
+      },
+      "booking": {
+        "title": "Kako rezervisati",
+        "description": "Da biste organizovali događaj, pošaljite nam poruku sa željenim datumom, brojem gostiju i formatom događaja. Javićemo vam se sa informacijama o dostupnosti i detaljima."
+      }
+    },
     "formatsTitle": "Formati događaja",
     "formatsDescription": "Od intimnih okupljanja do potpunog iznajmljivanja prostora — prilagođavamo se vašoj viziji.",
     "formats": {
@@ -86,73 +115,8 @@
         "description": "Prepoznatljiva podzemna estetika idealna za kreativne projekte, modne sesije i kreiranje sadržaja."
       }
     },
-    "equipmentTitle": "Oprema i mogućnosti",
-    "equipment": {
-      "sound": {
-        "title": "Profesionalni zvučni sistem",
-        "description": "Visokokvalitetna audio oprema, bežični mikrofoni, DJ oprema i mogućnost povezivanja vaše muzike."
-      },
-      "lighting": {
-        "title": "Pozorišno osvetljenje",
-        "description": "Prilagodljivo ambijentalno osvetljenje, scensko svetlo i atmosferski efekti za savršeno raspoloženje."
-      },
-      "space": {
-        "title": "Fleksibilan prostor",
-        "description": "Podzemna speakeasy atmosfera koja može da primi do 30 gostiju sa prilagodljivim rasporedom sedenja."
-      },
-      "technical": {
-        "title": "Tehnička oprema",
-        "description": "Projektor i ekran dostupni, pouzdan Wi-Fi, utičnice i tehnička podrška tokom celog događaja."
-      },
-      "bar": {
-        "title": "Kompletna usluga bara",
-        "description": "Profesionalni barmeni, meni autorskih koktela, kreiranje posebnih pića i širok izbor alkohola."
-      },
-      "atmosphere": {
-        "title": "Jedinstvena atmosfera",
-        "description": "Skriven ulaz kroz dvorište, teatralno podzemno okruženje, intimna speakeasy atmosfera koja spaja bar kulturu sa prostorom za nastupe."
-      }
-    },
-    "activitiesTitle": "Aktivnosti i usluge",
-    "activities": {
-      "liveMusic": "Živa muzika i DJ nastupi",
-      "cocktailClass": "Radionice koktela i miksologije",
-      "theatre": "Pozorišne predstave i zabava",
-      "customMenu": "Kreiranje posebnog menija i koktela za vaš događaj",
-      "bartenders": "Profesionalna usluga barmena tokom celog događaja",
-      "photoFriendly": "Fotografisanje i snimanje su dobrodošli",
-      "hosting": "Posvećena koordinacija i organizacija događaja",
-      "catering": "Fleksibilne opcije kateringa sa partnerskim servisima"
-    },
-    "conditionsTitle": "Informacije o rezervaciji",
-    "conditions": {
-      "capacity": {
-        "title": "Kapacitet",
-        "description": "Do 30 gostiju udobno, sa fleksibilnim opcijama za intimna okupljanja ili potpuno iznajmljivanje prostora."
-      },
-      "deposit": {
-        "title": "Uslovi rezervacije",
-        "description": "Potreban je minimalni depozit za osiguravanje datuma. Konačna cena zavisi od broja gostiju, trajanja i usluga."
-      },
-      "duration": {
-        "title": "Trajanje događaja",
-        "description": "Fleksibilno vreme prema vašim potrebama. Primenjuju se minimalni periodi rezervacije, dostupni su produženi sati."
-      },
-      "catering": {
-        "title": "Hrana i piće",
-        "description": "Kompletna usluga bara uključena. Partnerstvo sa našim ketering servisima ili mogućnost organizovanja sopstvene hrane."
-      },
-      "planning": {
-        "title": "Planiranje događaja",
-        "description": "Radite direktno sa našim timom da isplanirate svaki detalj — od menija do muzike i atmosfere."
-      },
-      "booking": {
-        "title": "Kako rezervisati",
-        "description": "Pošaljite upit preko kontakt forme ili nas pozovite direktno. Razgovaraćemo o vašoj viziji i pružiti prilagođenu ponudu."
-      }
-    },
     "viewPastEvents": "Pogledajte prošle događaje",
-    "cta": "Pošaljite upit za događaj"
+    "cta": "Zatražite detalje o događaju"
   },
   "EventExamples": {
     "title": "Prošli događaji",
